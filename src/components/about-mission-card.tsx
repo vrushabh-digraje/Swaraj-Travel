@@ -8,7 +8,7 @@ const TABS = [
     id: "mission",
     label: "Our Mission",
     title: "Our Mission",
-    image: "https://www.swarajtravel.com/assets/images/fleet/innova.webp",
+    image: "/about-reception.png",
     text: "To be a trusted transportation partner in Maharashtra, delivering value through safe, reliable, and customer-first cab services for airport, local, and outstation travel."
   },
   {
