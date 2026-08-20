@@ -56,7 +56,7 @@ export function InteractiveMap() {
         onMouseLeave={() => setIsActive(false)}
       >
         <iframe
-          title={`Swaraj Travel office in ${currentOffice.label}`}
+          title={`Book A Cab office in ${currentOffice.label}`}
           src={`https://maps.google.com/maps?q=${encodeURIComponent(currentOffice.q)}&t=&z=12&ie=UTF8&iwloc=&output=embed`}
           className={`h-full w-full border-0 transition-all duration-300 ${
             isActive ? "pointer-events-auto scale-[1.01]" : "pointer-events-none"

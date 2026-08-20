@@ -8,9 +8,9 @@ import { ServicesSteps } from "@/components/services-steps";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Mumbai Cab Services | Airport, Local & Outstation - Swaraj Travel",
+  title: "Mumbai Cab Services | Airport, Local & Outstation - Book A Cab",
   description:
-    "Swaraj Travel cab services in Mumbai: airport transfers, city rides, outstation trips, hourly rental, corporate transport, and wedding cars. Book 24/7.",
+    "Book A Cab cab services in Mumbai: airport transfers, city rides, outstation trips, hourly rental, corporate transport, and wedding cars. Book 24/7.",
   path: "/services",
   keywords: [
     "Mumbai airport cab",
@@ -74,7 +74,7 @@ export default function ServicesPage() {
       <FaqSection items={faqs} />
       <CtaBanner
         title="Ready to experience premium service?"
-        description="Book your ride now and see why travellers choose Swaraj Travel."
+        description="Book your ride now and see why travellers choose Book A Cab."
       />
     </>
   );

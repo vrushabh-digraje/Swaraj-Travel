@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Mumbai Cab Booking | Airport, Outstation & Local Taxi - Swaraj Travel",
+      "Mumbai Cab Booking | Airport, Outstation & Local Taxi - Book A Cab",
     template: "%s",
   },
   description: SITE.description,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     "Mumbai taxi service",
     "Mumbai airport cab",
     "outstation taxi Mumbai",
-    "Swaraj Travel",
+    "Book A Cab",
   ],
   authors: [{ name: SITE.name }],
   openGraph: {

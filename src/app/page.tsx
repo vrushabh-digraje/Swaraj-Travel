@@ -74,7 +74,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-12 text-center">
             <h2 className="font-display text-3xl font-bold text-navy md:text-5xl">
-              Why Choose <span className="gradient-text">Swaraj Travel</span>
+              Why Choose <span className="gradient-text">Book A Cab</span>
             </h2>
             <p className="mt-3 text-lg text-gray-600">
               We provide the best cab booking experience with premium features

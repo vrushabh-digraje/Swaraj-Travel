@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://www.swarajtravel.com";
+export const SITE_URL = "https://www.bookacab.co.in";
 
 export const SITE = {
-  name: "Swaraj Travel",
+  name: "Book A Cab",
   tagline: "Your Ride, Your Way",
   shortTagline: "Premium Rides",
   description:
     "Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra. 24/7 support, verified drivers, and instant booking on WhatsApp.",
   phone: "+918856904131",
   phoneDisplay: "+91-8856904131",
-  email: "travelsswaraj69@gmail.com",
+  email: "bookings@bookacab.co.in",
   whatsapp: "918856904131",
   address: "Near Airport, Mumbai, Maharashtra, India",
   city: "Mumbai",

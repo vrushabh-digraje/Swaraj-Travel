@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  LogoIcon,
   MailIcon,
   PhoneIcon,
   PinIcon,
@@ -24,7 +25,7 @@ export function Footer() {
         <div>
           <div className="mb-4 flex items-center gap-3">
             <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent">
-              <TaxiIcon className="h-5 w-5" />
+              <LogoIcon className="h-5 w-5" />
             </span>
             <strong className="font-display text-lg">{SITE.name}</strong>
           </div>

@@ -42,13 +42,13 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     title: "Mumbai to Pune Cab",
     metaTitle: "Mumbai to Pune Cab | Reliable One Way & Round Trip Taxi @ ₹14/km",
     metaDescription:
-      "Book a Mumbai to Pune cab with Swaraj Travel. One-way and round-trip taxis via the Expressway, airport drops from T1/T2, Innova Crysta and Dzire from ₹14/km.",
+      "Book a Mumbai to Pune cab with Book A Cab. One-way and round-trip taxis via the Expressway, airport drops from T1/T2, Innova Crysta and Dzire from ₹14/km.",
     distance: "148 km",
     duration: "3 hours",
     badge: "Most Popular Route",
     headline: "Reliable Mumbai to Pune Cab Service",
     intro:
-      "Looking for a stress-free journey? Swaraj Travel offers Mumbai to Pune taxi service via the Mumbai-Pune Expressway. Book a one-way drop from Mumbai Airport T2 or a round-trip package in a clean, air-conditioned sedan or SUV, available 24/7.",
+      "Looking for a stress-free journey? Book A Cab offers Mumbai to Pune taxi service via the Mumbai-Pune Expressway. Book a one-way drop from Mumbai Airport T2 or a round-trip package in a clean, air-conditioned sedan or SUV, available 24/7.",
     highlights: [
       { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
       { title: "Door-to-Door Pickup", body: "Home, office, hotel, or Mumbai Airport pickup." },
@@ -131,7 +131,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     badge: "Wine Country Route",
     headline: "Reliable Mumbai to Nashik Cab Service",
     intro:
-      "Book a premium Mumbai to Nashik taxi for Trimbakeshwar, Sula vineyards, or a business meeting. Swaraj Travel offers sanitized, punctual one-way and Mumbai Airport to Nashik cabs.",
+      "Book a premium Mumbai to Nashik taxi for Trimbakeshwar, Sula vineyards, or a business meeting. Book A Cab offers sanitized, punctual one-way and Mumbai Airport to Nashik cabs.",
     highlights: [
       { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
       { title: "Door-to-Door Pickup", body: "Home, office, or Mumbai Airport pickup." },
@@ -214,7 +214,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     badge: "Pilgrimage Route",
     headline: "Seamless Mumbai to Shirdi Cab Booking",
     intro:
-      "Travel from Mumbai to Shirdi for Kakad Aarti or a family pilgrimage in a comfortable AC cab. Swaraj Travel offers door-to-door pickup, airport transfers, and experienced highway drivers.",
+      "Travel from Mumbai to Shirdi for Kakad Aarti or a family pilgrimage in a comfortable AC cab. Book A Cab offers door-to-door pickup, airport transfers, and experienced highway drivers.",
     highlights: [
       { title: "Expressway Experts", body: "Samruddhi Mahamarg for a smoother 4.5-hour journey." },
       { title: "Punctual Pickups", body: "On-time departures from home or Mumbai Airport." },
@@ -297,7 +297,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     badge: "Hill Station Route",
     headline: "Refreshing Mumbai to Mahabaleshwar Cab Service",
     intro:
-      "Escape the city with a Mumbai to Mahabaleshwar taxi. Swaraj Travel runs powerful AC sedans and SUVs with drivers experienced on Pasarni Ghat, fog, and steep climbs.",
+      "Escape the city with a Mumbai to Mahabaleshwar taxi. Book A Cab runs powerful AC sedans and SUVs with drivers experienced on Pasarni Ghat, fog, and steep climbs.",
     highlights: [
       { title: "Hill-climb specialists", body: "Drivers trained for Pasarni Ghat and foggy roads." },
       { title: "Airport direct", body: "Pickup from Mumbai Airport T1/T2 for flying visitors." },

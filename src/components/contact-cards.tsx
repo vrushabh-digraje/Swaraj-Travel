@@ -71,7 +71,7 @@ export function ContactCards() {
 
       {/* WhatsApp Card */}
       <a 
-        href={whatsappHref("Hi Swaraj Travel, I want to book a cab.")} 
+        href={whatsappHref("Hi Book A Cab, I want to book a cab.")} 
         target="_blank"
         rel="noopener noreferrer"
         className="group block active:scale-98 transition-all duration-300"
@@ -101,7 +101,7 @@ export function ContactCards() {
             <PinIcon className="h-6 w-6" />
           </div>
           <h3 className="font-display text-lg font-bold text-navy group-hover:text-primary transition-colors">Visit Office</h3>
-          <p className="mt-2 text-sm text-gray-500 leading-relaxed">Swaraj Travels Office located near Terminal 1 & 2.</p>
+          <p className="mt-2 text-sm text-gray-500 leading-relaxed">Book A Cab Office located near Terminal 1 & 2.</p>
           <span className="mt-3 block text-sm font-semibold text-primary group-hover:translate-x-1.5 transition-transform inline-flex items-center gap-1 text-left w-full">
             {copiedLabel === "address" ? (
               <span className="text-green-600 flex items-center gap-1.5 animate-pulse text-xs font-bold uppercase tracking-wider">

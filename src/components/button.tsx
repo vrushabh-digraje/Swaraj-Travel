@@ -17,7 +17,7 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-gradient-to-r from-primary to-accent text-white shadow-md hover:shadow-lg",
+    "bg-gradient-to-r from-primary to-blue-500 text-white shadow-md hover:shadow-lg hover:from-primary-hover hover:to-blue-600 transition-all",
   secondary: "bg-navy text-white hover:bg-navy/90",
   outline:
     "border-2 border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white/20",

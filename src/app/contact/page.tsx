@@ -8,9 +8,9 @@ import { InteractiveMap } from "@/components/interactive-map";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Contact Swaraj Travel | Mumbai Booking & Support",
+  title: "Contact Book A Cab | Mumbai Booking & Support",
   description:
-    "Contact Swaraj Travel for Mumbai cab booking and 24/7 support. Call +91-8856904131, WhatsApp, or email travelsswaraj69@gmail.com. Near Airport, Mumbai.",
+    "Contact Book A Cab for Mumbai cab booking and 24/7 support. Call +91-8856904131, WhatsApp, or email bookings@bookacab.co.in. Near Airport, Mumbai.",
   path: "/contact",
 });
 

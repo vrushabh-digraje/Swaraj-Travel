@@ -7,9 +7,9 @@ import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Mumbai Cab Fleet | Hatchback, Sedan, SUV & Bus - Swaraj Travel",
+  title: "Mumbai Cab Fleet | Hatchback, Sedan, SUV & Bus - Book A Cab",
   description:
-    "Browse Swaraj Travel’s Mumbai cab fleet: Innova Crysta, Ertiga, Swift Dzire, Tempo Traveller, and mini buses. Well-maintained AC vehicles with 24/7 booking.",
+    "Browse Book A Cab’s Mumbai cab fleet: Innova Crysta, Ertiga, Swift Dzire, Tempo Traveller, and mini buses. Well-maintained AC vehicles with 24/7 booking.",
   path: "/fleet",
   keywords: ["Mumbai cab fleet", "Innova Crysta hire", "Tempo Traveller Mumbai"],
 });

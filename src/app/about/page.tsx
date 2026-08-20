@@ -6,9 +6,9 @@ import { AboutMissionCard } from "@/components/about-mission-card";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "About Us | Swaraj Travel Mumbai Cab Service",
+  title: "About Us | Book A Cab Mumbai Cab Service",
   description:
-    "Learn about Swaraj Travel, a Mumbai cab company offering airport transfers, local taxis, and outstation rides across Maharashtra with verified drivers.",
+    "Learn about Book A Cab, a Mumbai cab company offering airport transfers, local taxis, and outstation rides across Maharashtra with verified drivers.",
   path: "/about",
 });
 
@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Swaraj Travel"
+        eyebrow="About Book A Cab"
         title="Your Trusted Transportation Partner"
         description="Safe, reliable, and comfortable cab services across Maharashtra — from a small fleet to a trusted travel network."
         stats={[
@@ -37,7 +37,7 @@ export default function AboutPage() {
               From Vision to Reality
             </h2>
             <p className="mt-4 text-gray-600">
-              Swaraj Travel was founded with a simple mission: safe, reliable,
+              Book A Cab was founded with a simple mission: safe, reliable,
               and affordable transportation across Maharashtra. What started as
               a small fleet has grown into a trusted cab network serving
               travellers every day from Mumbai.
@@ -95,7 +95,7 @@ export default function AboutPage() {
       </div>
       <CtaBanner
         title="Ready to experience the difference?"
-        description="Join thousands of travellers who trust Swaraj Travel for Mumbai and Maharashtra trips."
+        description="Join thousands of travellers who trust Book A Cab for Mumbai and Maharashtra trips."
       />
     </>
   );

@@ -36,7 +36,7 @@ export function CtaBanner({
               variant="secondary"
               className="flex-1"
               href={telHref()}
-              ariaLabel="Call Swaraj Travel"
+              ariaLabel="Call Book A Cab"
             >
               <PhoneIcon className="h-4 w-4" />
               Call Us

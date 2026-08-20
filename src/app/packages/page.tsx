@@ -8,9 +8,9 @@ import { PACKAGE_RULES } from "@/lib/packages";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Tour Packages | Cab Rates in Mumbai - Swaraj Travel",
+  title: "Tour Packages | Cab Rates in Mumbai - Book A Cab",
   description:
-    "Swaraj Travel tour package pricing for Innova Crysta, Dzire, Ertiga, Tempo Traveller, and buses. Transparent per-km rates for Mumbai outstation trips.",
+    "Book A Cab tour package pricing for Innova Crysta, Dzire, Ertiga, Tempo Traveller, and buses. Transparent per-km rates for Mumbai outstation trips.",
   path: "/packages",
   keywords: ["Mumbai cab packages", "Innova Crysta rate", "outstation cab fare"],
 });

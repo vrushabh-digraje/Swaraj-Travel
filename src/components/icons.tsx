@@ -195,3 +195,15 @@ export function HomeIcon(props: IconProps) {
     </svg>
   );
 }
+
+export function LogoIcon(props: IconProps) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z" />
+      <path d="M9 10h6" />
+      <path d="M8 13h8l-1-3H9l-1 3z" />
+      <circle cx="10" cy="15" r="1" />
+      <circle cx="14" cy="15" r="1" />
+    </svg>
+  );
+}

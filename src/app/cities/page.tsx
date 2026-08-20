@@ -6,9 +6,9 @@ import { CitiesList } from "@/components/cities-list";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Cities We Cover | Cab Service Across Maharashtra - Swaraj Travel",
+  title: "Cities We Cover | Cab Service Across Maharashtra - Book A Cab",
   description:
-    "Swaraj Travel covers 50+ cities in Maharashtra including Mumbai, Pune, Nashik, Shirdi, Mahabaleshwar, Nagpur, and Konkan. Book local and outstation cabs.",
+    "Book A Cab covers 50+ cities in Maharashtra including Mumbai, Pune, Nashik, Shirdi, Mahabaleshwar, Nagpur, and Konkan. Book local and outstation cabs.",
   path: "/cities",
   keywords: [
     "cab service Maharashtra",

@@ -8,13 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary: #ff6b35;
-  --color-primary-hover: #ff8e53;
-  --color-accent: #ffd23f;
-  --color-navy: #1a1a2e;
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-accent: #ff6b35;
+  --color-navy: #0f172a;
   --color-success: #06d6a0;
   --color-whatsapp: #25d366;
-  --color-light: #f7f7f7;
+  --color-light: #f8fafc;
   --font-sans: var(--font-inter);
   --font-display: var(--font-montserrat);
 }
@@ -37,12 +37,12 @@ h4 {
 }
 
 ::selection {
-  background: #ff6b35;
+  background: #2563eb;
   color: #fff;
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ff6b35 0%, #ffd23f 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #ff6b35 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

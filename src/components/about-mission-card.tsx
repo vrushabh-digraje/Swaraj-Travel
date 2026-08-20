@@ -15,14 +15,14 @@ const TABS = [
     id: "vision",
     label: "Our Vision",
     title: "Our Vision",
-    image: "https://www.swarajtravel.com/assets/images/fleet/swift-dzire.webp",
+    image: "/images/swift-dzire.webp",
     text: "To revolutionize city and outstation travel in Maharashtra by combining standard-setting passenger safety, certified local chauffeurs, and a transparent zero-hidden-fee pricing structure."
   },
   {
     id: "guarantee",
     label: "Our Guarantee",
     title: "Our Guarantee",
-    image: "https://www.swarajtravel.com/assets/images/fleet/ertiga.webp",
+    image: "/images/ertiga.webp",
     text: "We guarantee 100% on-time arrivals, freshly sanitized vehicles, and professional, background-verified highway drivers for all airport, local, and outstation trips."
   }
 ];

@@ -3,9 +3,9 @@ import { PageHero } from "@/components/page-hero";
 import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Terms & Conditions | Swaraj Travel",
+  title: "Terms & Conditions | Book A Cab",
   description:
-    "Booking, cancellation, fare, and liability terms for Swaraj Travel cab services in Mumbai and across Maharashtra.",
+    "Booking, cancellation, fare, and liability terms for Book A Cab cab services in Mumbai and across Maharashtra.",
   path: "/terms-conditions",
 });
 
@@ -38,7 +38,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms & Conditions"
-        description="Please read these terms before booking a Swaraj Travel cab."
+        description="Please read these terms before booking a Book A Cab."
       />
       <div className="mx-auto max-w-3xl px-4 py-8">
         <Breadcrumbs items={[{ name: "Terms & Conditions", path: "/terms-conditions" }]} />

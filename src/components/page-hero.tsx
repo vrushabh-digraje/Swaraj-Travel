@@ -36,7 +36,9 @@ export function PageHero({
           </Button>
         </div>
         {stats ? (
-          <dl className="mt-10 grid max-w-xl grid-cols-2 gap-4 sm:grid-cols-4">
+          <dl className={`mt-10 grid grid-cols-2 gap-4 ${
+            stats.length === 3 ? "sm:grid-cols-3 max-w-2xl" : stats.length === 2 ? "sm:grid-cols-2 max-w-md" : "sm:grid-cols-4 max-w-xl"
+          }`}>
             {stats.map((stat) => (
               <div
                 key={stat.label}

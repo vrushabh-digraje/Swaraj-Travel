@@ -3,9 +3,9 @@ import { PageHero } from "@/components/page-hero";
 import { SITE, createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Privacy Policy | Swaraj Travel",
+  title: "Privacy Policy | Book A Cab",
   description:
-    "How Swaraj Travel collects and uses booking details such as name, phone number, and trip information for cab enquiries.",
+    "How Book A Cab collects and uses booking details such as name, phone number, and trip information for cab enquiries.",
   path: "/privacy-policy",
 });
 

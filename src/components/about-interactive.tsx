@@ -39,7 +39,7 @@ const MILESTONES = [
   {
     year: "2018",
     title: "The Genesis",
-    description: "Swaraj Travel started with only 5 vehicles in Mumbai, focusing solely on reliable airport pickups and local drops.",
+    description: "Book A Cab started with only 5 vehicles in Mumbai, focusing solely on reliable airport pickups and local drops.",
     stat: "5 Cabs · 1 City",
     img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=500&q=80",
   },
