@@ -1,11 +1,11 @@
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { Card } from "@/components/card";
+import { ContactCards } from "@/components/contact-cards";
 import { ContactForm } from "@/components/contact-form";
 import { CtaBanner } from "@/components/cta-banner";
 import { FaqSection } from "@/components/faq-section";
 import { PageHero } from "@/components/page-hero";
-import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "@/components/icons";
-import { SITE, createMetadata, telHref, whatsappHref } from "@/lib/site";
+import { InteractiveMap } from "@/components/interactive-map";
+import { createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Contact Swaraj Travel | Mumbai Booking & Support",
@@ -57,64 +57,11 @@ export default function ContactPage() {
       />
       <div className="mx-auto max-w-6xl px-4 py-8">
         <Breadcrumbs items={[{ name: "Contact", path: "/contact" }]} />
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <Card className="p-5">
-            <PhoneIcon className="h-6 w-6 text-primary" />
-            <h2 className="mt-3 font-display text-lg font-bold">Call Us</h2>
-            <a href={telHref()} className="mt-2 block text-sm text-gray-600">
-              {SITE.phoneDisplay}
-            </a>
-          </Card>
-          <Card className="p-5">
-            <MailIcon className="h-6 w-6 text-primary" />
-            <h2 className="mt-3 font-display text-lg font-bold">Email Us</h2>
-            <a href={`mailto:${SITE.email}`} className="mt-2 block text-sm text-gray-600">
-              {SITE.email}
-            </a>
-          </Card>
-          <Card className="p-5">
-            <WhatsAppIcon className="h-6 w-6 text-whatsapp" />
-            <h2 className="mt-3 font-display text-lg font-bold">WhatsApp</h2>
-            <a
-              href={whatsappHref("Hi, I need help with a cab booking.")}
-              className="mt-2 block text-sm text-gray-600"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Quick chat support
-            </a>
-          </Card>
-          <Card className="p-5">
-            <PinIcon className="h-6 w-6 text-primary" />
-            <h2 className="mt-3 font-display text-lg font-bold">Visit Us</h2>
-            <p className="mt-2 text-sm text-gray-600">{SITE.address}</p>
-          </Card>
-        </div>
+        <ContactCards />
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           <ContactForm />
-          <div>
-            <h2 className="mb-4 font-display text-2xl font-bold text-navy">
-              Find Us on Map
-            </h2>
-            <div className="overflow-hidden rounded-3xl bg-white shadow-md">
-              <iframe
-                title="Swaraj Travel office near Mumbai Airport"
-                src="https://maps.google.com/maps?q=Chhatrapati%20Shivaji%20Maharaj%20International%20Airport%20Mumbai&t=&z=12&ie=UTF8&iwloc=&output=embed"
-                className="h-80 w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <a
-              href="https://maps.google.com/?q=Near+Airport,+Mumbai,+Maharashtra"
-              className="mt-3 inline-block font-semibold text-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Get directions
-            </a>
-          </div>
+          <InteractiveMap />
         </div>
       </div>
       <FaqSection items={faqs} />

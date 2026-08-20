@@ -28,7 +28,7 @@ export default function AboutPage() {
       />
       <div className="mx-auto max-w-6xl px-4 py-8">
         <Breadcrumbs items={[{ name: "About", path: "/about" }]} />
-        <section className="grid gap-10 md:grid-cols-2">
+        <section className="grid gap-10 md:grid-cols-2 items-start mt-8">
           <div>
             <p className="text-sm font-bold tracking-wide text-primary uppercase">
               Our Story
@@ -49,6 +49,43 @@ export default function AboutPage() {
               welfare, and clear pricing remain our priorities as we expand
               across more cities.
             </p>
+            
+            {/* Interactive CTAs */}
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="/fleet"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-primary/20 px-5 py-2.5 text-sm font-bold text-primary hover:bg-primary/5 hover:border-primary transition-all duration-300 active:scale-95 cursor-pointer"
+              >
+                Explore Fleet
+                <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              <a
+                href="/outstation"
+                className="inline-flex items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-primary/20 hover:bg-primary-dark hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer"
+              >
+                Plan Outstation Trip
+              </a>
+            </div>
+
+            {/* Micro Feature Badges */}
+            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-gray-100 pt-6">
+              {[
+                { label: "Safe Travel", desc: "SOS support & GPS tracking", icon: "🛡️" },
+                { label: "On-Time Cab", desc: "Guaranteed pickups", icon: "⏱️" },
+                { label: "Transparent Fares", desc: "No hidden charges", icon: "💰" }
+              ].map(badge => (
+                <div 
+                  key={badge.label}
+                  className="rounded-xl border border-gray-100 bg-gray-50/30 p-3 hover:border-primary/20 hover:bg-white hover:shadow-md transition-all duration-300 group cursor-default"
+                >
+                  <span className="text-lg group-hover:scale-125 inline-block transform transition-transform duration-300">{badge.icon}</span>
+                  <h4 className="font-bold text-navy text-xs mt-1.5">{badge.label}</h4>
+                  <p className="text-[10px] text-gray-500 leading-tight mt-0.5">{badge.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <AboutMissionCard />
         </section>

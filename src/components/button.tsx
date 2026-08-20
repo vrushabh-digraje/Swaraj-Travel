@@ -12,6 +12,7 @@ type ButtonProps = {
   rel?: string;
   ariaLabel?: string;
   showArrow?: boolean;
+  disabled?: boolean;
 };
 
 const variants = {
@@ -42,8 +43,11 @@ export function Button({
   rel,
   ariaLabel,
   showArrow = false,
+  disabled = false,
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-shadow ${variants[variant]} ${sizes[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all ${
+    disabled ? "opacity-50 cursor-not-allowed" : "transition-shadow active:scale-98"
+  } ${variants[variant]} ${sizes[size]} ${className}`;
 
   const content = (
     <>
@@ -70,6 +74,7 @@ export function Button({
     <button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       className={classes}
       aria-label={ariaLabel}
     >

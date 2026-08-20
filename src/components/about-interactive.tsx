@@ -34,6 +34,7 @@ const CORE_VALUES = [
   },
 ];
 
+
 const MILESTONES = [
   {
     year: "2018",
@@ -65,41 +66,25 @@ const MILESTONES = [
   },
 ];
 
-const DRIVERS = [
-  {
-    name: "Ramesh Shinde",
-    experience: "12+ Years",
-    rating: "4.95",
-    trips: "1,500+",
-    specialty: "Expressway & Western Ghats expert",
-    badge: "Ghat Master",
-    img: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Milind Kadam",
-    experience: "8+ Years",
-    rating: "4.92",
-    trips: "1,100+",
-    specialty: "Mumbai Local & Airport transfers",
-    badge: "Punctuality King",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    name: "Sanjay Patil",
-    experience: "10+ Years",
-    rating: "4.97",
-    trips: "1,350+",
-    specialty: "Long-distance Konkan & Shirdi trips",
-    badge: "Safety Champion",
-    img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80",
-  },
-];
-
 export function AboutInteractive() {
   const [activeYear, setActiveYear] = useState("2018");
-  const [selectedDriver, setSelectedDriver] = useState<number | null>(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayYear, setDisplayYear] = useState("2018");
 
-  const currentMilestone = MILESTONES.find((m) => m.year === activeYear)!;
+  const currentMilestone = MILESTONES.find((m) => m.year === displayYear)!;
+
+  const handleYearChange = (year: string) => {
+    if (year === activeYear) return;
+    setIsTransitioning(true);
+    setActiveYear(year);
+    setTimeout(() => {
+      setDisplayYear(year);
+      setIsTransitioning(false);
+    }, 200);
+  };
+
+  const activeIndex = MILESTONES.findIndex((m) => m.year === activeYear);
+  const progressPercent = (activeIndex / (MILESTONES.length - 1)) * 100;
 
   return (
     <div className="space-y-16">
@@ -112,7 +97,7 @@ export function AboutInteractive() {
           {CORE_VALUES.map((val) => (
             <Card
               key={val.title}
-              className="p-6 border border-transparent hover:border-primary/20 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-primary/5 transition-all duration-300 group"
+              className="p-6 border border-gray-100 bg-white hover:border-primary/20 hover:-translate-y-1.5 hover:shadow-lg hover:ring-2 hover:ring-primary/5 transition-all duration-300 group flex flex-col items-start"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gray-50 text-gray-400 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300 mb-4 group-hover:scale-110 transform">
                 {val.icon}
@@ -138,13 +123,18 @@ export function AboutInteractive() {
           <div className="relative flex justify-between items-center max-w-md mx-auto mb-10">
             {/* Background progress line */}
             <div className="absolute left-0 right-0 h-0.5 bg-gray-200 top-1/2 -translate-y-1/2 -z-10" />
+            {/* Active progress line */}
+            <div 
+              style={{ width: `${progressPercent}%` }}
+              className="absolute left-0 h-0.5 bg-primary top-1/2 -translate-y-1/2 -z-10 transition-all duration-500 ease-out" 
+            />
             
             {MILESTONES.map((m) => {
               const isActive = activeYear === m.year;
               return (
                 <button
                   key={m.year}
-                  onClick={() => setActiveYear(m.year)}
+                  onClick={() => handleYearChange(m.year)}
                   className={`relative z-10 flex h-10 w-10 items-center justify-center rounded-full font-bold text-sm border-2 cursor-pointer transition-all duration-300 active:scale-90 ${
                     isActive
                       ? "bg-primary border-primary text-white shadow-md shadow-primary/25 scale-110"
@@ -158,7 +148,9 @@ export function AboutInteractive() {
           </div>
 
           {/* Active Milestone Card */}
-          <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 max-w-2xl mx-auto grid md:grid-cols-2 animate-fade-in-scale">
+          <div className={`bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 max-w-2xl mx-auto grid md:grid-cols-2 transition-all duration-300 ${
+            isTransitioning ? "opacity-0 translate-y-2 scale-[0.98] blur-[1px]" : "opacity-100 translate-y-0 scale-100 blur-0"
+          }`}>
             {/* Left Image */}
             <div className="relative h-48 md:h-full w-full overflow-hidden bg-gray-100 min-h-[200px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -184,90 +176,6 @@ export function AboutInteractive() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Professional Chauffeur Show */}
-      <section>
-        <div className="text-center max-w-xl mx-auto mb-10">
-          <p className="text-xs font-bold tracking-widest text-primary uppercase">Elite Crew</p>
-          <h2 className="mt-2 font-display text-3xl font-bold text-navy">
-            Our Professional Chauffeurs
-          </h2>
-          <p className="text-gray-500 text-sm mt-2">
-            Every driver at Swaraj Travel undergoes safety training, route testing, and customer service certification.
-          </p>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {DRIVERS.map((drv, idx) => {
-            const isSelected = selectedDriver === idx;
-            return (
-              <div
-                key={drv.name}
-                onClick={() => setSelectedDriver(isSelected ? null : idx)}
-                className={`rounded-2xl bg-white border transition-all duration-300 cursor-pointer overflow-hidden group shadow-sm ${
-                  isSelected
-                    ? "border-primary ring-4 ring-primary/5 shadow-md"
-                    : "border-gray-100 hover:border-primary/20 hover:shadow-md"
-                }`}
-              >
-                {/* Driver Photo with overlay badge */}
-                <div className="relative h-48 w-full overflow-hidden bg-gray-100">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={drv.img}
-                    alt={drv.name}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute top-3 right-3 text-[10px] font-bold text-white bg-primary px-2.5 py-1 rounded-full shadow-sm">
-                    {drv.badge}
-                  </span>
-                </div>
-
-                {/* Driver info */}
-                <div className="p-5">
-                  <h3 className="font-display text-lg font-bold text-navy group-hover:text-primary transition-colors">
-                    {drv.name}
-                  </h3>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs font-semibold text-gray-400">Rating:</span>
-                    <span className="text-xs font-bold text-amber-500 flex items-center gap-0.5">
-                      ★ {drv.rating}
-                    </span>
-                  </div>
-
-                  {/* Expanded driver details */}
-                  {isSelected ? (
-                    <div className="mt-4 pt-4 border-t border-dashed border-gray-100 text-xs text-gray-600 space-y-2 animate-fade-in-scale">
-                      <div>
-                        <span className="font-semibold text-navy">Experience: </span>
-                        {drv.experience} driving in Maharashtra.
-                      </div>
-                      <div>
-                        <span className="font-semibold text-navy">Completed Trips: </span>
-                        {drv.trips} verified outstations.
-                      </div>
-                      <div>
-                        <span className="font-semibold text-navy">Route Specialty: </span>
-                        {drv.specialty}.
-                      </div>
-                      <div className="text-[10px] text-primary font-bold mt-2 uppercase tracking-wide">
-                        Click again to close details
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="mt-3 text-xs text-primary font-bold uppercase tracking-wider flex items-center gap-1">
-                      <span>Show Driver Stats</span>
-                      <svg className="h-3 w-3 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
         </div>
       </section>
     </div>

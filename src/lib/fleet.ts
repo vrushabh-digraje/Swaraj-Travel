@@ -27,7 +27,21 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹20/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/innova.webp",
+    image: "/images/innova-crysta.webp",
+    popular: true,
+  },
+  {
+    id: "honda-city",
+    name: "Honda City",
+    category: "Sedan",
+    seats: "4+1",
+    luggage: "2 Bags",
+    fuel: "Petrol",
+    climate: "AC",
+    ratePerKm: "₹16/km",
+    ratePerHour: "N/A",
+    rating: "4.8",
+    image: "/images/honda-city.webp",
     popular: true,
   },
   {
@@ -41,7 +55,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹15/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/toyota-etios.webp",
+    image: "/images/toyota-etios.webp",
     popular: true,
   },
   {
@@ -55,7 +69,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹16/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/ertiga.webp",
+    image: "/images/ertiga.webp",
     popular: true,
   },
   {
@@ -69,7 +83,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹14/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/swift-dzire.webp",
+    image: "/images/swift-dzire.webp",
     popular: true,
   },
   {
@@ -83,7 +97,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹14/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/aura.webp",
+    image: "/images/aura.webp",
   },
   {
     id: "innova",
@@ -96,7 +110,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹24/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/innova-crysta.webp",
+    image: "/images/innova.webp",
   },
   {
     id: "scorpio",
@@ -109,7 +123,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹24/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/scorpio.webp",
+    image: "/images/scorpio.webp",
   },
   {
     id: "audi",
@@ -122,7 +136,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "On Call",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/audi.webp",
+    image: "/images/audi.webp",
   },
   {
     id: "tavera",
@@ -135,7 +149,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹26/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/tavera.webp",
+    image: "/images/tavera.webp",
   },
   {
     id: "kia-carens",
@@ -148,20 +162,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹20/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/kia-carens.webp",
-  },
-  {
-    id: "honda-city",
-    name: "Honda City",
-    category: "Sedan",
-    seats: "4+1",
-    luggage: "2 Bags",
-    fuel: "Petrol",
-    climate: "AC",
-    ratePerKm: "₹16/km",
-    ratePerHour: "N/A",
-    rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/honda-city.webp",
+    image: "/images/kia-carens.webp",
   },
   {
     id: "amaze",
@@ -174,7 +175,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "On Call",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/amaze.webp",
+    image: "/images/amaze.webp",
   },
   {
     id: "toyota-corolla",
@@ -187,7 +188,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹17/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/toyota-corolla.webp",
+    image: "/images/toyota-corolla.webp",
   },
   {
     id: "tempo-traveller-ac",
@@ -200,7 +201,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹32/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/tempo-traveller.webp",
+    image: "/images/tempo-traveller.webp",
   },
   {
     id: "tempo-traveller-non-ac",
@@ -213,7 +214,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹28/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/tempo-traveller.webp",
+    image: "/images/tempo-traveller.webp",
   },
   {
     id: "mini-bus",
@@ -226,7 +227,7 @@ export const VEHICLES: Vehicle[] = [
     ratePerKm: "₹55/km",
     ratePerHour: "N/A",
     rating: "4.8",
-    image: "https://www.swarajtravel.com/assets/images/fleet/mini-bus.webp",
+    image: "/images/mini-bus.webp",
   },
 ];
 
