@@ -23,8 +23,9 @@ export function Footer() {
     <footer className="bg-navy text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-4">
         <div>
-          <div className="mb-4">
-            <img src="/logo.png" alt="Book A Cab Logo" className="h-12 w-auto object-contain brightness-0 invert" />
+          <div className="mb-4 flex items-center gap-3">
+            <img src="/logo.png" alt="Book A Cab Logo" className="h-10 w-auto object-contain brightness-0 invert" />
+            <strong className="font-display text-lg">{SITE.name}</strong>
           </div>
           <p className="text-sm text-gray-400">
             Your trusted partner for comfortable and safe travel across

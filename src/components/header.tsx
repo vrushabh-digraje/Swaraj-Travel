@@ -50,7 +50,15 @@ export function Header() {
         >
           <div className="flex items-center justify-between px-3 py-2 md:px-5 md:py-3">
             <Link href="/" className="flex items-center gap-2 md:gap-3">
-              <img src="/logo.png" alt="Book A Cab Logo" className="h-10 w-auto md:h-12 object-contain" />
+              <img src="/logo.png" alt="Book A Cab Logo" className="h-9 w-auto md:h-11 object-contain" />
+              <span>
+                <span className="block font-display text-sm font-bold leading-none text-navy md:text-lg">
+                  {SITE.name}
+                </span>
+                <span className="mt-0.5 hidden text-[10px] text-gray-500 md:block">
+                  {SITE.shortTagline}
+                </span>
+              </span>
             </Link>
 
             <ul className="hidden items-center gap-1 lg:flex">
