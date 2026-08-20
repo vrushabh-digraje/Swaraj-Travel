@@ -23,11 +23,8 @@ export function Footer() {
     <footer className="bg-navy text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-4">
         <div>
-          <div className="mb-4 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent">
-              <LogoIcon className="h-5 w-5" />
-            </span>
-            <strong className="font-display text-lg">{SITE.name}</strong>
+          <div className="mb-4">
+            <img src="/logo.png" alt="Book A Cab Logo" className="h-12 w-auto object-contain brightness-0 invert" />
           </div>
           <p className="text-sm text-gray-400">
             Your trusted partner for comfortable and safe travel across

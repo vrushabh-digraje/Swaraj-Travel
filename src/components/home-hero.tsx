@@ -62,16 +62,15 @@ export function HomeHero() {
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-accent text-navy">
               ★
             </span>
-            India’s #1 Premium Cab Service
+            Trusted Airport & Outstation Cabs
           </p>
-          <h1 className="font-display text-4xl font-black leading-tight md:text-6xl lg:text-7xl">
-            <span className="block">Ride with</span>
-            <span className="gradient-text block">Confidence</span>
+          <h1 className="font-display text-4xl font-black leading-tight md:text-5xl lg:text-6xl">
+            <span className="block">Safe, Reliable</span>
+            <span className="gradient-text block">& Comfortable Rides</span>
           </h1>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-accent to-primary lg:mx-0" />
           <p className="mx-auto mt-6 max-w-lg text-lg text-white/80 lg:mx-0">
-            Experience luxury on wheels with our premium fleet. Safe,
-            comfortable, and punctual rides across Maharashtra, available 24/7.
+            Seamless travel solutions across Maharashtra. Enjoy safe, punctual airport drops, outstation trips, and local rides with verified drivers and premium AC vehicles.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
             <Button size="lg" onClick={() => openBooking()}>
