@@ -8,10 +8,10 @@ export const SITE = {
   shortTagline: "Premium Rides",
   description:
     "Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra. 24/7 support, verified drivers, and instant booking on WhatsApp.",
-  phone: "+918856904131",
-  phoneDisplay: "+91-8856904131",
+  phone: "+919970294122",
+  phoneDisplay: "+91-9970294122",
   email: "bookings@bookacab.co.in",
-  whatsapp: "918856904131",
+  whatsapp: "919970294122",
   address: "Near Airport, Mumbai, Maharashtra, India",
   city: "Mumbai",
   region: "Maharashtra",

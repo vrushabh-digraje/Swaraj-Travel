@@ -10,7 +10,7 @@ import { createMetadata } from "@/lib/site";
 export const metadata = createMetadata({
   title: "Contact Book A Cab | Mumbai Booking & Support",
   description:
-    "Contact Book A Cab for Mumbai cab booking and 24/7 support. Call +91-8856904131, WhatsApp, or email bookings@bookacab.co.in. Near Airport, Mumbai.",
+    "Contact Book A Cab for Mumbai cab booking and 24/7 support. Call +91-9970294122, WhatsApp, or email bookings@bookacab.co.in. Near Airport, Mumbai.",
   path: "/contact",
 });
 
