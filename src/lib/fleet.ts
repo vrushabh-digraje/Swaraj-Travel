@@ -38,7 +38,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "2 Bags",
     fuel: "Petrol",
     climate: "AC",
-    ratePerKm: "₹16/km",
+    ratePerKm: "₹18/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/honda-city.webp",
@@ -52,7 +52,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "2 Bags",
     fuel: "Diesel",
     climate: "AC",
-    ratePerKm: "₹15/km",
+    ratePerKm: "₹14/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/toyota-etios.webp",
@@ -80,7 +80,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "2 Bags",
     fuel: "Petrol",
     climate: "AC",
-    ratePerKm: "₹14/km",
+    ratePerKm: "₹13/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/swift-dzire.webp",
@@ -94,7 +94,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "2 Bags",
     fuel: "Petrol",
     climate: "AC",
-    ratePerKm: "₹14/km",
+    ratePerKm: "₹13/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/aura.webp",
@@ -107,49 +107,10 @@ export const VEHICLES: Vehicle[] = [
     luggage: "5 Bags",
     fuel: "Diesel",
     climate: "AC",
-    ratePerKm: "₹24/km",
+    ratePerKm: "₹18/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/innova.webp",
-  },
-  {
-    id: "scorpio",
-    name: "Scorpio",
-    category: "SUV",
-    seats: "8+1",
-    luggage: "4 Bags",
-    fuel: "Diesel",
-    climate: "AC",
-    ratePerKm: "₹24/km",
-    ratePerHour: "N/A",
-    rating: "4.8",
-    image: "/images/scorpio.webp",
-  },
-  {
-    id: "audi",
-    name: "Audi",
-    category: "Sedan",
-    seats: "4+1",
-    luggage: "3 Bags",
-    fuel: "Petrol",
-    climate: "AC",
-    ratePerKm: "On Call",
-    ratePerHour: "N/A",
-    rating: "4.8",
-    image: "/images/audi.webp",
-  },
-  {
-    id: "tavera",
-    name: "Tavera",
-    category: "SUV",
-    seats: "8+1",
-    luggage: "8 Bags",
-    fuel: "Diesel",
-    climate: "AC",
-    ratePerKm: "₹26/km",
-    ratePerHour: "N/A",
-    rating: "4.8",
-    image: "/images/tavera.webp",
   },
   {
     id: "kia-carens",
@@ -159,7 +120,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "4 Bags",
     fuel: "Petrol",
     climate: "AC",
-    ratePerKm: "₹20/km",
+    ratePerKm: "₹18/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/kia-carens.webp",
@@ -198,7 +159,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "10 Bags",
     fuel: "Diesel",
     climate: "AC",
-    ratePerKm: "₹32/km",
+    ratePerKm: "₹28/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/tempo-traveller.webp",
@@ -211,7 +172,7 @@ export const VEHICLES: Vehicle[] = [
     luggage: "10 Bags",
     fuel: "Diesel",
     climate: "Non-AC",
-    ratePerKm: "₹28/km",
+    ratePerKm: "₹26/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/tempo-traveller.webp",
@@ -224,10 +185,23 @@ export const VEHICLES: Vehicle[] = [
     luggage: "Large",
     fuel: "Diesel",
     climate: "AC",
-    ratePerKm: "₹55/km",
+    ratePerKm: "₹50/km",
     ratePerHour: "N/A",
     rating: "4.8",
     image: "/images/mini-bus.webp",
+  },
+  {
+    id: "urbania",
+    name: "Force Urbania",
+    category: "Bus",
+    seats: "17",
+    luggage: "12 Bags",
+    fuel: "Diesel",
+    climate: "AC",
+    ratePerKm: "₹35/km",
+    ratePerHour: "N/A",
+    rating: "4.8",
+    image: "/images/urbania.webp",
   },
 ];
 
@@ -243,4 +217,16 @@ export const POPULAR_VEHICLES = VEHICLES.filter((vehicle) => vehicle.popular);
 
 export function vehicleLabel(vehicle: Vehicle) {
   return `${vehicle.name} - ${vehicle.category} (${vehicle.seats} Seats, ${vehicle.luggage}) - ${vehicle.ratePerKm}`;
+}
+
+export function getVehicleBgColor(image: string): string {
+  if (image.includes("innova-crysta.webp")) return "#e8e8e8";
+  if (image.includes("urbania.webp")) return "#e1e1e1";
+  if (image.includes("toyota-etios.webp")) return "#f8fafb";
+  if (image.includes("swift-dzire.webp")) return "#f7f7f7";
+  if (image.includes("tavera.webp")) return "#fafafa";
+  if (image.includes("tempo-traveller.webp")) return "#fafafa";
+  if (image.includes("kia-carens.webp")) return "#fefefe";
+  if (image.includes("mini-bus.webp")) return "#fefefe";
+  return "#ffffff";
 }

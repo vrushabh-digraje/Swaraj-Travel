@@ -44,7 +44,7 @@ export default function OutstationPage() {
         description="Door-to-door cabs from Mumbai to Pune, Nashik, Shirdi, Mahabaleshwar, and more. One-way, round-trip, and airport transfers."
         stats={[
           { value: "4", label: "Featured routes" },
-          { value: "From ₹14/km", label: "Starting fare" },
+          { value: "From ₹13/km", label: "Starting fare" },
           { value: "24/7", label: "Pickup" },
         ]}
       />

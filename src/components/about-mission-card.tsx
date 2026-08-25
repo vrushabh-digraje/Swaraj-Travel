@@ -9,20 +9,23 @@ const TABS = [
     label: "Our Mission",
     title: "Our Mission",
     image: "/about-reception.webp",
+    bgColor: "#f3f4f6", // bg-gray-100
     text: "To be a trusted transportation partner in Maharashtra, delivering value through safe, reliable, and customer-first cab services for airport, local, and outstation travel."
   },
   {
     id: "vision",
     label: "Our Vision",
     title: "Our Vision",
-    image: "/images/swift-dzire.webp",
+    image: "/images/urbania.webp",
+    bgColor: "#e1e1e1", // matches urbania.webp background
     text: "To revolutionize city and outstation travel in Maharashtra by combining standard-setting passenger safety, certified local chauffeurs, and a transparent zero-hidden-fee pricing structure."
   },
   {
     id: "guarantee",
     label: "Our Guarantee",
     title: "Our Guarantee",
-    image: "/images/ertiga.webp",
+    image: "/images/innova-crysta.webp",
+    bgColor: "#e8e8e8", // matches innova-crysta.webp background
     text: "We guarantee 100% on-time arrivals, freshly sanitized vehicles, and professional, background-verified highway drivers for all airport, local, and outstation trips."
   }
 ];
@@ -51,13 +54,16 @@ export function AboutMissionCard() {
         {/* Top Image Container with zoom click action */}
         <div 
           onClick={() => setIsLightboxOpen(true)}
-          className="relative h-56 w-full overflow-hidden bg-gray-100 cursor-zoom-in group/img"
+          style={{ backgroundColor: current.bgColor || "#ffffff" }}
+          className="relative h-56 w-full overflow-hidden cursor-zoom-in group/img transition-all duration-300"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={current.image}
             alt={current.title}
-            className={`h-full w-full object-cover transition-all duration-300 ease-in-out group-hover/img:scale-105 ${
+            className={`h-full w-full transition-all duration-300 ease-in-out group-hover/img:scale-105 ${
+              current.id === "mission" ? "object-cover" : "object-contain"
+            } ${
               isTransitioning ? "opacity-40 blur-[2px]" : "opacity-100 blur-0"
             }`}
           />

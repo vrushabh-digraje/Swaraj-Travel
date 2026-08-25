@@ -21,7 +21,10 @@ function BookingModalInner() {
   const [tripType, setTripType] = useState("");
   const [pickup, setPickup] = useState("");
   const [drop, setDrop] = useState("");
-  const [datetime, setDatetime] = useState("");
+  const [pickupDate, setPickupDate] = useState("");
+  const [pickupTime, setPickupTime] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+  const [returnTime, setReturnTime] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -30,7 +33,10 @@ function BookingModalInner() {
     tripType: false,
     pickup: false,
     drop: false,
-    datetime: false,
+    pickupDate: false,
+    pickupTime: false,
+    returnDate: false,
+    returnTime: false,
     name: false,
     phone: false,
   });
@@ -40,7 +46,10 @@ function BookingModalInner() {
     tripType: tripType !== "",
     pickup: pickup.trim().length >= 3,
     drop: drop.trim().length >= 3,
-    datetime: datetime !== "",
+    pickupDate: pickupDate !== "",
+    pickupTime: pickupTime !== "",
+    returnDate: tripType === "Round Trip" ? returnDate !== "" : true,
+    returnTime: tripType === "Round Trip" ? returnTime !== "" : true,
     name: name.trim().length >= 3,
     phone: /^[0-9+\s-]{10,15}$/.test(phone),
   };
@@ -76,7 +85,10 @@ function BookingModalInner() {
       tripType: true,
       pickup: true,
       drop: true,
-      datetime: true,
+      pickupDate: true,
+      pickupTime: true,
+      returnDate: true,
+      returnTime: true,
       name: true,
       phone: true,
     });
@@ -90,10 +102,13 @@ function BookingModalInner() {
       `Phone: ${phone}`,
       `Cab: ${cab || "Not selected"}`,
       `Trip type: ${tripType}`,
-      `Pickup: ${pickup}`,
-      `Drop: ${drop}`,
-      `Date & time: ${datetime}`,
-    ].join("\n");
+      `Pickup Location: ${pickup}`,
+      `Drop Location: ${drop}`,
+      `Pickup Date: ${pickupDate}`,
+      `Pickup Time: ${pickupTime}`,
+      returnDate ? `Return Date: ${returnDate}` : "",
+      returnTime ? `Return Time: ${returnTime}` : "",
+    ].filter(Boolean).join("\n");
 
     window.open(whatsappHref(message), "_blank", "noopener,noreferrer");
     closeBooking();
@@ -250,21 +265,72 @@ function BookingModalInner() {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Pickup Date & Time">
+            <Field label="Pickup Date">
               <div className="relative mt-1">
                 <input 
-                  name="datetime" 
-                  type="datetime-local" 
-                  value={datetime}
-                  onChange={(e) => setDatetime(e.target.value)}
-                  onBlur={() => setTouched(prev => ({ ...prev, datetime: true }))}
-                  className={`w-full rounded-xl border pl-3 pr-10 py-2.5 outline-none transition-all duration-200 focus:ring-2 focus:ring-primary/20 ${
-                    touched.datetime && !validations.datetime ? "border-red-400" : "border-gray-200 focus:border-primary"
+                  name="pickupDate" 
+                  type="date" 
+                  value={pickupDate}
+                  onChange={(e) => setPickupDate(e.target.value)}
+                  onBlur={() => setTouched(prev => ({ ...prev, pickupDate: true }))}
+                  className={`w-full rounded-xl border px-3 py-2.5 outline-none transition-all duration-200 focus:ring-2 focus:ring-primary/20 ${
+                    touched.pickupDate && !validations.pickupDate ? "border-red-400" : "border-gray-200 focus:border-primary"
                   }`} 
                   required 
                 />
               </div>
             </Field>
+            <Field label="Pickup Time">
+              <div className="relative mt-1">
+                <input 
+                  name="pickupTime" 
+                  type="time" 
+                  value={pickupTime}
+                  onChange={(e) => setPickupTime(e.target.value)}
+                  onBlur={() => setTouched(prev => ({ ...prev, pickupTime: true }))}
+                  className={`w-full rounded-xl border px-3 py-2.5 outline-none transition-all duration-200 focus:ring-2 focus:ring-primary/20 ${
+                    touched.pickupTime && !validations.pickupTime ? "border-red-400" : "border-gray-200 focus:border-primary"
+                  }`} 
+                  required 
+                />
+              </div>
+            </Field>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field label={tripType === "Round Trip" ? "Return Date" : "Return Date (Optional)"}>
+              <div className="relative mt-1">
+                <input 
+                  name="returnDate" 
+                  type="date" 
+                  value={returnDate}
+                  onChange={(e) => setReturnDate(e.target.value)}
+                  onBlur={() => setTouched(prev => ({ ...prev, returnDate: true }))}
+                  className={`w-full rounded-xl border px-3 py-2.5 outline-none transition-all duration-200 focus:ring-2 focus:ring-primary/20 ${
+                    touched.returnDate && !validations.returnDate ? "border-red-400" : "border-gray-200 focus:border-primary"
+                  }`} 
+                  required={tripType === "Round Trip"} 
+                />
+              </div>
+            </Field>
+            <Field label={tripType === "Round Trip" ? "Return Time" : "Return Time (Optional)"}>
+              <div className="relative mt-1">
+                <input 
+                  name="returnTime" 
+                  type="time" 
+                  value={returnTime}
+                  onChange={(e) => setReturnTime(e.target.value)}
+                  onBlur={() => setTouched(prev => ({ ...prev, returnTime: true }))}
+                  className={`w-full rounded-xl border px-3 py-2.5 outline-none transition-all duration-200 focus:ring-2 focus:ring-primary/20 ${
+                    touched.returnTime && !validations.returnTime ? "border-red-400" : "border-gray-200 focus:border-primary"
+                  }`} 
+                  required={tripType === "Round Trip"} 
+                />
+              </div>
+            </Field>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
             <Field label="Full Name">
               <div className="relative mt-1">
                 <input 
@@ -291,9 +357,6 @@ function BookingModalInner() {
                 )}
               </div>
             </Field>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
             <Field label="Phone Number">
               <div className="relative mt-1">
                 <input
@@ -322,11 +385,12 @@ function BookingModalInner() {
                 )}
               </div>
             </Field>
-            <div className="flex items-end">
-              <Button type="submit" className="w-full h-[46px]" size="md">
-                Send Inquiry on WhatsApp
-              </Button>
-            </div>
+          </div>
+
+          <div className="flex pt-2">
+            <Button type="submit" className="w-full h-[48px]" size="lg">
+              Send Inquiry on WhatsApp
+            </Button>
           </div>
         </form>
       </div>

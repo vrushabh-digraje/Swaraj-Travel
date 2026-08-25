@@ -11,7 +11,7 @@ export function FleetGrid({
   vehicles?: typeof VEHICLES;
   showFilter?: boolean;
 }) {
-  const [category, setCategory] = useState<"All" | VehicleCategory>("All");
+  const [category, setCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
   const [seatingFilter, setSeatingFilter] = useState("All");
   const [sortBy, setSortBy] = useState("default");
@@ -20,7 +20,16 @@ export function FleetGrid({
     return vehicles
       .filter((vehicle) => {
         // Category filter
-        const matchesCategory = category === "All" || vehicle.category === category;
+        let matchesCategory = true;
+        if (category !== "All") {
+          if (category === "Mini Bus") {
+            matchesCategory = vehicle.id === "mini-bus";
+          } else if (category === "Urbania") {
+            matchesCategory = vehicle.id === "urbania" || vehicle.id.includes("tempo-traveller");
+          } else {
+            matchesCategory = vehicle.category === category;
+          }
+        }
         
         // Search query filter
         const matchesSearch = vehicle.name
@@ -69,22 +78,27 @@ export function FleetGrid({
         <div className="mb-8 flex flex-col gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
           {/* Category Tabs Row */}
           <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
-            {FLEET_CATEGORIES.map((item) => (
+            {[
+              { id: "All", label: "All", count: 14 },
+              { id: "SUV", label: "SUV", count: 8 },
+              { id: "Hatchback", label: "Hatchback", count: 2 },
+              { id: "Sedan", label: "Sedan", count: 4 },
+              { id: "Mini Bus", label: "Mini Bus", count: 1 },
+              { id: "Urbania", label: "Urbania", count: 2 },
+            ].map((item) => (
               <button
-                key={item}
+                key={item.id}
                 type="button"
-                onClick={() => setCategory(item)}
+                onClick={() => setCategory(item.id)}
                 className={`rounded-full px-5 py-2 text-sm font-semibold transition-all duration-200 active:scale-95 cursor-pointer ${
-                  category === item
+                  category === item.id
                     ? "bg-primary text-white shadow-md shadow-primary/25"
                     : "bg-gray-50 text-navy hover:bg-gray-100 hover:text-primary"
                 }`}
               >
-                {item}
-                <span className={`ml-1.5 text-xs ${category === item ? "text-white/80" : "text-gray-400"}`}>
-                  ({item !== "All"
-                    ? vehicles.filter((vehicle) => vehicle.category === item).length
-                    : vehicles.length})
+                {item.label}
+                <span className={`ml-1.5 text-xs ${category === item.id ? "text-white/80" : "text-gray-400"}`}>
+                  ({item.count})
                 </span>
               </button>
             ))}

@@ -126,7 +126,7 @@ export default function Home() {
               Popular Outstation Routes
             </h2>
             <p className="mt-3 text-lg text-gray-600">
-              {"Direct cabs from Mumbai to Maharashtra's most booked destinations"}
+              {"Direct cabs to Maharashtra's most booked outstation destinations"}
             </p>
           </div>
           <div className="scrollbar-none -mx-4 flex gap-6 overflow-x-auto px-4 pb-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-2 md:px-0 md:pb-0 lg:grid-cols-4">
@@ -215,14 +215,16 @@ export default function Home() {
               Explore Services
             </Button>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {SERVICES.slice(0, 3).map((service) => (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {SERVICES.slice(0, 4).map((service) => (
               <Card key={service.slug} className="p-6">
                 <h3 className="font-display text-xl font-bold text-navy">
                   {service.title}
                 </h3>
                 <p className="mt-2 text-gray-600">{service.description}</p>
-                <p className="mt-3 font-semibold text-primary">{service.price}</p>
+                {service.price && (
+                  <p className="mt-3 font-semibold text-primary">{service.price}</p>
+                )}
               </Card>
             ))}
           </div>

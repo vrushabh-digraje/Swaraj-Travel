@@ -40,9 +40,9 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Pune",
     title: "Mumbai to Pune Cab",
-    metaTitle: "Mumbai to Pune Cab | Reliable One Way & Round Trip Taxi @ ₹14/km",
+    metaTitle: "Mumbai to Pune Cab | Reliable One Way & Round Trip Taxi @ ₹13/km",
     metaDescription:
-      "Book a Mumbai to Pune cab with Book A Cab. One-way and round-trip taxis via the Expressway, airport drops from T1/T2, Innova Crysta and Dzire from ₹14/km.",
+      "Book a Mumbai to Pune cab with Book A Cab. One-way and round-trip taxis via the Expressway, airport drops from T1/T2, Innova Crysta and Dzire from ₹13/km.",
     distance: "148 km",
     duration: "3 hours",
     badge: "Most Popular Route",
@@ -64,7 +64,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
       {
         question: "How much is the cab fare from Mumbai to Pune?",
         answer:
-          "Mumbai to Pune cab fares start from ₹14/km. The total depends on the car type and whether you choose one-way or round trip. Tolls and parking are extra as actuals.",
+          "Mumbai to Pune cab fares start from ₹13/km. The total depends on the car type and whether you choose one-way or round trip. Tolls and parking are extra as actuals.",
       },
       {
         question: "Do you provide Mumbai Airport to Pune cab service?",
@@ -123,7 +123,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Nashik",
     title: "Mumbai to Nashik Cab",
-    metaTitle: "Mumbai to Nashik Cab | Reliable One Way & Round Trip Taxi @ ₹14/km",
+    metaTitle: "Mumbai to Nashik Cab | Reliable One Way & Round Trip Taxi @ ₹13/km",
     metaDescription:
       "Book a Mumbai to Nashik cab for wine tours, Trimbakeshwar darshan, or airport drops. One-way and round-trip taxis on NH160 with 24/7 pickup.",
     distance: "167 km",
@@ -206,7 +206,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Shirdi",
     title: "Mumbai to Shirdi Cab",
-    metaTitle: "Mumbai to Shirdi Cab | Reliable Taxi Service starting From ₹14/km",
+    metaTitle: "Mumbai to Shirdi Cab | Reliable Taxi Service starting From ₹13/km",
     metaDescription:
       "Book a Mumbai to Shirdi cab for Sai Baba darshan. Airport pickup, Innova Crysta family cars, and Samruddhi Mahamarg route with 24/7 service.",
     distance: "240 km",
@@ -347,6 +347,68 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
       { title: "Pratapgad Fort", body: "Historic Maratha fort about 22 km from the market." },
       { title: "Elephant's Head Point", body: "Natural rock formation with a cliff-side view." },
       { title: "Parsi Point, Panchgani", body: "Tea-break viewpoint over the Krishna valley." },
+    ],
+  },
+  {
+    slug: "pune-to-mumbai-cab",
+    from: "Pune",
+    to: "Mumbai",
+    title: "Pune to Mumbai Cab",
+    metaTitle: "Pune to Mumbai Cab | Reliable One Way & Round Trip Taxi @ ₹13/km",
+    metaDescription:
+      "Book a Pune to Mumbai cab with Book A Cab. Comfortable one-way drops, airport transfers to Mumbai T1/T2, and round trips via the Expressway from ₹13/km.",
+    distance: "148 km",
+    duration: "3 hours",
+    badge: "Business Express Route",
+    headline: "Punctual Pune to Mumbai Cab Service",
+    intro:
+      "Need a dependable ride? Book A Cab offers premium Pune to Mumbai taxi service via the Mumbai-Pune Expressway. Perfect for business meetings, airport drops to Mumbai T1/T2, or weekend trips in clean, air-conditioned hatchbacks, sedans, and SUVs.",
+    highlights: [
+      { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
+      { title: "Mumbai Airport Drops", body: "Direct drop to Mumbai T1 or T2 airport departures." },
+      { title: "Expressway Experts", body: "Chauffeurs who know the Expressway and ghat routes." },
+      { title: "Clean AC Vehicles", body: "Serviced, sanitized cabs for safe city-to-city travel." },
+    ],
+    stats: [
+      { value: "148 km", label: "Distance" },
+      { value: "3-4 hours", label: "Duration" },
+      { value: "24/7", label: "Available" },
+    ],
+    faqs: [
+      {
+        question: "How much is the cab fare from Pune to Mumbai?",
+        answer:
+          "Pune to Mumbai cab fares start from ₹13/km. The total depends on the car type and whether you choose one-way or round trip. Tolls and parking are extra as actuals.",
+      },
+      {
+        question: "Do you provide Pune to Mumbai Airport cab service?",
+        answer:
+          "Yes. We specialize in drops to Mumbai Airport T1/T2. Our drivers plan for highway traffic so you reach departures on time.",
+      },
+      {
+        question: "Which route do you take?",
+        answer:
+          "We travel via the Mumbai-Pune Expressway (toll road) for a fast, comfortable, and smooth 3-hour journey.",
+      },
+    ],
+    guideTitle: "Pune to Mumbai Road Trip Guide",
+    guideIntro:
+      "The drive between Pune and Mumbai via the Expressway is one of the most popular and scenic highway routes in Maharashtra, crossing the beautiful Western Ghats.",
+    routeMap: {
+      primary: "Pune → Lonavala → Khalapur → Panvel → Mumbai",
+      via: "Mumbai-Pune Expressway",
+      toll: "Expressway tolls are extra as actuals.",
+      mapsUrl: "https://maps.google.com/maps?q=Pune+to+Mumbai&t=&z=10&ie=UTF8&iwloc=&output=embed",
+    },
+    stops: [
+      {
+        title: "Lonavala Food Plazas",
+        body: "The famous mid-way pitstops offering hot Chikki, South Indian snacks, Vada Pav, and clean restroom facilities.",
+      },
+      {
+        title: "Khandala Ghat Scenic Points",
+        body: "Beautiful valley views during the monsoon season. Our drivers are trained to navigate the steep descent safely.",
+      },
     ],
   },
 ];

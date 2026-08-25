@@ -41,28 +41,32 @@ const MILESTONES = [
     title: "The Genesis",
     description: "Book A Cab started with only 5 vehicles in Mumbai, focusing solely on reliable airport pickups and local drops.",
     stat: "5 Cabs · 1 City",
-    img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=500&q=80",
+    img: "/images/swift-dzire.webp",
+    bgColor: "#f7f7f7",
   },
   {
     year: "2020",
     title: "Expressway Expansion",
     description: "Despite challenges, we expanded our services to the Mumbai-Pune Expressway and Nashik highway routes with specialized ghat drivers.",
     stat: "25 Cabs · 10K+ Trips",
-    img: "https://images.unsplash.com/photo-1602643163983-ed0babc39797?auto=format&fit=crop&w=500&q=80",
+    img: "/images/innova.webp",
+    bgColor: "#ffffff",
   },
   {
     year: "2023",
     title: "Scale & Digital Booking",
     description: "Launched corporate travel tie-ups and expanded our fleet to include luxury SUVs (Innova Crysta) and buses for travel groups.",
     stat: "80 Cabs · 30K+ Happy Customers",
-    img: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=500&q=80",
+    img: "/images/innova-crysta.webp",
+    bgColor: "#e8e8e8",
   },
   {
     year: "2026",
     title: "Pan-Maharashtra Reach",
     description: "Now serving over 50 cities and towns across Maharashtra. Launching interactive routes maps, transparent fares booking, and 24/7 live chat.",
     stat: "120+ Cabs · 50+ Cities covered",
-    img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=500&q=80",
+    img: "/images/urbania.webp",
+    bgColor: "#e1e1e1",
   },
 ];
 
@@ -152,12 +156,23 @@ export function AboutInteractive() {
             isTransitioning ? "opacity-0 translate-y-2 scale-[0.98] blur-[1px]" : "opacity-100 translate-y-0 scale-100 blur-0"
           }`}>
             {/* Left Image */}
-            <div className="relative h-48 md:h-full w-full overflow-hidden bg-gray-100 min-h-[200px]">
+            <div 
+              style={{ backgroundColor: currentMilestone.bgColor || "#f3f4f6" }}
+              className={`relative h-48 md:h-full w-full overflow-hidden transition-all duration-300 ${
+                currentMilestone.year === "2020"
+                  ? "min-h-[220px] flex items-end justify-center px-6 pt-8 pb-1"
+                  : "min-h-[200px] flex items-center justify-center p-4"
+              }`}
+            >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={currentMilestone.img}
                 alt={currentMilestone.title}
-                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                className={
+                  currentMilestone.year === "2020"
+                    ? "max-h-[90%] w-full object-contain transition-all duration-500 translate-y-2 hover:translate-y-0 hover:scale-[1.03]"
+                    : "h-full w-full object-contain transition-transform duration-500 hover:scale-105"
+                }
               />
             </div>
             

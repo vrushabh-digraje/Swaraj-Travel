@@ -20,7 +20,7 @@ export function ServicesList() {
   const filteredServices = SERVICES.filter((service) => {
     // Categorize services based on slug
     let cat = "local";
-    if (service.slug === "outstation-trips") {
+    if (service.slug === "outstation-trips" || service.slug === "one-way-pickup-drop") {
       cat = "outstation";
     } else if (
       service.slug === "corporate-services" ||
@@ -104,7 +104,9 @@ export function ServicesList() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 font-semibold text-primary">{service.price}</p>
+              {service.price && (
+                <p className="mt-4 font-semibold text-primary">{service.price}</p>
+              )}
               <div className="mt-auto pt-5">
                 <BookNowButton cab={service.title} className="w-full" />
               </div>

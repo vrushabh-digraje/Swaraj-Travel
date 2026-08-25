@@ -10,7 +10,7 @@ import {
   UsersIcon,
 } from "@/components/icons";
 import { useBooking } from "@/lib/booking-context";
-import type { Vehicle } from "@/lib/fleet";
+import { type Vehicle, getVehicleBgColor } from "@/lib/fleet";
 
 const categoryColor: Record<Vehicle["category"], string> = {
   SUV: "bg-emerald-500",
@@ -25,7 +25,8 @@ export function FleetCard({ vehicle }: { vehicle: Vehicle }) {
   return (
     <Card className="overflow-hidden group">
       <div
-        className="relative h-44 md:h-56 w-full overflow-hidden bg-white border-b border-gray-100 flex items-center justify-center p-5"
+        style={{ backgroundColor: getVehicleBgColor(vehicle.image) }}
+        className="relative h-44 md:h-56 w-full overflow-hidden border-b border-gray-100 flex items-center justify-center p-5"
         aria-hidden="true"
       >
         <img

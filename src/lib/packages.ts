@@ -8,19 +8,19 @@ export type PackageRate = {
 };
 
 export const PACKAGE_RATES: PackageRate[] = [
-  { vehicle: "Innova", seating: "6+1", rate: "₹20/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
-  { vehicle: "Innova Crysta", seating: "6+1", rate: "₹24/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
-  { vehicle: "Swift Dzire", seating: "4+1", rate: "₹14/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
-  { vehicle: "Aura", seating: "4+1", rate: "₹14/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
-  { vehicle: "Toyota Etios", seating: "4+1", rate: "₹15/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
+  { vehicle: "Innova", seating: "6+1", rate: "₹18/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
+  { vehicle: "Innova Crysta", seating: "6+1", rate: "₹20/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
+  { vehicle: "Swift Dzire", seating: "4+1", rate: "₹13/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
+  { vehicle: "Aura", seating: "4+1", rate: "₹13/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
+  { vehicle: "Toyota Etios", seating: "4+1", rate: "₹14/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
+  { vehicle: "Honda City", seating: "4+1", rate: "₹18/km", driverFood: "Extra", toll: "Extra", category: "Sedan" },
   { vehicle: "Ertiga", seating: "6+1", rate: "₹16/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
-  { vehicle: "Scorpio", seating: "8+1", rate: "₹24/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
-  { vehicle: "Audi", seating: "4+1", rate: "On Call", driverFood: "Extra", toll: "Extra", category: "Luxury" },
-  { vehicle: "Tempo Traveller", seating: "13/17 seater", rate: "On Call", driverFood: "Extra", toll: "Extra", category: "Bus" },
-  { vehicle: "Mini Bus", seating: "20 seater", rate: "On Call", driverFood: "Extra", toll: "Extra", category: "Bus" },
+  { vehicle: "Kia Carens", seating: "6+1 / 7+1", rate: "₹18/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
+  { vehicle: "Tempo Traveller AC", seating: "12 seater", rate: "₹28/km", driverFood: "Extra", toll: "Extra", category: "Bus" },
+  { vehicle: "Tempo Traveller Non-AC", seating: "12 seater", rate: "₹26/km", driverFood: "Extra", toll: "Extra", category: "Bus" },
+  { vehicle: "Mini Bus", seating: "32 seater", rate: "₹50/km", driverFood: "Extra", toll: "Extra", category: "Bus" },
+  { vehicle: "Force Urbania", seating: "17 seater", rate: "₹35/km", driverFood: "Extra", toll: "Extra", category: "Bus" },
   { vehicle: "Bus", seating: "32-52", rate: "On Call", driverFood: "Extra", toll: "Extra", category: "Bus" },
-  { vehicle: "Tavera", seating: "8+1", rate: "₹26/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
-  { vehicle: "Kia Carens", seating: "6+1 / 7+1", rate: "₹20/km", driverFood: "Extra", toll: "Extra", category: "SUV" },
 ];
 
 export const PACKAGE_RULES = [
