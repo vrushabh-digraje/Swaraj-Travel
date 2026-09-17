@@ -114,19 +114,19 @@ export function MumbaiToMahabaleshwarContent() {
 
         {/* H1 - Exact match per Developer Guide */}
         <h1 className="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-          Mumbai to Mahabaleshwar Cab Booking with Swaraj Travels
+          Mumbai to Mahabaleshwar Cab Booking with Book A Cab
         </h1>
 
         {/* Intro Paragraphs with Planned Internal Links */}
         <div className="mt-4 space-y-3 text-base text-gray-700 leading-relaxed md:text-lg">
           <p>
-            Planning a trip from Mumbai to Mahabaleshwar and looking for a cab you can actually rely on. Swaraj Travels offers Mumbai to Mahabaleshwar cab booking for both one way and round trip journeys, with clear pricing shown upfront so you know exactly what you are paying for before you confirm your ride.
+            Planning a trip from Mumbai to Mahabaleshwar and looking for a cab you can actually rely on. Book A Cab offers Mumbai to Mahabaleshwar cab booking for both one way and round trip journeys, with clear pricing shown upfront so you know exactly what you are paying for before you confirm your ride.
           </p>
           <p>
             Whether you are travelling with family for a weekend break, heading out for a work trip, or planning a longer holiday around Mahabaleshwar and Panchgani, this page gives you everything you need to book with confidence.
           </p>
           <p>
-            Swaraj Travels has served thousands of passengers across Maharashtra, with a fleet of 120+ premium cabs, 24/7 availability, and a rider base of over 50,000 happy customers. On this route, our verified drivers are familiar with the Mumbai-Pune Expressway and the Mahabaleshwar ghat section, helping you travel comfortably and on time with our{" "}
+            Book A Cab has served thousands of passengers across Maharashtra, with a fleet of 120+ premium cabs, 24/7 availability, and a rider base of over 50,000 happy customers. On this route, our verified drivers are familiar with the Mumbai-Pune Expressway and the Mahabaleshwar ghat section, helping you travel comfortably and on time with our{" "}
             <Link href="/outstation" className="font-semibold text-primary underline underline-offset-4 hover:text-navy">
               outstation cab services
             </Link>.
@@ -153,7 +153,7 @@ export function MumbaiToMahabaleshwarContent() {
                 <span>Call {PHONE_NUMBER}</span>
               </a>
               <a
-                href={waLink("Hi Swaraj Travels, I want to book a Mumbai to Mahabaleshwar cab.")}
+                href={waLink("Hi Book A Cab, I want to book a Mumbai to Mahabaleshwar cab.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-2 text-white hover:bg-emerald-500 transition-colors"
@@ -176,9 +176,9 @@ export function MumbaiToMahabaleshwarContent() {
         <figure className="mt-8 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
           <div className="relative aspect-[16/9] max-h-[540px] w-full overflow-hidden bg-gray-950">
             <img
-              src="/images/mahabaleshwar-cab-hero-swaraj-travels.webp"
-              title="Mumbai to Mahabaleshwar cab by Swaraj Travels on the highway"
-              alt="Mumbai to Mahabaleshwar cab by Swaraj Travels on the highway — book online with transparent fares"
+              src="/images/mahabaleshwar-cab-hero-book-a-cab.webp"
+              title="Mumbai to Mahabaleshwar cab by Book A Cab on the highway"
+              alt="Mumbai to Mahabaleshwar cab by Book A Cab on the highway — book online with transparent fares"
               width={1200}
               height={600}
               loading="eager"
@@ -190,7 +190,7 @@ export function MumbaiToMahabaleshwarContent() {
             </div>
             <div className="absolute bottom-4 left-4 right-4 text-white">
               <p className="text-xs font-semibold uppercase tracking-wider text-amber-400">
-                Swaraj Travels Premium Outstation Fleet
+                Book A Cab Premium Outstation Fleet
               </p>
               <p className="text-lg sm:text-2xl font-bold drop-shadow">
                 Comfortable Mountain Drive to Mahabaleshwar &amp; Panchgani
@@ -198,7 +198,7 @@ export function MumbaiToMahabaleshwarContent() {
             </div>
           </div>
           <figcaption className="border-t border-gray-100 bg-gray-50 p-3 text-center text-xs font-medium text-gray-600 italic">
-            Mumbai to Mahabaleshwar cab by Swaraj Travels on the highway
+            Mumbai to Mahabaleshwar cab by Book A Cab on the highway
           </figcaption>
         </figure>
       </header>
@@ -213,7 +213,7 @@ export function MumbaiToMahabaleshwarContent() {
             One of the biggest frustrations travellers face when booking an outstation cab is not knowing the final amount until the trip is almost over. Many cab fares online show only a starting price, without mentioning toll, driver allowance, or extra charges that get added later.
           </p>
           <p>
-            At Swaraj Travels, the Mumbai to Mahabaleshwar cab fare is shown clearly before you book, so there are no surprises at the end of your trip. Our fares are calculated transparently using a per-kilometre rate plus driver allowance — the same method we apply across all our outstation services so every customer sees the same pricing logic.
+            At Book A Cab, the Mumbai to Mahabaleshwar cab fare is shown clearly before you book, so there are no surprises at the end of your trip. Our fares are calculated transparently using a per-kilometre rate plus driver allowance — the same method we apply across all our outstation services so every customer sees the same pricing logic.
           </p>
         </div>
 
@@ -353,7 +353,7 @@ export function MumbaiToMahabaleshwarContent() {
                     Book This Cab
                   </button>
                   <a
-                    href={waLink(`Hi Swaraj Travels, please quote Mumbai to Mahabaleshwar cab for ${currentVehicle.vehicle} (${tripType === "oneway" ? "One Way" : "Round Trip"}) from ${PICKUP_LOCATIONS[selectedPickupIdx].area}.`)}
+                    href={waLink(`Hi Book A Cab, please quote Mumbai to Mahabaleshwar cab for ${currentVehicle.vehicle} (${tripType === "oneway" ? "One Way" : "Round Trip"}) from ${PICKUP_LOCATIONS[selectedPickupIdx].area}.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-xl bg-emerald-600 px-3.5 py-2.5 text-xs font-bold text-white shadow hover:bg-emerald-500 transition-all flex items-center gap-1.5"
@@ -466,7 +466,7 @@ export function MumbaiToMahabaleshwarContent() {
               </a>
               <span>•</span>
               <a
-                href={waLink("Hi Swaraj Travels, please share exact fare quote for Mumbai to Mahabaleshwar cab.")}
+                href={waLink("Hi Book A Cab, please share exact fare quote for Mumbai to Mahabaleshwar cab.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-emerald-400"
@@ -479,7 +479,7 @@ export function MumbaiToMahabaleshwarContent() {
                 onClick={() => openBooking("Mumbai to Mahabaleshwar Cab")}
                 className="rounded-lg bg-primary px-3 py-1.5 font-semibold text-white hover:bg-primary/90 transition-colors"
               >
-                Check Online Fare on swarajtravel.com
+                Check Online Fare on bookacab.co.in
               </button>
             </div>
           </div>
@@ -662,7 +662,7 @@ export function MumbaiToMahabaleshwarContent() {
           <img
             src="/images/mumbai-mahabaleshwar-cab-vehicle-options.webp"
             title="Sedan and SUV options for Mumbai to Mahabaleshwar cab booking"
-            alt="Sedan and SUV options for Mumbai to Mahabaleshwar cab booking with Swaraj Travels"
+            alt="Sedan and SUV options for Mumbai to Mahabaleshwar cab booking with Book A Cab"
             width={900}
             height={500}
             loading="lazy"
@@ -793,7 +793,7 @@ export function MumbaiToMahabaleshwarContent() {
             </Link>{" "}
             ·{" "}
             <a
-              href={waLink("Hi Swaraj Travels, I need help deciding the right cab for my family trip to Mahabaleshwar.")}
+              href={waLink("Hi Book A Cab, I need help deciding the right cab for my family trip to Mahabaleshwar.")}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-emerald-800 underline hover:text-emerald-900"
@@ -905,10 +905,10 @@ export function MumbaiToMahabaleshwarContent() {
         </div>
       </section>
 
-      {/* 08: H2 - Section 4: Why Book Your Mumbai to Mahabaleshwar Cab with Swaraj Travels */}
+      {/* 08: H2 - Section 4: Why Book Your Mumbai to Mahabaleshwar Cab with Book A Cab */}
       <section className="mx-auto max-w-[1080px] px-4 mt-14">
         <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
-          Why Book Your Mumbai to Mahabaleshwar Cab with Swaraj Travels
+          Why Book Your Mumbai to Mahabaleshwar Cab with Book A Cab
         </h2>
         <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
           There are several cab options available for this route, from large travel platforms to local operators. Here is what actually matters when choosing between them, and what you can expect from us.
@@ -917,16 +917,16 @@ export function MumbaiToMahabaleshwarContent() {
         {/* IMAGE 5: Why Choose Us / Trust Visual (<90KB WebP) */}
         <figure className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
           <img
-            src="/images/swaraj-travels-cab-outstation-service.webp"
-            title="Swaraj Travels cab for outstation Mumbai to Mahabaleshwar trip"
-            alt="Swaraj Travels cab for outstation Mumbai to Mahabaleshwar trip — verified drivers & transparent fares"
+            src="/images/book-a-cab-outstation-service.webp"
+            title="Book A Cab cab for outstation Mumbai to Mahabaleshwar trip"
+            alt="Book A Cab cab for outstation Mumbai to Mahabaleshwar trip — verified drivers & transparent fares"
             width={800}
             height={450}
             loading="lazy"
             className="h-auto w-full object-cover"
           />
           <figcaption className="p-3 text-center text-xs font-medium text-gray-600 italic">
-            Swaraj Travels cab for outstation Mumbai to Mahabaleshwar trip
+            Book A Cab cab for outstation Mumbai to Mahabaleshwar trip
           </figcaption>
         </figure>
 
@@ -989,7 +989,7 @@ export function MumbaiToMahabaleshwarContent() {
           How to Book Your Cab
         </h2>
         <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
-          Booking a Mumbai to Mahabaleshwar cab with Swaraj Travels is meant to be simple. Here is how the process works.
+          Booking a Mumbai to Mahabaleshwar cab with Book A Cab is meant to be simple. Here is how the process works.
         </p>
 
         {/* IMAGE 6: Booking Process Visual (<80KB WebP) */}
@@ -997,7 +997,7 @@ export function MumbaiToMahabaleshwarContent() {
           <img
             src="/images/steps-to-book-mahabaleshwar-cab.webp"
             title="Steps to book Mumbai to Mahabaleshwar cab online"
-            alt="4 steps to book Mumbai to Mahabaleshwar cab online with Swaraj Travels"
+            alt="4 steps to book Mumbai to Mahabaleshwar cab online with Book A Cab"
             width={800}
             height={350}
             loading="lazy"
@@ -1078,11 +1078,11 @@ export function MumbaiToMahabaleshwarContent() {
                 onClick={() => openBooking("Mumbai to Mahabaleshwar Cab")}
                 className="underline hover:text-amber-300"
               >
-                Use Booking Form at swarajtravel.com
+                Use Booking Form at bookacab.co.in
               </button>
               <span>•</span>
               <a
-                href={waLink("Hi Swaraj Travels, I want to confirm my Mumbai to Mahabaleshwar cab.")}
+                href={waLink("Hi Book A Cab, I want to confirm my Mumbai to Mahabaleshwar cab.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-emerald-300"
@@ -1104,7 +1104,7 @@ export function MumbaiToMahabaleshwarContent() {
           Mumbai Pickup Locations We Serve
         </h2>
         <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
-          We understand that Mumbai is spread across several suburbs, and knowing whether pickup is available near you matters before you book. Swaraj Travels arranges Mumbai to Mahabaleshwar cab pickup from the following areas.
+          We understand that Mumbai is spread across several suburbs, and knowing whether pickup is available near you matters before you book. Book A Cab arranges Mumbai to Mahabaleshwar cab pickup from the following areas.
         </p>
 
         {/* Interactive Pickup Directory Cards */}
@@ -1288,7 +1288,7 @@ export function MumbaiToMahabaleshwarContent() {
           Contact Us
         </h2>
         <p className="mt-3 text-sm sm:text-base text-gray-700 leading-relaxed">
-          Have a question about your Mumbai to Mahabaleshwar cab booking, need a custom quote, or want to discuss a group itinerary? Reach out to Swaraj Travels through any of the channels below — our team is available 24/7.
+          Have a question about your Mumbai to Mahabaleshwar cab booking, need a custom quote, or want to discuss a group itinerary? Reach out to Book A Cab through any of the channels below — our team is available 24/7.
         </p>
 
         {/* Contact Table Form */}
@@ -1324,7 +1324,7 @@ export function MumbaiToMahabaleshwarContent() {
                 </td>
                 <td className="px-4 py-3.5">
                   <a
-                    href={waLink("Hi Swaraj Travels, I want to inquire about Mumbai to Mahabaleshwar cab.")}
+                    href={waLink("Hi Book A Cab, I want to inquire about Mumbai to Mahabaleshwar cab.")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold text-emerald-700 hover:underline"
@@ -1339,8 +1339,8 @@ export function MumbaiToMahabaleshwarContent() {
               <tr>
                 <td className="px-4 py-3.5 font-bold text-navy whitespace-nowrap">Email</td>
                 <td className="px-4 py-3.5">
-                  <a href="mailto:travelsswaraj69@gmail.com" className="text-gray-800 hover:underline">
-                    travelsswaraj69@gmail.com
+                  <a href="mailto:bookings@bookacab.co.in" className="text-gray-800 hover:underline">
+                    bookings@bookacab.co.in
                   </a>
                 </td>
               </tr>
@@ -1352,7 +1352,7 @@ export function MumbaiToMahabaleshwarContent() {
                     onClick={() => openBooking("Mumbai to Mahabaleshwar Cab")}
                     className="font-bold text-primary underline hover:text-navy"
                   >
-                    Use the booking form on swarajtravel.com
+                    Use the booking form on bookacab.co.in
                   </button>
                   <span className="text-gray-600 ml-1">to select your cab and submit your trip details</span>
                 </td>
@@ -1378,7 +1378,7 @@ export function MumbaiToMahabaleshwarContent() {
             </div>
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href={waLink("Hi Swaraj Travels, I want to book a Mumbai to Mahabaleshwar cab.")}
+                href={waLink("Hi Book A Cab, I want to book a Mumbai to Mahabaleshwar cab.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-emerald-400"
@@ -1395,7 +1395,7 @@ export function MumbaiToMahabaleshwarContent() {
                 onClick={() => openBooking("Mumbai to Mahabaleshwar Cab")}
                 className="rounded-lg bg-emerald-600 px-3 py-1 font-semibold text-white hover:bg-emerald-500 transition-colors"
               >
-                Book Online Now at swarajtravel.com
+                Book Online Now at bookacab.co.in
               </button>
             </div>
           </div>
@@ -1417,7 +1417,7 @@ export function MumbaiToMahabaleshwarContent() {
               Call Now to Book
             </a>
             <a
-              href={waLink("Hi Swaraj Travels, I would like to book a cab from Mumbai to Mahabaleshwar.")}
+              href={waLink("Hi Book A Cab, I would like to book a cab from Mumbai to Mahabaleshwar.")}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-xl bg-emerald-600 px-5 py-2.5 text-white shadow hover:bg-emerald-500 transition-all flex items-center gap-1.5"
@@ -1436,7 +1436,7 @@ export function MumbaiToMahabaleshwarContent() {
           <p className="mt-4 text-[11px] text-gray-500">
             Powered by{" "}
             <Link href="/" className="font-bold text-navy hover:underline">
-              Swaraj Travels
+              Book A Cab
             </Link>{" "}
             • 24/7 Outstation Cab Services Across Maharashtra
           </p>

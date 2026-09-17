@@ -310,7 +310,7 @@ export const MAHABALESHWAR_FAQS: MahabaleshwarFaq[] = [
   },
   {
     question: "How much does a Mumbai to Mahabaleshwar cab cost?",
-    answer: "The fare depends on the vehicle type and whether you choose a one way or round trip booking. At Swaraj Travels, one way fares for this route start from approximately ₹4,200 for a Swift Dzire (hatchback) and go up to around ₹9,600+ for a 12-seater Tempo Traveller AC. Innova Crysta, one of our most popular options, is priced in the ₹6,500–₹7,500 range for a one way trip. Contact us or use our booking form to get an exact quote for your date and vehicle choice.",
+    answer: "The fare depends on the vehicle type and whether you choose a one way or round trip booking. At Book A Cab, one way fares for this route start from approximately ₹4,200 for a Swift Dzire (hatchback) and go up to around ₹9,600+ for a 12-seater Tempo Traveller AC. Innova Crysta, one of our most popular options, is priced in the ₹6,500–₹7,500 range for a one way trip. Contact us or use our booking form to get an exact quote for your date and vehicle choice.",
     category: "pricing",
   },
   {

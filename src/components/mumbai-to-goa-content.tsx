@@ -138,7 +138,7 @@ export function MumbaiToGoaContent() {
           {/* Paragraph (intro text — 4 lines max) */}
           <div className="mt-4 space-y-3 text-base text-gray-700 leading-relaxed md:text-lg">
             <p>
-              Planning your Mumbai to Goa road trip? Swaraj Travel provides direct cab service from your doorstep anywhere in Mumbai to your exact drop point in Goa. Our drivers are experienced on the NH66 Konkan coastal highway, are comfortable on ghat sections, and have safely completed thousands of long-distance trips for families, groups, couples, and solo travelers.
+              Planning your Mumbai to Goa road trip? Book A Cab provides direct cab service from your doorstep anywhere in Mumbai to your exact drop point in Goa. Our drivers are experienced on the NH66 Konkan coastal highway, are comfortable on ghat sections, and have safely completed thousands of long-distance trips for families, groups, couples, and solo travelers.
             </p>
             <p>
               No hidden charges. No app to download. No complicated booking forms. With 50,000+ happy riders, 120+ premium cabs, and a team available around the clock, your Mumbai to Goa cab booking is simple, fast, and completely transparent. Send us a WhatsApp message and we confirm your cab in minutes.
@@ -148,7 +148,7 @@ export function MumbaiToGoaContent() {
           {/* CTA BLOCK: WhatsApp Button + Call Button */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
-              href={waLink("Hi Swaraj Travel, I want to book a Mumbai to Goa cab. Please share details.")}
+              href={waLink("Hi Book A Cab, I want to book a Mumbai to Goa cab. Please share details.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-base font-bold text-white shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all"
@@ -181,9 +181,9 @@ export function MumbaiToGoaContent() {
           <div className="mt-8 overflow-hidden rounded-2xl border border-gray-200 bg-gray-100 shadow-xl">
             <div className="relative aspect-[16/9] w-full max-h-[520px]">
               <Image
-                src="/images/mumbai-to-goa-cab-swaraj-travel-hero.webp"
-                alt="Mumbai to Goa cab booking service by Swaraj Travel with verified driver on NH66 Konkan coastal highway"
-                title="Book Mumbai to Goa Cab with Swaraj Travel — Verified Drivers, Fixed Fare, 24/7 Support"
+                src="/images/mumbai-to-goa-cab-book-a-cab-hero.webp"
+                alt="Mumbai to Goa cab booking service by Book A Cab with verified driver on NH66 Konkan coastal highway"
+                title="Book Mumbai to Goa Cab with Book A Cab — Verified Drivers, Fixed Fare, 24/7 Support"
                 fill
                 priority
                 className="object-cover object-center"
@@ -191,7 +191,7 @@ export function MumbaiToGoaContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 sm:p-6 text-white">
                 <p className="text-sm sm:text-base font-medium">
-                  Hero banner showing a clean, well-maintained Swaraj Travel cab on the NH66 coastal highway with the Konkan coastline visible, representing the Mumbai to Goa cab journey.
+                  Hero banner showing a clean, well-maintained Book A Cab cab on the NH66 coastal highway with the Konkan coastline visible, representing the Mumbai to Goa cab journey.
                 </p>
                 <div className="mt-1 flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-amber-300">
                   <span className="inline-flex items-center gap-1 rounded bg-black/40 px-2 py-0.5 backdrop-blur-sm">
@@ -344,7 +344,7 @@ export function MumbaiToGoaContent() {
                 </button>
                 <a
                   href={waLink(
-                    `Hi Swaraj Travel, I would like to book a Mumbai to Goa cab (${selectedVehicle.carType}) from ${selectedMumbaiZone} to ${selectedGoaZone}. Trip: ${tripType === "oneway" ? "One-Way" : "Round Trip"}${isNightPickup ? " (Night Pickup)" : ""}. Please confirm availability and fare.`
+                    `Hi Book A Cab, I would like to book a Mumbai to Goa cab (${selectedVehicle.carType}) from ${selectedMumbaiZone} to ${selectedGoaZone}. Trip: ${tripType === "oneway" ? "One-Way" : "Round Trip"}${isNightPickup ? " (Night Pickup)" : ""}. Please confirm availability and fare.`
                   )}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -375,9 +375,9 @@ export function MumbaiToGoaContent() {
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
             <div className="relative aspect-[16/9] w-full max-h-[420px]">
               <Image
-                src="/images/mumbai-to-goa-cab-fare-price-breakdown-swaraj-travel.webp"
+                src="/images/mumbai-to-goa-cab-fare-price-breakdown-book-a-cab.webp"
                 alt="Mumbai to Goa cab fare breakdown by car type showing sedan SUV and Innova Crysta pricing with toll charges included"
-                title="Mumbai to Goa Cab Price — Transparent Fare Table by Swaraj Travel"
+                title="Mumbai to Goa Cab Price — Transparent Fare Table by Book A Cab"
                 fill
                 loading="lazy"
                 className="object-cover object-center"
@@ -520,7 +520,7 @@ export function MumbaiToGoaContent() {
             </div>
 
             <p className="mt-4 text-sm text-gray-700 leading-relaxed">
-              There are no platform fees, no booking commissions, and no surprise GST additions. Swaraj Travel operates on a direct booking model, which is exactly why our fares are honest and straightforward.
+              There are no platform fees, no booking commissions, and no surprise GST additions. Book A Cab operates on a direct booking model, which is exactly why our fares are honest and straightforward.
             </p>
           </div>
 
@@ -544,7 +544,7 @@ export function MumbaiToGoaContent() {
             {/* CTA BLOCK: Get Fare on WhatsApp */}
             <div className="mt-6">
               <a
-                href={waLink("Hi Swaraj Travel, I would like to get my exact fare for Mumbai to Goa cab on [travel date].")}
+                href={waLink("Hi Book A Cab, I would like to get my exact fare for Mumbai to Goa cab on [travel date].")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -609,7 +609,7 @@ export function MumbaiToGoaContent() {
             {/* CTA BLOCK: Ask on WhatsApp */}
             <div className="mt-6">
               <a
-                href={waLink("Hi Swaraj Travel, I need help deciding which car is right for our group travelling from Mumbai to Goa.")}
+                href={waLink("Hi Book A Cab, I need help deciding which car is right for our group travelling from Mumbai to Goa.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -685,9 +685,9 @@ export function MumbaiToGoaContent() {
           <div className="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
             <div className="relative aspect-[16/9] w-full max-h-[460px]">
               <Image
-                src="/images/mumbai-to-goa-road-route-nh66-map-stops-swaraj-travel.webp"
+                src="/images/mumbai-to-goa-road-route-nh66-map-stops-book-a-cab.webp"
                 alt="Mumbai to Goa road route map via NH66 showing waypoints Panvel Mahad Chiplun Ratnagiri Sawantwadi and Goa border"
-                title="Mumbai to Goa Route Map via NH66 — Swaraj Travel Cab Service with Stop Guide"
+                title="Mumbai to Goa Route Map via NH66 — Book A Cab Cab Service with Stop Guide"
                 fill
                 loading="lazy"
                 className="object-cover object-center"
@@ -695,7 +695,7 @@ export function MumbaiToGoaContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <p className="text-sm font-semibold">
-                  Illustrated route map showing the Mumbai to Goa NH66 coastal highway path with marked waypoints including Mahad, Chiplun, Ratnagiri, Kankavli, and Sawantwadi, used by Swaraj Travel cabs.
+                  Illustrated route map showing the Mumbai to Goa NH66 coastal highway path with marked waypoints including Mahad, Chiplun, Ratnagiri, Kankavli, and Sawantwadi, used by Book A Cab cabs.
                 </p>
               </div>
             </div>
@@ -789,7 +789,7 @@ export function MumbaiToGoaContent() {
             {/* CTA BLOCK: Plan My Trip */}
             <div className="mt-6">
               <a
-                href={waLink("Hi Swaraj Travel, I need help planning our departure time for a Mumbai to Goa cab trip.")}
+                href={waLink("Hi Book A Cab, I need help planning our departure time for a Mumbai to Goa cab trip.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-navy px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-slate-800 transition-colors"
@@ -808,16 +808,16 @@ export function MumbaiToGoaContent() {
             Is It Safe to Travel Mumbai to Goa by Cab?
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
-            Yes. Mumbai to Goa by cab is safe when you travel with the right service. Here is exactly what Swaraj Travel does to ensure your 595 km journey is as safe as it is comfortable.
+            Yes. Mumbai to Goa by cab is safe when you travel with the right service. Here is exactly what Book A Cab does to ensure your 595 km journey is as safe as it is comfortable.
           </p>
 
           {/* Image 4 — Safety Section */}
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
             <div className="relative aspect-[16/9] w-full max-h-[460px]">
               <Image
-                src="/images/swaraj-travel-verified-driver-mumbai-to-goa-cab-safe-journey.webp"
-                alt="Swaraj Travel verified and ghat-experienced driver for safe Mumbai to Goa cab night travel on NH66 coastal highway"
-                title="Verified Driver for Mumbai to Goa Cab — Swaraj Travel Safety Standard"
+                src="/images/book-a-cab-verified-driver-mumbai-to-goa-cab-safe-journey.webp"
+                alt="Book A Cab verified and ghat-experienced driver for safe Mumbai to Goa cab night travel on NH66 coastal highway"
+                title="Verified Driver for Mumbai to Goa Cab — Book A Cab Safety Standard"
                 fill
                 loading="lazy"
                 className="object-cover object-center"
@@ -825,7 +825,7 @@ export function MumbaiToGoaContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <p className="text-sm font-semibold">
-                  Professional Swaraj Travel driver in uniform seated in a clean, well-maintained cab, representing the verified driver safety standard for Mumbai to Goa outstation trips.
+                  Professional Book A Cab driver in uniform seated in a clean, well-maintained cab, representing the verified driver safety standard for Mumbai to Goa outstation trips.
                 </p>
               </div>
             </div>
@@ -837,7 +837,7 @@ export function MumbaiToGoaContent() {
               Night Travel from Mumbai to Goa by Cab
             </h3>
             <p className="mt-3 text-base text-gray-700 leading-relaxed">
-              Night departures between 10 PM and 11 PM are one of the most popular choices for the Mumbai to Goa trip. NH66 is a national highway with consistent lighting across most of its length. Night traffic is significantly lighter than daytime, which means your driver maintains a steady, comfortable pace without highway congestion. Swaraj Travel assigns only experienced long-distance drivers for overnight departures.
+              Night departures between 10 PM and 11 PM are one of the most popular choices for the Mumbai to Goa trip. NH66 is a national highway with consistent lighting across most of its length. Night traffic is significantly lighter than daytime, which means your driver maintains a steady, comfortable pace without highway congestion. Book A Cab assigns only experienced long-distance drivers for overnight departures.
             </p>
 
             {/* Bullet list (safety measures) */}
@@ -875,7 +875,7 @@ export function MumbaiToGoaContent() {
               Our Driver Verification and Selection Process
             </h3>
             <p className="mt-3 text-base text-gray-700 leading-relaxed">
-              Swaraj Travel has completed 50,000+ trips with background-verified drivers. Every driver on our network is screened before their first trip assignment. For long-distance outstation routes like Mumbai to Goa, our selection goes further.
+              Book A Cab has completed 50,000+ trips with background-verified drivers. Every driver on our network is screened before their first trip assignment. For long-distance outstation routes like Mumbai to Goa, our selection goes further.
             </p>
 
             {/* Bullet list (selection criteria) */}
@@ -973,19 +973,19 @@ export function MumbaiToGoaContent() {
         <section id="how-to-book" className="scroll-mt-20">
           {/* H2 */}
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            How to Book Your Mumbai to Goa Cab with Swaraj Travel
+            How to Book Your Mumbai to Goa Cab with Book A Cab
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
-            No app to download. No account to create. No long forms. No IVR queue. Swaraj Travel runs on the simplest and fastest booking channel available: WhatsApp, the app you already use every day.
+            No app to download. No account to create. No long forms. No IVR queue. Book A Cab runs on the simplest and fastest booking channel available: WhatsApp, the app you already use every day.
           </p>
 
           {/* Image 5 — How to Book Section */}
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
             <div className="relative aspect-[4/3] sm:aspect-[16/9] w-full max-h-[460px]">
               <Image
-                src="/images/swaraj-travel-whatsapp-cab-booking-mumbai-to-goa-step-by-step.webp"
-                alt="WhatsApp cab booking process for Mumbai to Goa trip with Swaraj Travel showing instant confirmation steps"
-                title="Book Mumbai to Goa Cab on WhatsApp — Instant Confirmation by Swaraj Travel"
+                src="/images/book-a-cab-whatsapp-booking-mumbai-to-goa-step-by-step.webp"
+                alt="WhatsApp cab booking process for Mumbai to Goa trip with Book A Cab showing instant confirmation steps"
+                title="Book Mumbai to Goa Cab on WhatsApp — Instant Confirmation by Book A Cab"
                 fill
                 loading="lazy"
                 className="object-cover object-center"
@@ -993,7 +993,7 @@ export function MumbaiToGoaContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <p className="text-sm font-semibold">
-                  Visual showing a mobile phone with WhatsApp open, illustrating the 2-minute Mumbai to Goa cab booking process offered by Swaraj Travel with instant WhatsApp confirmation.
+                  Visual showing a mobile phone with WhatsApp open, illustrating the 2-minute Mumbai to Goa cab booking process offered by Book A Cab with instant WhatsApp confirmation.
                 </p>
               </div>
             </div>
@@ -1064,7 +1064,7 @@ export function MumbaiToGoaContent() {
             {/* CTA BLOCK: Start My Booking */}
             <div className="mt-6">
               <a
-                href={waLink("Hi Swaraj Travel, I want to start my Mumbai to Goa cab booking right now.")}
+                href={waLink("Hi Book A Cab, I want to start my Mumbai to Goa cab booking right now.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -1083,7 +1083,7 @@ export function MumbaiToGoaContent() {
             Pickup Zones in Mumbai We Cover
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
-            Your Swaraj Travel cab comes to your address. You do not need to travel to a taxi stand, railway station, or hub.
+            Your Book A Cab cab comes to your address. You do not need to travel to a taxi stand, railway station, or hub.
           </p>
 
           <div className="mt-6 space-y-6">
@@ -1201,7 +1201,7 @@ export function MumbaiToGoaContent() {
           {/* CTA BLOCK: Confirm Drop Point */}
           <div className="mt-6">
             <a
-              href={waLink("Hi Swaraj Travel, I am travelling to a specific hotel in Goa. Can you confirm the exact drop point?")}
+              href={waLink("Hi Book A Cab, I am travelling to a specific hotel in Goa. Can you confirm the exact drop point?")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -1304,7 +1304,7 @@ export function MumbaiToGoaContent() {
         <section id="reviews" className="scroll-mt-20">
           {/* H2 */}
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            What Our Customers Say About Swaraj Travel
+            What Our Customers Say About Book A Cab
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
             Real reviews from real riders. No edits, no filters.
@@ -1314,9 +1314,9 @@ export function MumbaiToGoaContent() {
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
             <div className="relative aspect-[16/9] sm:aspect-[2.5/1] w-full max-h-[340px]">
               <Image
-                src="/images/swaraj-travel-50000-happy-riders-mumbai-cab-service-reviews.webp"
-                alt="Swaraj Travel 50000 happy riders customer reviews for Mumbai outstation and Goa cab service"
-                title="50,000+ Happy Riders — Swaraj Travel Customer Reviews for Mumbai to Goa Cab"
+                src="/images/book-a-cab-50000-happy-riders-mumbai-cab-service-reviews.webp"
+                alt="Book A Cab 50000 happy riders customer reviews for Mumbai outstation and Goa cab service"
+                title="50,000+ Happy Riders — Book A Cab Customer Reviews for Mumbai to Goa Cab"
                 fill
                 loading="lazy"
                 className="object-cover object-center"
@@ -1625,14 +1625,14 @@ export function MumbaiToGoaContent() {
 
           {/* Supporting paragraph (2 lines) */}
           <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-            Fixed fare. No hidden charges. Verified driver with ghat experience. WhatsApp booking confirmed in minutes. 50,000+ riders have trusted Swaraj Travel for their journey. Your Goa trip starts here. Pickup from anywhere in Mumbai. Drop anywhere in Goa. Available 24 hours a day, 7 days a week.
+            Fixed fare. No hidden charges. Verified driver with ghat experience. WhatsApp booking confirmed in minutes. 50,000+ riders have trusted Book A Cab for their journey. Your Goa trip starts here. Pickup from anywhere in Mumbai. Drop anywhere in Goa. Available 24 hours a day, 7 days a week.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-6 flex flex-wrap items-center gap-4">
             {/* WhatsApp CTA Button (primary) */}
             <a
-              href={waLink("Hi Swaraj Travel, I am ready to book my Mumbai to Goa cab now.")}
+              href={waLink("Hi Book A Cab, I am ready to book my Mumbai to Goa cab now.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"

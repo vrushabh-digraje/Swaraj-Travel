@@ -404,7 +404,7 @@ export function MumbaiDarshanContent() {
               <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2">
                 <div>
                   <p className="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider">
-                    Swaraj Travel Premium Tour Fleet
+                    Book A Cab Premium Tour Fleet
                   </p>
                   <p className="text-base font-bold text-white sm:text-xl drop-shadow-md">
                     {URBANIA_HERO_SLIDES[urbaniaHeroIndex].title}
@@ -458,7 +458,7 @@ export function MumbaiDarshanContent() {
                   Book Urbania Now
                 </button>
                 <a
-                  href={waUrl("Hi Swaraj Travel, I would like to check rate & availability for Force Urbania on Mumbai Darshan tour")}
+                  href={waUrl("Hi Book A Cab, I would like to check rate & availability for Force Urbania on Mumbai Darshan tour")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 rounded-xl border border-emerald-600/30 bg-emerald-50 px-3.5 py-2.5 text-xs font-bold text-emerald-800 hover:bg-emerald-100 transition-colors"
@@ -1417,7 +1417,7 @@ export function MumbaiDarshanContent() {
                 <div className="mt-2 text-xs text-gray-700 leading-relaxed md:text-sm">
                   {activeCostSegment === 1 && (
                     <p>
-                      <strong className="text-navy">1. Cab Package Fare:</strong> Covers your private AC vehicle ({costInfographicCab}), 8 hours and 80 km of running, fuel, driver waiting time at all stops, and doorstep pickup/drop. Paid directly to Swaraj Travel.
+                      <strong className="text-navy">1. Cab Package Fare:</strong> Covers your private AC vehicle ({costInfographicCab}), 8 hours and 80 km of running, fuel, driver waiting time at all stops, and doorstep pickup/drop. Paid directly to Book A Cab.
                     </p>
                   )}
                   {activeCostSegment === 2 && (
@@ -3187,7 +3187,7 @@ export function MumbaiDarshanContent() {
       {/* 26: H2 - Section 11 */}
       <section className="mx-auto max-w-[1080px] px-4">
         <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
-          How to Book a Mumbai Darshan Cab with Swaraj Travel
+          How to Book a Mumbai Darshan Cab with Book A Cab
         </h2>
         <ol className="mt-3 space-y-2 list-decimal list-inside text-xs text-gray-700 leading-relaxed md:text-sm">
           <li><strong>Tell us your details:</strong> Date, pickup address, group size and the places you want to see. Call or WhatsApp {phoneDisplay}, or email {SITE.email}.</li>
@@ -3245,7 +3245,7 @@ export function MumbaiDarshanContent() {
       {/* 28: H2 - Section 13 */}
       <section className="mx-auto max-w-[1080px] px-4">
         <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
-          Why Travellers Book Mumbai Darshan Cabs with Swaraj Travel
+          Why Travellers Book Mumbai Darshan Cabs with Book A Cab
         </h2>
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
           Facts you can check, rather than adjectives you cannot.
@@ -3254,9 +3254,9 @@ export function MumbaiDarshanContent() {
         {/* IMAGE 7: Inside section 13 */}
         <figure className="my-6 overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 shadow-sm">
           <img
-            src="/images/swaraj-travel-driver-id-itemised-bill.webp"
-            title="Swaraj Travel Driver ID and Itemised Bill"
-            alt="Swaraj Travel driver identification and itemised Mumbai Darshan trip bill"
+            src="/images/book-a-cab-driver-id-itemised-bill.webp"
+            title="Book A Cab Driver ID and Itemised Bill"
+            alt="Book A Cab driver identification and itemised Mumbai Darshan trip bill"
             width={1200}
             height={800}
             loading="lazy"
@@ -3268,7 +3268,7 @@ export function MumbaiDarshanContent() {
         </figure>
 
         <div className="mt-4 space-y-2.5 text-xs text-gray-700 leading-relaxed md:text-sm">
-          <p><strong>A real business with one contact number:</strong> {SITE.name} (Swaraj Travel), office near the airport in Mumbai, Maharashtra. Phone and WhatsApp on {phoneDisplay}, email {SITE.email}. Support runs 24 hours. More on our <Link href="/about" className="text-primary underline">about page</Link>.</p>
+          <p><strong>A real business with one contact number:</strong> {SITE.name}, office near the airport in Mumbai, Maharashtra. Phone and WhatsApp on {phoneDisplay}, email {SITE.email}. Support runs 24 hours. More on our <Link href="/about" className="text-primary underline">about page</Link>.</p>
           <p><strong>Founded by someone who has done this a long time:</strong> Founded by Rajesh Sharma, who brought over 15 years of experience in the transport industry to it. The company began with a fleet of five cars and now runs a considerably larger one across Maharashtra.</p>
           <p><strong>Published rates, applied consistently:</strong> Every fare on this page comes from the same per km rates listed on our <Link href="/packages" className="text-primary underline">tour packages page</Link>. No separate tourist pricing, no fare that appears in a heading and then disappears from the table.</p>
           <p><strong>Itemised billing on every trip:</strong> Package fare, extra hours, extra kilometres, driver allowance, tolls and parking, each on its own line, with toll receipts handed over.</p>

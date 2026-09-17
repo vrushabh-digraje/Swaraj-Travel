@@ -4,39 +4,39 @@ import { MumbaiToGoaContent } from "@/components/mumbai-to-goa-content";
 import { GOA_FAQS } from "@/lib/mumbai-to-goa";
 
 export const metadata: Metadata = {
-  title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Swaraj Travel",
+  title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
   description:
-    "Book Mumbai to Goa cab with Swaraj Travel. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+    "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
   alternates: {
-    canonical: "https://www.swarajtravel.com/mumbai-to-goa-cab",
+    canonical: "https://www.bookacab.co.in/mumbai-to-goa-cab",
   },
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Swaraj Travel",
+    title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
-      "Book Mumbai to Goa cab with Swaraj Travel. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
-    url: "https://www.swarajtravel.com/mumbai-to-goa-cab",
-    siteName: "Swaraj Travel",
+      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+    url: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+    siteName: "Book A Cab",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.swarajtravel.com/images/mumbai-to-goa-cab-swaraj-travel-hero.webp",
+        url: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
         width: 1440,
         height: 600,
-        alt: "Mumbai to Goa cab booking service by Swaraj Travel with verified driver on NH66 Konkan coastal highway",
+        alt: "Mumbai to Goa cab booking service by Book A Cab with verified driver on NH66 Konkan coastal highway",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Swaraj Travel",
+    title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
-      "Book Mumbai to Goa cab with Swaraj Travel. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
-    images: ["https://www.swarajtravel.com/images/mumbai-to-goa-cab-swaraj-travel-hero.webp"],
+      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+    images: ["https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp"],
   },
 };
 
@@ -45,12 +45,12 @@ function schemaLocalBusiness() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Swaraj Travel",
-    url: "https://www.swarajtravel.com",
-    logo: "https://www.swarajtravel.com/logo.png",
-    image: "https://www.swarajtravel.com/images/mumbai-to-goa-cab-swaraj-travel-hero.webp",
+    name: "Book A Cab",
+    url: "https://www.bookacab.co.in",
+    logo: "https://www.bookacab.co.in/logo.png",
+    image: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
     description:
-      "Swaraj Travel provides Mumbai to Goa cab booking with fixed fare, verified drivers, and instant WhatsApp booking available 24/7. 50,000+ happy riders across Maharashtra outstation routes.",
+      "Book A Cab provides Mumbai to Goa cab booking with fixed fare, verified drivers, and instant WhatsApp booking available 24/7. 50,000+ happy riders across Maharashtra outstation routes.",
     telephone: "+918856904131",
     address: {
       "@type": "PostalAddress",
@@ -78,7 +78,7 @@ function schemaLocalBusiness() {
       closes: "23:59",
     },
     priceRange: "₹₹",
-    sameAs: ["https://www.swarajtravel.com"],
+    sameAs: ["https://www.bookacab.co.in"],
   };
 }
 
@@ -91,8 +91,8 @@ function schemaService() {
     serviceType: "Outstation Cab Booking",
     provider: {
       "@type": "LocalBusiness",
-      name: "Swaraj Travel",
-      url: "https://www.swarajtravel.com",
+      name: "Book A Cab",
+      url: "https://www.bookacab.co.in",
     },
     areaServed: [
       { "@type": "City", name: "Mumbai" },
@@ -166,19 +166,19 @@ function schemaBreadcrumb() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.swarajtravel.com",
+        item: "https://www.bookacab.co.in",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Outstation Cabs",
-        item: "https://www.swarajtravel.com/outstation",
+        item: "https://www.bookacab.co.in/outstation",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Mumbai to Goa Cab",
-        item: "https://www.swarajtravel.com/mumbai-to-goa-cab",
+        item: "https://www.bookacab.co.in/mumbai-to-goa-cab",
       },
     ],
   };
@@ -189,12 +189,12 @@ function schemaAggregateRating() {
   return {
     "@context": "https://schema.org",
     "@type": "Product",
-    name: "Mumbai to Goa Cab Service by Swaraj Travel",
+    name: "Mumbai to Goa Cab Service by Book A Cab",
     description:
       "One-way and round trip cab booking from Mumbai to Goa with fixed fare, verified drivers, ghat experience, and 24/7 WhatsApp support.",
     brand: {
       "@type": "Brand",
-      name: "Swaraj Travel",
+      name: "Book A Cab",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -234,7 +234,7 @@ function schemaHowTo() {
   return {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Book a Mumbai to Goa Cab with Swaraj Travel",
+    name: "How to Book a Mumbai to Goa Cab with Book A Cab",
     description:
       "Book your Mumbai to Goa cab in under 2 minutes using WhatsApp. No app required, no advance payment needed.",
     totalTime: "PT2M",
@@ -250,7 +250,7 @@ function schemaHowTo() {
         "@type": "HowToStep",
         position: 2,
         name: "Receive your confirmed fare",
-        text: "Swaraj Travel sends you the exact fixed fare for your trip, with all inclusions clearly mentioned, within minutes.",
+        text: "Book A Cab sends you the exact fixed fare for your trip, with all inclusions clearly mentioned, within minutes.",
       },
       {
         "@type": "HowToStep",
@@ -279,20 +279,20 @@ function schemaWebPage() {
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Swaraj Travel",
-    url: "https://www.swarajtravel.com/mumbai-to-goa-cab",
+    name: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
+    url: "https://www.bookacab.co.in/mumbai-to-goa-cab",
     description:
-      "Book Mumbai to Goa cab with Swaraj Travel. Fixed fare, no hidden charges, ghat-experienced drivers and instant WhatsApp booking 24/7. 50,000+ happy riders.",
+      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers and instant WhatsApp booking 24/7. 50,000+ happy riders.",
     inLanguage: "en-IN",
     isPartOf: {
       "@type": "WebSite",
-      name: "Swaraj Travel",
-      url: "https://www.swarajtravel.com",
+      name: "Book A Cab",
+      url: "https://www.bookacab.co.in",
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: "https://www.swarajtravel.com/images/mumbai-to-goa-cab-swaraj-travel-hero.webp",
-      caption: "Mumbai to Goa cab booking by Swaraj Travel on NH66 coastal highway",
+      url: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
+      caption: "Mumbai to Goa cab booking by Book A Cab on NH66 coastal highway",
     },
     breadcrumb: {
       "@type": "BreadcrumbList",
@@ -301,19 +301,19 @@ function schemaWebPage() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.swarajtravel.com",
+          item: "https://www.bookacab.co.in",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Outstation Cabs",
-          item: "https://www.swarajtravel.com/outstation",
+          item: "https://www.bookacab.co.in/outstation",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Mumbai to Goa Cab",
-          item: "https://www.swarajtravel.com/mumbai-to-goa-cab",
+          item: "https://www.bookacab.co.in/mumbai-to-goa-cab",
         },
       ],
     },

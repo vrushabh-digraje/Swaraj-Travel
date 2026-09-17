@@ -142,7 +142,7 @@ export function MumbaiToShirdiContent() {
           {/* Intro Paragraphs with Planned Internal Links */}
           <div className="mt-4 space-y-3 text-base text-gray-700 leading-relaxed md:text-lg">
             <p>
-              A trip to Shirdi is usually about one thing, reaching your destination peacefully without worrying about the drive itself. Swaraj Travel&apos;s Mumbai to Shirdi cab service is built around exactly that. Whether you are travelling with family for darshan, going alone for a quiet visit, or planning a group pilgrimage, you can book a comfortable, well maintained cab with a verified driver behind the wheel.
+              A trip to Shirdi is usually about one thing, reaching your destination peacefully without worrying about the drive itself. Book A Cab&apos;s Mumbai to Shirdi cab service is built around exactly that. Whether you are travelling with family for darshan, going alone for a quiet visit, or planning a group pilgrimage, you can book a comfortable, well maintained cab with a verified driver behind the wheel.
             </p>
             <p>
               Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra, with 24/7 support, verified drivers, and instant booking on WhatsApp. Your Mumbai to Shirdi cab can be booked for early morning departures too, which many pilgrims prefer to avoid daytime heat and heavy traffic on the highway. Explore all our{" "}
@@ -171,7 +171,7 @@ export function MumbaiToShirdiContent() {
               <span>Call {PHONE_NUMBER}</span>
             </a>
             <a
-              href={waLink("Hi Swaraj Travels, I want to book a Mumbai to Shirdi cab for darshan.")}
+              href={waLink("Hi Book A Cab, I want to book a Mumbai to Shirdi cab for darshan.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-semibold text-white hover:bg-emerald-700 transition-colors shadow-sm"
@@ -186,8 +186,8 @@ export function MumbaiToShirdiContent() {
             <div className="relative aspect-[16/9] w-full max-h-[500px]">
               <Image
                 src="/images/mumbai-to-shirdi-cab-service.webp"
-                alt="Mumbai to Shirdi cab service by Swaraj Travel"
-                title="Mumbai to Shirdi Cab Service by Swaraj Travel"
+                alt="Mumbai to Shirdi cab service by Book A Cab"
+                title="Mumbai to Shirdi Cab Service by Book A Cab"
                 fill
                 priority
                 className="object-cover object-center"
@@ -340,7 +340,7 @@ export function MumbaiToShirdiContent() {
                 </button>
                 <a
                   href={waLink(
-                    `Hi Swaraj Travels, I would like to book a ${tripType === "oneway" ? "One Way" : "Round Trip"} Mumbai to Shirdi cab (${currentVehicle.vehicle}) starting from ${SHIRDI_PICKUP_HUBS[selectedHubIdx].name}.${
+                    `Hi Book A Cab, I would like to book a ${tripType === "oneway" ? "One Way" : "Round Trip"} Mumbai to Shirdi cab (${currentVehicle.vehicle}) starting from ${SHIRDI_PICKUP_HUBS[selectedHubIdx].name}.${
                       includeShaniShingnapur ? " Including Shani Shingnapur." : ""
                     }${includeTrimbakeshwar ? " Including Trimbakeshwar." : ""} Please share final confirmation.`
                   )}
@@ -416,7 +416,7 @@ export function MumbaiToShirdiContent() {
           {/* CTA Button 2: GET EXACT FARE ON WHATSAPP (Per Content Brief & Handoff) */}
           <div className="mt-5">
             <a
-              href={waLink("Hi Swaraj Travels, I want to get the exact fare for Mumbai to Shirdi cab for my travel dates.")}
+              href={waLink("Hi Book A Cab, I want to get the exact fare for Mumbai to Shirdi cab for my travel dates.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -526,7 +526,7 @@ export function MumbaiToShirdiContent() {
                     Book {showcaseVehicle.vehicle.split(" ")[0]}
                   </button>
                   <a
-                    href={waLink(`Hi Swaraj Travels, I want to book a ${showcaseVehicle.vehicle} for Mumbai to Shirdi trip.`)}
+                    href={waLink(`Hi Book A Cab, I want to book a ${showcaseVehicle.vehicle} for Mumbai to Shirdi trip.`)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="rounded-xl bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700 transition-colors inline-flex items-center gap-1.5"
@@ -849,7 +849,7 @@ export function MumbaiToShirdiContent() {
             How Booking Works
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
-            Booking your Mumbai to Shirdi cab with Swaraj Travel is simple and does not involve long forms or waiting on hold.
+            Booking your Mumbai to Shirdi cab with Book A Cab is simple and does not involve long forms or waiting on hold.
           </p>
 
           {/* 4 Steps numbered list per brief */}
@@ -945,7 +945,7 @@ export function MumbaiToShirdiContent() {
           {/* CTA Button 3: BOOK NOW ON WHATSAPP (Per Content Brief & Handoff) */}
           <div className="mt-5">
             <a
-              href={waLink("Hi Swaraj Travels, I want to book a Mumbai to Shirdi cab now.")}
+              href={waLink("Hi Book A Cab, I want to book a Mumbai to Shirdi cab now.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -964,7 +964,7 @@ export function MumbaiToShirdiContent() {
           </h2>
           <div className="mt-3 space-y-3 text-base text-gray-700 leading-relaxed">
             <p>
-              On a long route like Mumbai to Shirdi, who is driving matters as much as which car you are sitting in. Every cab booked through Swaraj Travel comes with a verified driver, and support is available 24/7 if you need any assistance during your journey.
+              On a long route like Mumbai to Shirdi, who is driving matters as much as which car you are sitting in. Every cab booked through Book A Cab comes with a verified driver, and support is available 24/7 if you need any assistance during your journey.
             </p>
             <p>
               Real feedback from past passengers reflects this. One customer travelling to Shirdi with family shared that the driver was polite and helped them throughout the journey, calling it a peaceful and tension free trip. Another customer on a separate long distance trip mentioned that the driver was experienced on ghats and drove safely, adding that the whole family enjoyed the trip. A tourist on another journey said they felt very safe and comfortable, describing the driver as professional and helpful throughout.
@@ -1134,7 +1134,7 @@ export function MumbaiToShirdiContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <p className="text-sm font-semibold">
-                  Real customer feedback for a Mumbai to Shirdi cab trip with Swaraj Travel
+                  Real customer feedback for a Mumbai to Shirdi cab trip with Book A Cab
                 </p>
               </div>
             </div>
@@ -1283,7 +1283,7 @@ export function MumbaiToShirdiContent() {
                 BOOK NOW
               </button>
               <a
-                href={waLink("Hi Swaraj Travels, I want to book a cab from Mumbai to Shirdi.")}
+                href={waLink("Hi Book A Cab, I want to book a cab from Mumbai to Shirdi.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-xl bg-emerald-600 px-5 py-3 font-semibold text-white hover:bg-emerald-700 transition-colors inline-flex items-center gap-2"

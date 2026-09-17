@@ -240,7 +240,7 @@ export interface PuneFaqItem {
 export const PUNE_FAQS: PuneFaqItem[] = [
   {
     question: "What is the fare for a Pune to Mumbai cab?",
-    answer: "A Pune to Mumbai cab with Swaraj Travel is charged per kilometre, starting at ₹14 per km for a Swift Dzire, ₹16 per km for an Ertiga and ₹20 per km for an Innova Crysta. On a 150 km trip that is roughly ₹2,100 in a Dzire and ₹3,000 in an Innova Crysta, plus toll and driver food as per actual.",
+    answer: "A Pune to Mumbai cab with Book A Cab is charged per kilometre, starting at ₹14 per km for a Swift Dzire, ₹16 per km for an Ertiga and ₹20 per km for an Innova Crysta. On a 150 km trip that is roughly ₹2,100 in a Dzire and ₹3,000 in an Innova Crysta, plus toll and driver food as per actual.",
   },
   {
     question: "Is toll included in the Pune to Mumbai cab fare?",
@@ -264,7 +264,7 @@ export const PUNE_FAQS: PuneFaqItem[] = [
   },
   {
     question: "Will the cab drop me at Terminal 1 or Terminal 2 of Mumbai airport?",
-    answer: "Swaraj Travel drops at both Terminal 1 and Terminal 2 of Chhatrapati Shivaji Maharaj International Airport. Tell us your terminal at booking, since T1 at Santacruz and T2 at Andheri East have separate approach roads. If you are unsure, send your airline and flight number and we will note it.",
+    answer: "Book A Cab drops at both Terminal 1 and Terminal 2 of Chhatrapati Shivaji Maharaj International Airport. Tell us your terminal at booking, since T1 at Santacruz and T2 at Andheri East have separate approach roads. If you are unsure, send your airline and flight number and we will note it.",
   },
   {
     question: "What time should I leave Pune to catch a 9 am flight from Mumbai?",

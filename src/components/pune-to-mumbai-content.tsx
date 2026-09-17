@@ -137,7 +137,7 @@ export function PuneToMumbaiContent() {
           {/* Intro text */}
           <div className="mt-4 space-y-3 text-base text-gray-700 leading-relaxed md:text-lg">
             <p>
-              Swaraj Travel runs Pune to Mumbai cabs around the clock, with one way, round trip and hourly rental options. Our per kilometre rates for all 16 vehicles are published on this page, so you can work out roughly what your trip will cost before you call anyone.
+              Book A Cab runs Pune to Mumbai cabs around the clock, with one way, round trip and hourly rental options. Our per kilometre rates for all 16 vehicles are published on this page, so you can work out roughly what your trip will cost before you call anyone.
             </p>
             <p>
               Rates start at ₹14 per km for a Swift Dzire and go up to a 32 seat Mini Bus for large groups. Toll, parking and driver food are charged as per actual on top of the running fare, and we tell you exactly what applies before your booking is confirmed.
@@ -152,8 +152,8 @@ export function PuneToMumbaiContent() {
             <div className="relative aspect-[16/9] w-full max-h-[500px]">
               <Image
                 src="/assets/images/routes/pune-to-mumbai/pune-to-mumbai-cab-service.webp"
-                alt="Swaraj Travel cab on the Mumbai Pune Expressway for a Pune to Mumbai trip"
-                title="Pune to Mumbai Cab Service by Swaraj Travel"
+                alt="Book A Cab cab on the Mumbai Pune Expressway for a Pune to Mumbai trip"
+                title="Pune to Mumbai Cab Service by Book A Cab"
                 fill
                 priority
                 className="object-cover object-center"
@@ -161,7 +161,7 @@ export function PuneToMumbaiContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-4 sm:p-6 text-white">
                 <figcaption className="text-sm sm:text-base font-medium">
-                  Hero image of a Swaraj Travel sedan on the Mumbai Pune Expressway, used on the Pune to Mumbai cab service page.
+                  Hero image of a Book A Cab sedan on the Mumbai Pune Expressway, used on the Pune to Mumbai cab service page.
                 </figcaption>
               </div>
             </div>
@@ -209,7 +209,7 @@ export function PuneToMumbaiContent() {
           {/* CTA Group: WhatsApp + Call */}
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
-              href={waLink("Hi Swaraj Travel, I need a cab from Pune to Mumbai. Please share availability and fare.")}
+              href={waLink("Hi Book A Cab, I need a cab from Pune to Mumbai. Please share availability and fare.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -355,7 +355,7 @@ export function PuneToMumbaiContent() {
                   Book This Vehicle
                 </button>
                 <a
-                  href={waLink(`Hi Swaraj Travel, I would like to book ${selectedVehicle.vehicle} for Pune to Mumbai (${tripType}). Total estimate ₹${calculatedEstimate.total}. Please confirm.`)}
+                  href={waLink(`Hi Book A Cab, I would like to book ${selectedVehicle.vehicle} for Pune to Mumbai (${tripType}). Total estimate ₹${calculatedEstimate.total}. Please confirm.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-xl bg-emerald-600 px-4 py-2 text-xs sm:text-sm font-semibold text-white hover:bg-emerald-700 transition-colors inline-flex items-center gap-1.5"
@@ -946,7 +946,7 @@ export function PuneToMumbaiContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <figcaption className="text-sm font-semibold">
-                  Chhatrapati Shivaji Maharaj International Airport drop points served by Swaraj Travel.
+                  Chhatrapati Shivaji Maharaj International Airport drop points served by Book A Cab.
                 </figcaption>
               </div>
             </div>
@@ -1081,7 +1081,7 @@ export function PuneToMumbaiContent() {
         <section id="how-to-book" className="scroll-mt-20">
           {/* #19 h2 */}
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            How to Book a Pune to Mumbai Cab with Swaraj Travel
+            How to Book a Pune to Mumbai Cab with Book A Cab
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
             Four steps, and you deal with a person rather than an app.
@@ -1145,7 +1145,7 @@ export function PuneToMumbaiContent() {
 
           <div className="mt-6">
             <a
-              href={waLink("Hi Swaraj Travel, I would like to book a Pune to Mumbai cab.")}
+              href={waLink("Hi Book A Cab, I would like to book a Pune to Mumbai cab.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
@@ -1160,7 +1160,7 @@ export function PuneToMumbaiContent() {
         <section id="why-us" className="scroll-mt-20">
           {/* #20 h2 */}
           <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            Why Travellers Choose Swaraj Travel on This Route
+            Why Travellers Choose Book A Cab on This Route
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
             No slogans. Here is what you actually get.
@@ -1171,7 +1171,7 @@ export function PuneToMumbaiContent() {
             <div className="relative aspect-[16/9] w-full max-h-[460px]">
               <Image
                 src="/assets/images/routes/pune-to-mumbai/verified-driver-gps-tracked-cab.webp"
-                alt="Background verified Swaraj Travel driver with a GPS tracked cab"
+                alt="Background verified Book A Cab driver with a GPS tracked cab"
                 title="Verified Driver and GPS Tracked Vehicle"
                 fill
                 loading="lazy"
@@ -1180,7 +1180,7 @@ export function PuneToMumbaiContent() {
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 text-white">
                 <figcaption className="text-sm font-semibold">
-                  Swaraj Travel chauffeur beside a serviced, GPS tracked vehicle used on the Pune Mumbai route.
+                  Book A Cab chauffeur beside a serviced, GPS tracked vehicle used on the Pune Mumbai route.
                 </figcaption>
               </div>
             </div>
@@ -1253,14 +1253,14 @@ export function PuneToMumbaiContent() {
             </div>
           </div>
 
-          {/* #21 h3: About Swaraj Travel */}
+          {/* #21 h3: About Book A Cab */}
           <div className="mt-10 rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 shadow-sm">
             <h3 className="font-display text-xl font-bold tracking-tight text-navy sm:text-2xl">
-              About Swaraj Travel
+              About Book A Cab
             </h3>
             <div className="mt-3 space-y-3 text-sm sm:text-base text-gray-700 leading-relaxed">
               <p>
-                Swaraj Travel is a Maharashtra based cab service running airport transfers, outstation trips, local taxi bookings and tour packages across the state. Pune to Mumbai is one of the routes we work most often, alongside Mumbai to Pune, Nashik, Shirdi and Mahabaleshwar.
+                Book A Cab is a Maharashtra based cab service running airport transfers, outstation trips, local taxi bookings and tour packages across the state. Pune to Mumbai is one of the routes we work most often, alongside Mumbai to Pune, Nashik, Shirdi and Mahabaleshwar.
               </p>
               <p>
                 The company was founded by Rajesh Sharma, who brought more than 15 years of experience in the transportation industry to the business. It began with a fleet of five cars and the straightforward aim of running a cab service that people could rely on, with proper attention to customer safety and driver welfare. The fleet today runs to 16 vehicles across four categories, hatchbacks, sedans, SUVs and buses.
@@ -1268,7 +1268,7 @@ export function PuneToMumbaiContent() {
               <div className="rounded-xl bg-gray-50 p-4 border border-gray-200 text-xs sm:text-sm text-gray-800 space-y-1">
                 <div><strong>Office:</strong> Near Airport, Mumbai, Maharashtra, India</div>
                 <div><strong>Phone and WhatsApp:</strong> +91 8830273575, answered 24 hours</div>
-                <div><strong>Email:</strong> travelsswaraj69@gmail.com</div>
+                <div><strong>Email:</strong> bookings@bookacab.co.in</div>
               </div>
               <p className="text-xs text-gray-500">
                 Any dispute is handled by our support team within 24 hours of the incident, and our terms are published in full on the site rather than buried. Learn more on our{" "}
@@ -1305,7 +1305,7 @@ export function PuneToMumbaiContent() {
             ))}
           </div>
           <p className="mt-4 text-xs italic text-gray-500">
-            Reviews are from Swaraj Travel customers. Apply Review schema only once these are published on a public profile that visitors can check independently.
+            Reviews are from Book A Cab customers. Apply Review schema only once these are published on a public profile that visitors can check independently.
           </p>
         </section>
 
@@ -1390,7 +1390,7 @@ export function PuneToMumbaiContent() {
               <span>Call +91 8830273575</span>
             </a>
             <a
-              href={waLink("Hi Swaraj Travel, I want to book a Pune to Mumbai cab.")}
+              href={waLink("Hi Book A Cab, I want to book a Pune to Mumbai cab.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"

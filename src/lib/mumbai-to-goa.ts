@@ -198,7 +198,7 @@ export interface TransportComparisonItem {
 
 export const TRANSPORT_COMPARISON: TransportComparisonItem[] = [
   {
-    mode: "Private Cab (Swaraj Travel)",
+    mode: "Private Cab (Book A Cab)",
     cost: "₹8,500 to ₹18,000",
     time: "10 to 12 hours",
     doorToDoor: "Yes, fully",
@@ -304,24 +304,24 @@ export const GOA_FAQS: GoaFaqItem[] = [
     category: "distance",
   },
   {
-    question: "Which route does Swaraj Travel use for Mumbai to Goa?",
+    question: "Which route does Book A Cab use for Mumbai to Goa?",
     answer: "We use NH66, the coastal highway passing through Panvel, Mahad, Chiplun, Ratnagiri, Kankavli, and Sawantwadi before entering Goa. This is the most reliable, scenic, and consistently maintained route for this journey. If you specifically need the expressway and Kolhapur route, mention this at booking and we will accommodate it.",
     category: "distance",
   },
   // Fare, Pricing, and Charges
   {
     question: "What is the cab fare from Mumbai to Goa?",
-    answer: "Swaraj Travel's one-way Mumbai to Goa cab fare starts at ₹7,500 for a Hatchback, ₹8,500 for a Sedan, ₹11,000 for an SUV, ₹13,500 for an Innova Crysta, and ₹18,000 for a Tempo Traveller. All fares include tolls and driver charges. Your exact confirmed fare is sent to you on WhatsApp before you book.",
+    answer: "Book A Cab's one-way Mumbai to Goa cab fare starts at ₹7,500 for a Hatchback, ₹8,500 for a Sedan, ₹11,000 for an SUV, ₹13,500 for an Innova Crysta, and ₹18,000 for a Tempo Traveller. All fares include tolls and driver charges. Your exact confirmed fare is sent to you on WhatsApp before you book.",
     category: "fare",
   },
   {
     question: "Are tolls included in the Mumbai to Goa cab fare?",
-    answer: "Yes. Toll charges applicable on the NH66 route are included in the Swaraj Travel one-way fare. The only additional government charge is the Maharashtra to Goa interstate state permit fee, which is charged at actuals. We inform you of this separately before you confirm your booking.",
+    answer: "Yes. Toll charges applicable on the NH66 route are included in the Book A Cab one-way fare. The only additional government charge is the Maharashtra to Goa interstate state permit fee, which is charged at actuals. We inform you of this separately before you confirm your booking.",
     category: "fare",
   },
   {
-    question: "Are there any hidden charges in the Swaraj Travel fare?",
-    answer: "No. Swaraj Travel charges no platform fee, no booking commission, and no surprise additions. The fare confirmed on WhatsApp is what you pay. The only variables outside our control are the interstate state permit fee and the night allowance for pickups between 11 PM and 5 AM, both of which are communicated clearly before confirmation.",
+    question: "Are there any hidden charges in the Book A Cab fare?",
+    answer: "No. Book A Cab charges no platform fee, no booking commission, and no surprise additions. The fare confirmed on WhatsApp is what you pay. The only variables outside our control are the interstate state permit fee and the night allowance for pickups between 11 PM and 5 AM, both of which are communicated clearly before confirmation.",
     category: "fare",
   },
   {
@@ -331,7 +331,7 @@ export const GOA_FAQS: GoaFaqItem[] = [
   },
   // Booking Process
   {
-    question: "How do I book a Mumbai to Goa cab with Swaraj Travel?",
+    question: "How do I book a Mumbai to Goa cab with Book A Cab?",
     answer: "Send us a WhatsApp message with your travel date, pickup location in Mumbai, preferred car type, and drop point in Goa. We confirm your fare and booking within minutes. No app is required, no advance payment is needed to hold your booking.",
     category: "booking",
   },
@@ -348,17 +348,17 @@ export const GOA_FAQS: GoaFaqItem[] = [
   // Safety and Drivers
   {
     question: "Is it safe to travel Mumbai to Goa by cab at night?",
-    answer: "Yes. NH66 is a national highway with consistent lighting for most of its length. Night traffic is lighter, making for a smoother and faster drive compared to daytime. Swaraj Travel assigns only experienced long-distance drivers for overnight trips. You receive your driver's direct contact number 2 hours before pickup, our support team is reachable on WhatsApp at all hours, and live location sharing is available throughout the journey.",
+    answer: "Yes. NH66 is a national highway with consistent lighting for most of its length. Night traffic is lighter, making for a smoother and faster drive compared to daytime. Book A Cab assigns only experienced long-distance drivers for overnight trips. You receive your driver's direct contact number 2 hours before pickup, our support team is reachable on WhatsApp at all hours, and live location sharing is available throughout the journey.",
     category: "safety",
   },
   {
-    question: "Are Swaraj Travel drivers experienced on the ghat sections of the Mumbai to Goa route?",
+    question: "Are Book A Cab drivers experienced on the ghat sections of the Mumbai to Goa route?",
     answer: "Yes. Our outstation drivers are specifically selected for their long-distance route experience. They know the NH66 coastal highway, the ghat approaches near Mahad and Poladpur, and the river bridge sections that require careful speed management. One of our customers confirmed this directly: \"Driver was experienced on ghats and drove safely. Family enjoyed a lot.\" That standard applies to every Mumbai to Goa trip we operate.",
     category: "safety",
   },
   {
     question: "What happens if my cab breaks down during the Mumbai to Goa journey?",
-    answer: "Our support team is reachable on WhatsApp and call 24 hours a day, 7 days a week. In the event of a breakdown, we coordinate roadside assistance and arrange an alternate vehicle to continue your journey from that point. You will always have a live point of contact from Swaraj Travel and will never be left without a clear resolution.",
+    answer: "Our support team is reachable on WhatsApp and call 24 hours a day, 7 days a week. In the event of a breakdown, we coordinate roadside assistance and arrange an alternate vehicle to continue your journey from that point. You will always have a live point of contact from Book A Cab and will never be left without a clear resolution.",
     category: "safety",
   },
   // Car and Trip Questions
@@ -374,7 +374,7 @@ export const GOA_FAQS: GoaFaqItem[] = [
   },
   {
     question: "Do you provide Goa to Mumbai cab service as well?",
-    answer: "Yes. Swaraj Travel operates return cabs from Goa to Mumbai with the same standard of verified drivers and well-maintained vehicles. If you want to book both legs together, mention this when you message us on WhatsApp and we arrange both in one conversation.",
+    answer: "Yes. Book A Cab operates return cabs from Goa to Mumbai with the same standard of verified drivers and well-maintained vehicles. If you want to book both legs together, mention this when you message us on WhatsApp and we arrange both in one conversation.",
     category: "car",
   },
   {
@@ -384,7 +384,7 @@ export const GOA_FAQS: GoaFaqItem[] = [
   },
   {
     question: "Do your drivers speak Marathi or English?",
-    answer: "Most Swaraj Travel drivers are fluent in Marathi and conversational in Hindi. A working level of English is available. If you have a specific language preference, mention it at booking and we will do our best to match you accordingly.",
+    answer: "Most Book A Cab drivers are fluent in Marathi and conversational in Hindi. A working level of English is available. If you have a specific language preference, mention it at booking and we will do our best to match you accordingly.",
     category: "car",
   },
   {
