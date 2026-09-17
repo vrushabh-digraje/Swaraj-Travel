@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Card } from "@/components/card";
 import { CtaBanner } from "@/components/cta-banner";
@@ -52,6 +53,21 @@ export default function FleetPage() {
           Browse by Category
         </h2>
         <FleetGrid showFilter />
+        <div className="mt-12 rounded-2xl bg-primary/5 p-6 border border-primary/20 text-center max-w-3xl mx-auto">
+          <h3 className="font-display text-xl font-bold text-navy">
+            Planning a Full Day Sightseeing Trip?
+          </h3>
+          <p className="mt-2 text-sm text-gray-600">
+            View all dedicated sightseeing packages and{" "}
+            <Link
+              href="/mumbai-darshan-cab"
+              className="font-semibold text-primary underline hover:text-primary/80"
+            >
+              cars available for Mumbai Darshan
+            </Link>{" "}
+            with transparent 8h, 10h, and 12h fixed pricing.
+          </p>
+        </div>
       </div>
       <section className="bg-white py-16">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-4">

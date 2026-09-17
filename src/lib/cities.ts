@@ -14,6 +14,7 @@ export const CITIES: City[] = [
       { label: "Mumbai → Pune", href: "/mumbai-to-pune-cab" },
       { label: "Mumbai → Nashik", href: "/mumbai-to-nashik-cab" },
       { label: "Mumbai → Shirdi", href: "/mumbai-to-shirdi-cab" },
+      { label: "Mumbai Darshan taxi service", href: "/mumbai-darshan-cab" },
       { label: "Mumbai Airport transfers", href: "/services" },
     ],
   },
@@ -22,7 +23,7 @@ export const CITIES: City[] = [
     region: "Western Maharashtra",
     description: "IT hub and cultural capital with airport drops, local cabs, and hill-station trips.",
     routes: [
-      { label: "Pune → Mumbai", href: "/mumbai-to-pune-cab" },
+      { label: "Pune → Mumbai", href: "/pune-to-mumbai-cab" },
       { label: "Pune → Lonavala", href: "/cities" },
       { label: "Pune → Mahabaleshwar", href: "/mumbai-to-mahabaleshwar-cab" },
       { label: "Pune Airport transfers", href: "/services" },

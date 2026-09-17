@@ -228,6 +228,20 @@ export default function Home() {
               </Card>
             ))}
           </div>
+
+          <div className="mt-8 rounded-2xl bg-primary/5 p-6 border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <h3 className="font-display text-lg font-bold text-navy">
+                Looking for Full Day City Sightseeing?
+              </h3>
+              <p className="text-sm text-gray-600 mt-1">
+                Explore our fixed-fare sightseeing packages with personalized routes, verified chauffeurs, and zero hidden costs.
+              </p>
+            </div>
+            <Button href="/mumbai-darshan-cab" className="shrink-0">
+              Mumbai Darshan Cab Booking
+            </Button>
+          </div>
         </div>
       </section>
 

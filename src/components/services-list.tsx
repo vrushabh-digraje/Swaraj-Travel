@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { BookNowButton } from "@/components/book-now-button";
 import { Card } from "@/components/card";
 import { CheckIcon } from "@/components/icons";
@@ -106,6 +107,18 @@ export function ServicesList() {
               </ul>
               {service.price && (
                 <p className="mt-4 font-semibold text-primary">{service.price}</p>
+              )}
+              {service.slug === "hourly-rental" && (
+                <p className="mt-2 text-xs text-gray-500">
+                  Planning full-day city tours? Book our{" "}
+                  <Link
+                    href="/mumbai-darshan-cab"
+                    className="font-semibold text-primary underline hover:text-primary/80"
+                  >
+                    full day Mumbai sightseeing cab
+                  </Link>
+                  .
+                </p>
               )}
               <div className="mt-auto pt-5">
                 <BookNowButton cab={service.title} className="w-full" />

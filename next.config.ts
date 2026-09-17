@@ -14,11 +14,24 @@ const phpPages = [
   "mumbai-to-nashik-cab",
   "mumbai-to-shirdi-cab",
   "mumbai-to-mahabaleshwar-cab",
+  "mumbai-darshan-cab",
+  "mumbai-to-goa-cab",
+  "pune-to-mumbai-cab",
 ];
 
 const nextConfig: NextConfig = {
   async redirects() {
     return [
+      {
+        source: "/pune-to-mumbai-cab-service",
+        destination: "/pune-to-mumbai-cab",
+        permanent: true,
+      },
+      {
+        source: "/pune-to-mumbai-cab-service/",
+        destination: "/pune-to-mumbai-cab",
+        permanent: true,
+      },
       ...phpPages.map((path) => ({
         source: `/${path}.php`,
         destination: `/${path}`,

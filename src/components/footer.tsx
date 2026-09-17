@@ -13,6 +13,7 @@ const quickLinks = [
   { href: "/fleet", label: "Our Fleet" },
   { href: "/services", label: "Services" },
   { href: "/packages", label: "Packages" },
+  { href: "/mumbai-darshan-cab", label: "Mumbai Darshan" },
   { href: "/contact", label: "Contact Us" },
   { href: "/terms-conditions", label: "Terms & Conditions" },
   { href: "/privacy-policy", label: "Privacy Policy" },
