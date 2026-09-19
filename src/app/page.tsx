@@ -129,7 +129,7 @@ export default function Home() {
               {"Direct cabs to Maharashtra's most booked outstation destinations"}
             </p>
           </div>
-          <div className="scrollbar-none -mx-4 flex gap-6 overflow-x-auto px-4 pb-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-2 md:px-0 md:pb-0 lg:grid-cols-4">
+          <div className="scrollbar-none -mx-4 flex gap-6 overflow-x-auto px-4 pb-6 snap-x snap-mandatory md:mx-0 md:grid md:grid-cols-2 md:px-0 md:pb-0 lg:grid-cols-3">
             {OUTSTATION_ROUTES.map((route) => (
               <Link
                 key={route.slug}

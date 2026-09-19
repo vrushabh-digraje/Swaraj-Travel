@@ -350,6 +350,81 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     ],
   },
   {
+    slug: "mumbai-to-goa-cab",
+    from: "Mumbai",
+    to: "Goa",
+    title: "Mumbai to Goa Cab",
+    metaTitle: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
+    metaDescription:
+      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+    distance: "595 km",
+    duration: "10-12 hours",
+    badge: "Coastal Holiday Route",
+    headline: "Comfortable Mumbai to Goa Cab Service",
+    intro:
+      "Planning a holiday to Goa? Book A Cab offers premium Mumbai to Goa taxi service via NH66. Travel in comfort with verified long-distance drivers, transparent fixed pricing, and door-to-door pickup across Mumbai.",
+    highlights: [
+      { title: "Fixed All-Inclusive Fares", body: "Transparent pricing including tolls, fuel, and driver allowance." },
+      { title: "Door-to-Door Pickup", body: "Direct doorstep pickup from anywhere in Mumbai, Thane, or Navi Mumbai." },
+      { title: "NH66 Coastal Experts", body: "Chauffeurs trained for long highway stretches and scenic coastal driving." },
+      { title: "Family & Luggage Ready", body: "Spacious Ertiga and Innova Crysta SUVs ideal for family holidays." },
+    ],
+    stats: [
+      { value: "595 km", label: "Distance" },
+      { value: "10-12 hours", label: "Duration" },
+      { value: "24/7", label: "Available" },
+    ],
+    faqs: [
+      {
+        question: "What is the cab fare from Mumbai to Goa?",
+        answer:
+          "Book A Cab's one-way Mumbai to Goa cab fare starts at ₹7,500 for Hatchback, ₹8,500 for Sedan, ₹11,000 for SUV, and ₹13,500 for Innova Crysta. Tolls and driver allowance are included.",
+      },
+      {
+        question: "How long does a Mumbai to Goa cab take?",
+        answer:
+          "Under normal conditions, the journey takes 10 to 12 hours including 1 to 2 short break stops via NH66. An early morning departure is recommended.",
+      },
+      {
+        question: "Can I book a one-way cab from Mumbai to Goa?",
+        answer:
+          "Yes. One-way cab booking is available to both North and South Goa. You pay only for the trip you need with no return journey cost.",
+      },
+      {
+        question: "Is it safe to travel Mumbai to Goa by cab at night?",
+        answer:
+          "Yes. NH66 is a well-lit national highway with lighter traffic at night. Book A Cab assigns only verified drivers with long-distance and ghat experience.",
+      },
+    ],
+    guideTitle: "Must-visit pitstops on a Mumbai to Goa road trip",
+    guideIntro:
+      "The Mumbai to Goa drive along the NH66 Konkan corridor is one of the most scenic road trips in India, featuring coastal views, river bridges, and authentic Konkani food stops.",
+    routeMap: {
+      primary: "Mumbai → Panvel → Mahad → Chiplun → Ratnagiri → Sawantwadi → Goa",
+      via: "NH-66 Konkan Coastal Highway",
+      toll: "Included in fare",
+      mapsUrl: "https://maps.google.com/?q=Mumbai+to+Goa",
+    },
+    stops: [
+      {
+        title: "Mahad",
+        body: "A convenient breakfast stop and riverside town after crossing Panvel and Khopoli.",
+      },
+      {
+        title: "Chiplun",
+        body: "Midpoint on the Vashishti River, popular for lunch and scenic river views from the bridge.",
+      },
+      {
+        title: "Ratnagiri",
+        body: "Famous for Alphonso mangoes, coastal sea breeze, and authentic Konkani seafood/veg thalis.",
+      },
+      {
+        title: "Sawantwadi",
+        body: "Historic town known for traditional lacquerware toys and light snacks before entering Goa.",
+      },
+    ],
+  },
+  {
     slug: "pune-to-mumbai-cab",
     from: "Pune",
     to: "Mumbai",

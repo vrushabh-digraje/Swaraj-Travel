@@ -15,8 +15,6 @@ const staticPaths = [
   "/terms-conditions",
   "/privacy-policy",
   "/mumbai-darshan-cab",
-  "/mumbai-to-goa-cab",
-  "/pune-to-mumbai-cab",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
