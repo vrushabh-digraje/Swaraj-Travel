@@ -56,6 +56,9 @@ export const metadata: Metadata = {
       "en-IN": SITE_URL,
     },
   },
+  verification: {
+    google: "4MWJkX3SzWjPgJbtWwyzOFlNgZLn_K-XBjD-vcmzkbM",
+  },
 };
 
 export const viewport: Viewport = {
