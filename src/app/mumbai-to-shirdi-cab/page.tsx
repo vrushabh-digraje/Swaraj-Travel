@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Book your Mumbai to Shirdi cab with verified drivers, 24/7 support and instant WhatsApp booking. Safe, comfortable rides for family and solo pilgrims.",
   alternates: {
-    canonical: "https://www.bookacab.co.in/mumbai-to-shirdi-cab",
+    canonical: "https://bookacab.co.in/mumbai-to-shirdi-cab/",
   },
   robots: {
     index: true,
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     title: "Mumbai to Shirdi Cab Service | Book A Cab",
     description:
       "Book your Mumbai to Shirdi cab with verified drivers, 24/7 support and instant WhatsApp booking. Safe, comfortable rides for family and solo pilgrims.",
-    url: "https://www.bookacab.co.in/mumbai-to-shirdi-cab",
+    url: "https://bookacab.co.in/mumbai-to-shirdi-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.bookacab.co.in/images/mumbai-to-shirdi-cab-service.webp",
+        url: "https://bookacab.co.in/images/mumbai-to-shirdi-cab-service.webp",
         width: 1200,
         height: 600,
         alt: "Mumbai to Shirdi cab service by Book A Cab",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Mumbai to Shirdi Cab Service | Book A Cab",
     description:
       "Book your Mumbai to Shirdi cab with verified drivers, 24/7 support and instant WhatsApp booking. Safe, comfortable rides for family and solo pilgrims.",
-    images: ["https://www.bookacab.co.in/images/mumbai-to-shirdi-cab-service.webp"],
+    images: ["https://bookacab.co.in/images/mumbai-to-shirdi-cab-service.webp"],
   },
 };
 
@@ -46,13 +46,13 @@ function shirdiUnifiedSchema() {
     "@graph": [
       {
         "@type": "Service",
-        "@id": "https://www.bookacab.co.in/mumbai-to-shirdi-cab#service",
+        "@id": "https://bookacab.co.in/mumbai-to-shirdi-cab/#service",
         serviceType: "Outstation Cab Service",
         name: "Mumbai to Shirdi Cab Service",
         provider: {
           "@type": "Organization",
           name: "Book A Cab",
-          url: "https://www.bookacab.co.in/",
+          url: "https://bookacab.co.in/",
         },
         areaServed: {
           "@type": "Place",
@@ -72,7 +72,7 @@ function shirdiUnifiedSchema() {
       },
       {
         "@type": "FAQPage",
-        "@id": "https://www.bookacab.co.in/mumbai-to-shirdi-cab#faq",
+        "@id": "https://bookacab.co.in/mumbai-to-shirdi-cab/#faq",
         mainEntity: SHIRDI_FAQS.map((f) => ({
           "@type": "Question",
           name: f.question,
@@ -84,25 +84,25 @@ function shirdiUnifiedSchema() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://www.bookacab.co.in/mumbai-to-shirdi-cab#breadcrumb",
+        "@id": "https://bookacab.co.in/mumbai-to-shirdi-cab/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://www.bookacab.co.in/",
+            item: "https://bookacab.co.in/",
           },
           {
             "@type": "ListItem",
             position: 2,
             name: "Outstation Cabs",
-            item: "https://www.bookacab.co.in/outstation",
+            item: "https://bookacab.co.in/outstation/",
           },
           {
             "@type": "ListItem",
             position: 3,
             name: "Mumbai to Shirdi Cab",
-            item: "https://www.bookacab.co.in/mumbai-to-shirdi-cab",
+            item: "https://bookacab.co.in/mumbai-to-shirdi-cab/",
           },
         ],
       },

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹14/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call 8830273575.",
   alternates: {
-    canonical: "https://www.bookacab.co.in/pune-to-mumbai-cab-service/",
+    canonical: "https://bookacab.co.in/pune-to-mumbai-cab/",
   },
   robots: {
     index: true,
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     title: "Pune to Mumbai Cab Service | Rates from ₹14/km",
     description:
       "Per km rates published upfront for all 16 vehicles. One way, round trip and hourly. Mumbai airport T1 and T2 drops. Call 8830273575.",
-    url: "https://www.bookacab.co.in/pune-to-mumbai-cab-service/",
+    url: "https://bookacab.co.in/pune-to-mumbai-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
     images: [
       {
-        url: "https://www.bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg",
+        url: "https://bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg",
         width: 1200,
         height: 630,
         alt: "Pune to Mumbai Cab Service by Book A Cab",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Pune to Mumbai Cab Service | Rates from ₹14/km",
     description:
       "Per km rates published upfront. One way, round trip, airport drops. Call 8830273575.",
-    images: ["https://www.bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg"],
+    images: ["https://bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg"],
   },
 };
 
@@ -47,12 +47,12 @@ function puneToMumbaiMainSchema() {
     "@graph": [
       {
         "@type": "TaxiService",
-        "@id": "https://www.bookacab.co.in/#taxiservice",
+        "@id": "https://bookacab.co.in/#taxiservice",
         name: "Book A Cab",
-        url: "https://www.bookacab.co.in/",
+        url: "https://bookacab.co.in/",
         telephone: "+91-8830273575",
         email: "bookings@bookacab.co.in",
-        image: "https://www.bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-cab-service.webp",
+        image: "https://bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-cab-service.webp",
         priceRange: "₹₹",
         currenciesAccepted: "INR",
         paymentAccepted: "Cash, Credit Card, Debit Card, UPI, Digital Wallet",
@@ -86,19 +86,19 @@ function puneToMumbaiMainSchema() {
       },
       {
         "@type": "Service",
-        "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#service",
+        "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#service",
         name: "Pune to Mumbai Cab Service",
         serviceType: "Outstation Cab Service",
         description:
           "One way, round trip and hourly cab service from Pune to Mumbai with per kilometre rates published upfront, covering Mumbai airport Terminal 1 and Terminal 2, Navi Mumbai and Thane.",
-        provider: { "@id": "https://www.bookacab.co.in/#taxiservice" },
+        provider: { "@id": "https://bookacab.co.in/#taxiservice" },
         areaServed: [
           { "@type": "City", name: "Pune" },
           { "@type": "City", name: "Mumbai" },
         ],
         availableChannel: {
           "@type": "ServiceChannel",
-          serviceUrl: "https://www.bookacab.co.in/pune-to-mumbai-cab-service/",
+          serviceUrl: "https://bookacab.co.in/pune-to-mumbai-cab/",
           servicePhone: "+91-8830273575",
           availableLanguage: ["en", "hi", "mr"],
         },
@@ -136,10 +136,10 @@ function puneToMumbaiMainSchema() {
       },
       {
         "@type": "Trip",
-        "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#trip",
+        "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#trip",
         name: "Pune to Mumbai by Cab",
         description: "Road journey from Pune to Mumbai covering around 148 to 150 km in 3 to 4 hours via the Mumbai Pune Expressway.",
-        provider: { "@id": "https://www.bookacab.co.in/#taxiservice" },
+        provider: { "@id": "https://bookacab.co.in/#taxiservice" },
         itinerary: {
           "@type": "ItemList",
           itemListElement: [
@@ -155,39 +155,39 @@ function puneToMumbaiMainSchema() {
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#breadcrumb",
+        "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#breadcrumb",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.bookacab.co.in/" },
-          { "@type": "ListItem", position: 2, name: "Outstation Cabs", item: "https://www.bookacab.co.in/services" },
-          { "@type": "ListItem", position: 3, name: "Pune to Mumbai Cab Service", item: "https://www.bookacab.co.in/pune-to-mumbai-cab-service/" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://bookacab.co.in/" },
+          { "@type": "ListItem", position: 2, name: "Outstation Cabs", item: "https://bookacab.co.in/outstation/" },
+          { "@type": "ListItem", position: 3, name: "Pune to Mumbai Cab Service", item: "https://bookacab.co.in/pune-to-mumbai-cab/" },
         ],
       },
       {
         "@type": "WebPage",
-        "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#webpage",
-        url: "https://www.bookacab.co.in/pune-to-mumbai-cab-service/",
+        "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#webpage",
+        url: "https://bookacab.co.in/pune-to-mumbai-cab/",
         name: "Pune to Mumbai Cab Service | Rates from ₹14/km",
         description: "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹14/km to Innova Crysta ₹20/km. One way, round trip, airport drops.",
         inLanguage: "en-IN",
-        isPartOf: { "@type": "WebSite", "@id": "https://www.bookacab.co.in/#website" },
-        primaryImageOfPage: { "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#primaryimage" },
-        breadcrumb: { "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#breadcrumb" },
+        isPartOf: { "@type": "WebSite", "@id": "https://bookacab.co.in/#website" },
+        primaryImageOfPage: { "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#primaryimage" },
+        breadcrumb: { "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#breadcrumb" },
       },
       {
         "@type": "ImageObject",
-        "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#primaryimage",
-        url: "https://www.bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-cab-service.webp",
+        "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#primaryimage",
+        url: "https://bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-cab-service.webp",
         width: 1600,
         height: 900,
         caption: "Book A Cab cab on the Mumbai Pune Expressway for a Pune to Mumbai trip",
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.bookacab.co.in/#website",
-        url: "https://www.bookacab.co.in/",
+        "@id": "https://bookacab.co.in/#website",
+        url: "https://bookacab.co.in/",
         name: "Book A Cab",
         inLanguage: "en-IN",
-        publisher: { "@id": "https://www.bookacab.co.in/#taxiservice" },
+        publisher: { "@id": "https://bookacab.co.in/#taxiservice" },
       },
     ],
   };
@@ -198,7 +198,7 @@ function puneToMumbaiFaqSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "@id": "https://www.bookacab.co.in/pune-to-mumbai-cab-service/#faq",
+    "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#faq",
     mainEntity: PUNE_FAQS.map((f) => ({
       "@type": "Question",
       name: f.question,

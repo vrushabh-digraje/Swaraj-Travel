@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
   alternates: {
-    canonical: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+    canonical: "https://bookacab.co.in/mumbai-to-goa-cab/",
   },
   robots: {
     index: true,
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
       "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
-    url: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+    url: "https://bookacab.co.in/mumbai-to-goa-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
+        url: "https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
         width: 1440,
         height: 600,
         alt: "Mumbai to Goa cab booking service by Book A Cab with verified driver on NH66 Konkan coastal highway",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
       "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
-    images: ["https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp"],
+    images: ["https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp"],
   },
 };
 
@@ -46,9 +46,9 @@ function schemaLocalBusiness() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Book A Cab",
-    url: "https://www.bookacab.co.in",
-    logo: "https://www.bookacab.co.in/logo.png",
-    image: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
+    url: "https://bookacab.co.in/",
+    logo: "https://bookacab.co.in/logo.png",
+    image: "https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
     description:
       "Book A Cab provides Mumbai to Goa cab booking with fixed fare, verified drivers, and instant WhatsApp booking available 24/7. 50,000+ happy riders across Maharashtra outstation routes.",
     telephone: "+918856904131",
@@ -78,7 +78,7 @@ function schemaLocalBusiness() {
       closes: "23:59",
     },
     priceRange: "₹₹",
-    sameAs: ["https://www.bookacab.co.in"],
+    sameAs: ["https://bookacab.co.in/"],
   };
 }
 
@@ -92,7 +92,7 @@ function schemaService() {
     provider: {
       "@type": "LocalBusiness",
       name: "Book A Cab",
-      url: "https://www.bookacab.co.in",
+      url: "https://bookacab.co.in/",
     },
     areaServed: [
       { "@type": "City", name: "Mumbai" },
@@ -166,19 +166,19 @@ function schemaBreadcrumb() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://www.bookacab.co.in",
+        item: "https://bookacab.co.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Outstation Cabs",
-        item: "https://www.bookacab.co.in/outstation",
+        item: "https://bookacab.co.in/outstation/",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Mumbai to Goa Cab",
-        item: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+        item: "https://bookacab.co.in/mumbai-to-goa-cab/",
       },
     ],
   };
@@ -280,18 +280,18 @@ function schemaWebPage() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
-    url: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+    url: "https://bookacab.co.in/mumbai-to-goa-cab/",
     description:
       "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers and instant WhatsApp booking 24/7. 50,000+ happy riders.",
     inLanguage: "en-IN",
     isPartOf: {
       "@type": "WebSite",
       name: "Book A Cab",
-      url: "https://www.bookacab.co.in",
+      url: "https://bookacab.co.in/",
     },
     primaryImageOfPage: {
       "@type": "ImageObject",
-      url: "https://www.bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
+      url: "https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
       caption: "Mumbai to Goa cab booking by Book A Cab on NH66 coastal highway",
     },
     breadcrumb: {
@@ -301,19 +301,19 @@ function schemaWebPage() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://www.bookacab.co.in",
+          item: "https://bookacab.co.in/",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Outstation Cabs",
-          item: "https://www.bookacab.co.in/outstation",
+          item: "https://bookacab.co.in/outstation/",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Mumbai to Goa Cab",
-          item: "https://www.bookacab.co.in/mumbai-to-goa-cab",
+          item: "https://bookacab.co.in/mumbai-to-goa-cab/",
         },
       ],
     },

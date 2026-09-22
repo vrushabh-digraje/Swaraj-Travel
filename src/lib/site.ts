@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://www.bookacab.co.in";
+/**
+ * Canonical domain — single source of truth.
+ *
+ * www.bookacab.co.in ka DNS A record NAHI hai (domain resolve nahi hota).
+ * Isliye SITE_URL hamesha non-www rahega. Ise kabhi "www." ke saath mat karna.
+ *
+ * NOTE: URL ke end me slash mat lagana — helper khud add karta hai.
+ */
+export const SITE_URL = "https://bookacab.co.in";
+
+export const SITE_NAME = "Book A Cab";
 
 export const SITE = {
   name: "Book A Cab",
@@ -38,9 +48,18 @@ export function whatsappHref(message?: string) {
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
 
-export function absoluteUrl(path = "/") {
-  if (path.startsWith("http")) return path;
-  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+/**
+ * next.config.js ke `trailingSlash` se ye EXACTLY match hona chahiye.
+ * Mismatch hua to sitemap ka har URL ek extra 301 hop karega.
+ */
+export const TRAILING_SLASH = true;
+
+/** Kisi bhi path ko poore canonical URL me badalta hai. */
+export function absoluteUrl(path = "/"): string {
+  if (path === "/" || path === "") return `${SITE_URL}/`;
+
+  const clean = `/${path.replace(/^\/+/, "").replace(/\/+$/, "")}`;
+  return TRAILING_SLASH ? `${SITE_URL}${clean}/` : `${SITE_URL}${clean}`;
 }
 
 export function createMetadata({
