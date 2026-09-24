@@ -1,8 +1,7 @@
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { MumbaiDarshanContent } from "@/components/mumbai-darshan-content";
-import { MUMBAI_DARSHAN_FAQS } from "@/lib/mumbai-darshan";
-import { SITE, absoluteUrl, createMetadata } from "@/lib/site";
+import { SITE, createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
   title: "Mumbai Darshan Cab | Fixed Fares and Full Day Itinerary",
@@ -700,6 +699,7 @@ export default function MumbaiDarshanPage() {
             { name: "Services", path: "/services" },
             { name: "Mumbai Darshan Cab", path: "/mumbai-darshan-cab" },
           ]}
+          jsonLd={false}
         />
       </div>
       <MumbaiDarshanContent />

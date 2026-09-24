@@ -7,12 +7,18 @@ type Crumb = {
   path: string;
 };
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({
+  items,
+  jsonLd = true,
+}: {
+  items: Crumb[];
+  jsonLd?: boolean;
+}) {
   const trail = [{ name: "Home", path: "/" }, ...items];
 
   return (
     <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-500">
-      <JsonLd data={breadcrumbSchema(trail)} />
+      {jsonLd && <JsonLd data={breadcrumbSchema(trail)} />}
       <ol className="flex flex-wrap items-center gap-2">
         {trail.map((item, index) => {
           const last = index === trail.length - 1;
