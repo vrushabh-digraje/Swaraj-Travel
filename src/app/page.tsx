@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/button";
+import { JsonLd } from "@/components/json-ld";
 import { Card } from "@/components/card";
 import { CtaBanner } from "@/components/cta-banner";
 import { FleetGrid } from "@/components/fleet-grid";
@@ -60,10 +61,183 @@ const steps = [
   },
 ];
 
+function homeUnifiedSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://bookacab.co.in/#organization",
+        name: "Book A Cab",
+        legalName: "Book A Cab",
+        url: "https://bookacab.co.in/",
+        logo: {
+          "@type": "ImageObject",
+          "@id": "https://bookacab.co.in/#logo",
+          url: "https://bookacab.co.in/logo.png",
+          caption: "Book A Cab",
+        },
+        image: {
+          "@id": "https://bookacab.co.in/#logo",
+        },
+        email: "bookings@bookacab.co.in",
+        telephone: "+919970294122",
+        foundingDate: "2010",
+        founder: {
+          "@type": "Person",
+          name: "Rajesh Sharma",
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Near Airport, Andheri East",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400099",
+          addressCountry: "IN",
+        },
+        sameAs: ["https://wa.me/919970294122"],
+      },
+      {
+        "@type": ["LocalBusiness", "TaxiService"],
+        "@id": "https://bookacab.co.in/#localbusiness",
+        name: "Book A Cab",
+        description:
+          "Mumbai based cab service offering Mumbai Darshan sightseeing tours, airport transfers and outstation taxi to Pune, Shirdi, Nashik, Mahabaleshwar and Goa. Published per-km rates, itemised billing and verified drivers.",
+        url: "https://bookacab.co.in/",
+        image: {
+          "@id": "https://bookacab.co.in/#logo",
+        },
+        logo: {
+          "@id": "https://bookacab.co.in/#logo",
+        },
+        parentOrganization: {
+          "@id": "https://bookacab.co.in/#organization",
+        },
+        telephone: "+919970294122",
+        email: "bookings@bookacab.co.in",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Near Airport, Andheri East",
+          addressLocality: "Mumbai",
+          addressRegion: "Maharashtra",
+          postalCode: "400099",
+          addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 19.0989,
+          longitude: 72.8656,
+        },
+        hasMap:
+          "https://www.google.com/maps/search/?api=1&query=19.0989,72.8656",
+        priceRange: "₹₹",
+        currenciesAccepted: "INR",
+        paymentAccepted:
+          "Cash, UPI, Credit Card, Debit Card, Digital Wallet",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        ],
+        areaServed: [
+          { "@type": "City", name: "Mumbai" },
+          { "@type": "City", name: "Navi Mumbai" },
+          { "@type": "City", name: "Thane" },
+          { "@type": "City", name: "Pune" },
+          { "@type": "City", name: "Nashik" },
+          { "@type": "City", name: "Shirdi" },
+          { "@type": "City", name: "Mahabaleshwar" },
+          { "@type": "City", name: "Lonavala" },
+          { "@type": "City", name: "Goa" },
+        ],
+        sameAs: ["https://wa.me/919970294122"],
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: "+919970294122",
+            contactType: "reservations",
+            areaServed: "IN",
+            availableLanguage: ["en", "hi", "mr"],
+          },
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://bookacab.co.in/#website",
+        url: "https://bookacab.co.in/",
+        name: "Book A Cab",
+        publisher: {
+          "@id": "https://bookacab.co.in/#organization",
+        },
+        inLanguage: "en-IN",
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://bookacab.co.in/#webpage",
+        url: "https://bookacab.co.in/",
+        name: "Mumbai Cab Booking | Airport, Outstation & Local Taxi - Book A Cab",
+        description:
+          "Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra. 24/7 support, verified drivers, and instant booking on WhatsApp.",
+        isPartOf: {
+          "@id": "https://bookacab.co.in/#website",
+        },
+        about: {
+          "@id": "https://bookacab.co.in/#localbusiness",
+        },
+        inLanguage: "en-IN",
+        dateModified: "2026-09-21",
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://bookacab.co.in/#services",
+        name: "Book A Cab services",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Mumbai Darshan Cab",
+            url: "https://bookacab.co.in/mumbai-darshan-cab/",
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Outstation Cabs",
+            url: "https://bookacab.co.in/outstation/",
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Tour Packages",
+            url: "https://bookacab.co.in/packages/",
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: "Our Fleet",
+            url: "https://bookacab.co.in/fleet/",
+          },
+        ],
+      },
+    ],
+  };
+}
+
 export default function Home() {
   const { openBooking } = useBooking();
   return (
     <>
+      <JsonLd data={homeUnifiedSchema()} />
       <HomeHero />
       <CtaBanner
         title="Ready to Ride?"

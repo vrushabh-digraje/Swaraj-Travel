@@ -4,9 +4,7 @@ import { BookingModal } from "@/components/booking-modal";
 import { FloatingActions } from "@/components/floating-actions";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { JsonLd } from "@/components/json-ld";
 import { BookingProvider } from "@/lib/booking-context";
-import { localBusinessSchema } from "@/lib/schema";
 import { SITE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -72,7 +70,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-light font-sans text-navy">
-        <JsonLd data={localBusinessSchema()} />
         <BookingProvider>
           <a href="#main-content" className="skip-link">
             Skip to content
