@@ -4,21 +4,10 @@ import { MumbaiDarshanContent } from "@/components/mumbai-darshan-content";
 import { SITE, createMetadata } from "@/lib/site";
 
 export const metadata = createMetadata({
-  title: "Mumbai Darshan Cab | Fixed Fares and Full Day Itinerary",
+  title: "Mumbai Darshan Cab from ₹1,120",
   description:
-    "Book a Mumbai Darshan cab from ₹1,120 for 8 hours and 80 km. Real itinerary, place timings, entry fees and every extra cost shown before you pay. Call " +
-    SITE.phoneDisplay +
-    ".",
+    "Book a Mumbai Darshan cab from ₹1,120 for 8 hours / 80 km. Itinerary, entry fees, closure days and extra costs shown upfront. Call +91-9970294122.",
   path: "/mumbai-darshan-cab",
-  keywords: [
-    "Mumbai Darshan Cab",
-    "mumbai darshan cab booking",
-    "cab service",
-    "cabs",
-    "Mumbai sightseeing cab",
-    "private car hire Mumbai",
-    "full day cab Mumbai",
-  ],
 });
 
 function mumbaiDarshanUnifiedSchema() {

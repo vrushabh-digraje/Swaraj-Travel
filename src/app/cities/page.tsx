@@ -10,11 +10,6 @@ export const metadata = createMetadata({
   description:
     "Book A Cab covers 50+ cities in Maharashtra including Mumbai, Pune, Nashik, Shirdi, Mahabaleshwar, Nagpur, and Konkan. Book local and outstation cabs.",
   path: "/cities",
-  keywords: [
-    "cab service Maharashtra",
-    "Mumbai taxi coverage",
-    "Pune cab booking",
-  ],
 });
 
 export default function CitiesPage() {

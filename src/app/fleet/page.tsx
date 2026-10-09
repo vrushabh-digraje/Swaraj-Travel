@@ -12,7 +12,6 @@ export const metadata = createMetadata({
   description:
     "Browse Book A Cab’s Mumbai cab fleet: Innova Crysta, Ertiga, Swift Dzire, Tempo Traveller, and mini buses. Well-maintained AC vehicles with 24/7 booking.",
   path: "/fleet",
-  keywords: ["Mumbai cab fleet", "Innova Crysta hire", "Tempo Traveller Mumbai"],
 });
 
 const faqs = [

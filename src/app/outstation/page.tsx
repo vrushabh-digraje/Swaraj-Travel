@@ -10,11 +10,6 @@ export const metadata = createMetadata({
   description:
     "Book outstation cabs from Mumbai to Pune, Nashik, Shirdi, and Mahabaleshwar. One-way and round-trip taxis with airport pickup and transparent per-km rates.",
   path: "/outstation",
-  keywords: [
-    "Mumbai outstation cab",
-    "Mumbai to Pune taxi",
-    "Mumbai to Shirdi cab",
-  ],
 });
 
 const faqs = [

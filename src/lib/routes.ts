@@ -8,6 +8,22 @@ export type RouteStop = {
   body: string;
 };
 
+export type RouteFareRow = {
+  vehicle: string;
+  seats: string;
+  ratePerKm: number;
+  oneWayBaseFare: number;
+  bestFor?: string;
+};
+
+export type TransportComparisonRow = {
+  option: string;
+  doorToDoor: string;
+  luggage: string;
+  timingControl: string;
+  bestFor: string;
+};
+
 export type OutstationRoute = {
   slug: string;
   from: string;
@@ -32,6 +48,25 @@ export type OutstationRoute = {
     mapsUrl: string;
   };
   stops: RouteStop[];
+
+  // AEO + SEO additions from Developer Handoff doc
+  quickAnswer?: string;
+  fareTable?: RouteFareRow[];
+  fareTableNote?: string;
+  included?: string[];
+  extraAtActuals?: string[];
+  pickupAreas?: string;
+  dropAreas?: string;
+  bestTimeToTravel?: string;
+  whyBook?: {
+    title: string;
+    content: string;
+    highlightLinkText?: string;
+    highlightLinkHref?: string;
+  };
+  comparisonTable?: TransportComparisonRow[];
+  airportNote?: string;
+  contextualLinks?: Array<{ title: string; href: string }>;
 };
 
 export const OUTSTATION_ROUTES: OutstationRoute[] = [
@@ -40,15 +75,17 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Pune",
     title: "Mumbai to Pune Cab",
-    metaTitle: "Mumbai to Pune Cab | Reliable One Way & Round Trip Taxi @ ₹13/km",
+    metaTitle: "Mumbai to Pune Cab from ₹1,924 | One Way & Round Trip",
     metaDescription:
-      "Book a Mumbai to Pune cab with Book A Cab. One-way and round-trip taxis via the Expressway, airport drops from T1/T2, Innova Crysta and Dzire from ₹13/km.",
+      "Book a Mumbai to Pune cab: one-way from ₹1,924 for 148 km. Airport T1/T2 pickup, drop anywhere in Pune. Dzire, Innova, Ertiga, Tempo Traveller. Call +91-9970294122.",
     distance: "148 km",
-    duration: "3 hours",
+    duration: "3 to 3.5 hours",
     badge: "Most Popular Route",
-    headline: "Reliable Mumbai to Pune Cab Service",
+    headline: "Mumbai to Pune Cab: One Way & Round Trip Taxi",
     intro:
-      "Looking for a stress-free journey? Book A Cab offers Mumbai to Pune taxi service via the Mumbai-Pune Expressway. Book a one-way drop from Mumbai Airport T2 or a round-trip package in a clean, air-conditioned sedan or SUV, available 24/7.",
+      "A Mumbai to Pune cab covers about 148 km via the Yashwantrao Chavan Mumbai-Pune Expressway in roughly 3 to 3.5 hours. One-way base fares start at ₹1,924 for a Swift Dzire (₹13/km), ₹2,664 for an Innova and ₹2,960 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. Book on call or WhatsApp at +91-9970294122.",
+    quickAnswer:
+      "A Mumbai to Pune cab covers about 148 km via the Yashwantrao Chavan Mumbai-Pune Expressway in roughly 3 to 3.5 hours. One-way base fares start at ₹1,924 for a Swift Dzire (₹13/km), ₹2,664 for an Innova and ₹2,960 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. Book on call or WhatsApp at +91-9970294122.",
     highlights: [
       { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
       { title: "Door-to-Door Pickup", body: "Home, office, hotel, or Mumbai Airport pickup." },
@@ -57,14 +94,86 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     ],
     stats: [
       { value: "148 km", label: "Distance" },
-      { value: "3-4 hours", label: "Duration" },
-      { value: "24/7", label: "Available" },
+      { value: "3 to 3.5 hrs", label: "Duration" },
+      { value: "₹1,924", label: "Starting Fare" },
+    ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 1924, bestFor: "2 to 3 people, light luggage" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 2072, bestFor: "2 to 3 people" },
+      { vehicle: "Honda City", seats: "4+1", ratePerKm: 18, oneWayBaseFare: 2664, bestFor: "Comfort sedan" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 2368, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 2664, bestFor: "Families with luggage" },
+      { vehicle: "Kia Carens", seats: "6+1 / 7+1", ratePerKm: 18, oneWayBaseFare: 2664, bestFor: "Families, more legroom" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 2960, bestFor: "Premium comfort, elders" },
+      { vehicle: "Tempo Traveller AC", seats: "12", ratePerKm: 28, oneWayBaseFare: 4144, bestFor: "Groups" },
+      { vehicle: "Force Urbania", seats: "17", ratePerKm: 35, oneWayBaseFare: 5180, bestFor: "Larger groups" },
+    ],
+    fareTableNote:
+      "Base fare = 148 km x rate per km. Expressway toll (approximately ₹320 for a car one way, paid by FASTag), parking and driver allowance (₹300 per day) are extra at actuals. Round trips are charged on total kilometres travelled, minimum 250 km per day. For an all-inclusive quote, message us on WhatsApp.",
+    included: [
+      "AC vehicle and fuel for the booked distance",
+      "Experienced expressway chauffeur",
+      "Door-to-door pickup and drop",
+      "Flexible short pitstops for food, tea or photography",
+    ],
+    extraAtActuals: [
+      "Expressway toll (approx ₹320 for car one-way via FASTag)",
+      "Parking charges at pickup/drop venues (with receipts)",
+      "Driver allowance (₹300 per day)",
+      "State taxes and waiting charges beyond agreed schedule",
+    ],
+    pickupAreas:
+      "Mumbai Airport Terminal 1 and Terminal 2, Andheri, Bandra, Dadar, Powai, Ghatkopar, Chembur, Thane, Navi Mumbai (Vashi, Nerul, Kharghar, Panvel), South Mumbai.",
+    dropAreas:
+      "Pune Airport, Pune Railway Station, Shivajinagar, Deccan, Kothrud, Hinjewadi, Baner, Wakad, Viman Nagar, Kharadi, Hadapsar, Magarpatta.",
+    bestTimeToTravel:
+      "Early morning (before 7 am) and late evening (after 8 pm) are the smoothest for the expressway. Friday evenings and Sunday evenings, long weekends and monsoon weekends can add 45 to 90 minutes around Khandala and Lonavala. If you have a flight or meeting in Pune, add a buffer of one hour to the standard 3-hour estimate.",
+    comparisonTable: [
+      { option: "Private Cab", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Families, groups, airport trips, business" },
+      { option: "Train", doorToDoor: "No (station to station)", luggage: "Manageable", timingControl: "Fixed timetable", bestFor: "Solo traveller on a budget" },
+      { option: "Bus", doorToDoor: "No", luggage: "Limited", timingControl: "Fixed timetable", bestFor: "Budget travel" },
+      { option: "Self-Drive", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Confident drivers who want to drive" },
+    ],
+    airportNote:
+      "We pick up from Terminal 1 and Terminal 2. Share your flight number and the driver tracks your arrival, so he is at arrivals when you land. Airport parking is charged at actuals. Typical airport to Pune door-to-door time is 3.5 to 4 hours depending on traffic.",
+    contextualLinks: [
+      { title: "Mumbai to Nashik cab", href: "/mumbai-to-nashik-cab" },
+      { title: "Mumbai to Mahabaleshwar cab", href: "/mumbai-to-mahabaleshwar-cab" },
+      { title: "Pune to Mumbai cab", href: "/pune-to-mumbai-cab" },
+      { title: "Mumbai Darshan cab", href: "/mumbai-darshan-cab" },
+      { title: "Fleet page", href: "/fleet" },
+      { title: "Tour packages", href: "/packages" },
     ],
     faqs: [
       {
-        question: "How much is the cab fare from Mumbai to Pune?",
+        question: "How long does it take to travel from Mumbai to Pune by cab?",
         answer:
-          "Mumbai to Pune cab fares start from ₹13/km. The total depends on the car type and whether you choose one-way or round trip. Tolls and parking are extra as actuals.",
+          "About 3 to 3.5 hours for 148 km via the Mumbai-Pune Expressway. Peak weekends and monsoon can add 45 to 90 minutes.",
+      },
+      {
+        question: "What is the cheapest cab from Mumbai to Pune?",
+        answer:
+          "A Swift Dzire or Aura at ₹13/km, which is a base fare of ₹1,924 one way, plus toll and driver allowance at actuals.",
+      },
+      {
+        question: "Which cab is best for a family of five from Mumbai to Pune?",
+        answer:
+          "An Ertiga (₹16/km) or Kia Carens (₹18/km) fits five people with moderate luggage. For heavy luggage or elders, choose an Innova or Innova Crysta.",
+      },
+      {
+        question: "Can I stop on the way?",
+        answer:
+          "Yes. Short stops for food, photos or a break are fine. Long waiting beyond the agreed time may be charged. Tell us your plan when booking.",
+      },
+      {
+        question: "Can you drop me at Pune Airport or Pune Railway Station?",
+        answer:
+          "Yes. We drop anywhere in Pune, including Pune Airport and Pune Railway Station.",
+      },
+      {
+        question: "Do you offer night travel from Mumbai to Pune?",
+        answer:
+          "Yes, 24/7. Night charges apply between 12:00 am and 6:00 am.",
       },
       {
         question: "Do you provide Mumbai Airport to Pune cab service?",
@@ -74,21 +183,21 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
       {
         question: "Is the Mumbai-Pune Expressway toll included?",
         answer:
-          "To keep base rates transparent, expressway tolls and state taxes are usually extra. We can share an all-inclusive quote on WhatsApp.",
+          "Expressway toll (approx ₹320 for a car one way) is extra as actuals paid by FASTag, or we can share an all-inclusive quote on WhatsApp.",
       },
       {
         question: "Can I book a one-way taxi from Mumbai to Pune?",
         answer:
-          "Yes. You pay only for the distance you travel on a one-way booking. Return fare is not charged.",
+          "Yes. On one-way trips you pay only for the distance you travel (148 km base). Return fare is not charged.",
       },
     ],
     guideTitle: "Must-visit stops on a Mumbai to Pune road trip",
     guideIntro:
-      "The drive from Mumbai to Pune via the Yashwantrao Chavan Expressway is more than a 3-hour commute. Our drivers run this route every day and know the best food and viewpoint stops.",
+      "The drive from Mumbai to Pune via the Yashwantrao Chavan Expressway is roughly 3 to 3.5 hours. Our drivers run this route every day and know the best food and viewpoint stops.",
     routeMap: {
       primary: "Mumbai → Panvel → Khopoli → Khandala → Lonavala → Talegaon → Pune",
       via: "Mumbai-Pune Expressway (Yashwantrao Chavan Expressway)",
-      toll: "₹300-400",
+      toll: "approx ₹320 (car, one way)",
       mapsUrl: "https://maps.google.com/?q=Mumbai+to+Pune+Expressway",
     },
     stops: [
@@ -123,41 +232,98 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Nashik",
     title: "Mumbai to Nashik Cab",
-    metaTitle: "Mumbai to Nashik Cab | Reliable One Way & Round Trip Taxi @ ₹13/km",
+    metaTitle: "Mumbai to Nashik Cab from ₹2,171 | One Way & Round Trip",
     metaDescription:
-      "Book a Mumbai to Nashik cab for wine tours, Trimbakeshwar darshan, or airport drops. One-way and round-trip taxis on NH160 with 24/7 pickup.",
+      "Book a Mumbai to Nashik cab: one-way from ₹2,171 for 167 km. Trimbakeshwar, Sula, Shirdi add-ons. Dzire, Ertiga, Innova. Call +91-9970294122.",
     distance: "167 km",
-    duration: "3.5 hours",
-    badge: "Wine Country Route",
-    headline: "Reliable Mumbai to Nashik Cab Service",
+    duration: "3.5 to 4 hours",
+    badge: "Wine Country & Pilgrimage",
+    headline: "Mumbai to Nashik Cab: One Way & Round Trip Taxi",
     intro:
-      "Book a premium Mumbai to Nashik taxi for Trimbakeshwar, Sula vineyards, or a business meeting. Book A Cab offers sanitized, punctual one-way and Mumbai Airport to Nashik cabs.",
+      "A Mumbai to Nashik cab covers about 167 km in roughly 3.5 to 4 hours via the Mumbai-Nashik highway through Kasara Ghat. One-way base fares start at ₹2,171 for a Swift Dzire, ₹3,006 for an Innova and ₹3,340 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals.",
+    quickAnswer:
+      "A Mumbai to Nashik cab covers about 167 km in roughly 3.5 to 4 hours via the Mumbai-Nashik highway through Kasara Ghat. One-way base fares start at ₹2,171 for a Swift Dzire, ₹3,006 for an Innova and ₹3,340 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals.",
     highlights: [
       { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
       { title: "Door-to-Door Pickup", body: "Home, office, or Mumbai Airport pickup." },
-      { title: "NH160 Experts", body: "Drivers who know Igatpuri ghats and Nashik traffic." },
-      { title: "Safety First", body: "Serviced, sanitized vehicles for family travel." },
+      { title: "Ghat Route Specialists", body: "Chauffeurs trained for Kasara Ghat curves and fog." },
+      { title: "Pilgrim & Wine Add-ons", body: "Trimbakeshwar and Sula Vineyards same-day options." },
     ],
     stats: [
       { value: "167 km", label: "Distance" },
-      { value: "3.5-4.5 hours", label: "Duration" },
-      { value: "24/7", label: "Available" },
+      { value: "3.5 to 4 hrs", label: "Duration" },
+      { value: "₹2,171", label: "Starting Fare" },
+    ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 2171, bestFor: "2 to 3 people, light luggage" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 2338, bestFor: "2 to 3 people" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 2672, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 3006, bestFor: "Families with luggage" },
+      { vehicle: "Kia Carens", seats: "6+1 / 7+1", ratePerKm: 18, oneWayBaseFare: 3006, bestFor: "Families, more legroom" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 3340, bestFor: "Premium comfort, elders" },
+    ],
+    fareTableNote:
+      "Base fare = 167 km x rate per km. Toll, parking and driver allowance (₹300 per day) are extra at actuals. Round trips are charged on total kilometres travelled, minimum 250 km per day. For an all-inclusive quote, message us on WhatsApp.",
+    included: [
+      "AC vehicle and fuel for the booked distance",
+      "Experienced ghat chauffeur",
+      "Door-to-door pickup across Mumbai",
+      "Flexible short pitstops for breakfast and viewpoints",
+    ],
+    extraAtActuals: [
+      "Highway tolls paid via FASTag at actuals",
+      "Parking charges at temples/vineyards with receipts",
+      "Driver allowance (₹300 per day)",
+      "Waiting beyond agreed time",
+    ],
+    whyBook: {
+      title: "Why Travellers Book a Mumbai to Nashik Cab",
+      content:
+        "Most Nashik trips fall into three groups: pilgrims heading to Trimbakeshwar and Panchavati, wine-tourism visitors going to the Sula and Gangapur Road vineyards, and business travellers. A private cab lets you combine stops, such as Nashik city, Trimbakeshwar (about 28 km further) and a vineyard visit, without changing vehicles.",
+      highlightLinkText: "Want to continue to Sai Baba's temple after Nashik? See Mumbai to Shirdi cab.",
+      highlightLinkHref: "/mumbai-to-shirdi-cab",
+    },
+    pickupAreas:
+      "Mumbai Airport, Andheri, Bandra, Dadar, Thane, Navi Mumbai and all Mumbai areas.",
+    dropAreas:
+      "Nashik Road railway station, CBS, Gangapur Road, College Road, Panchavati, Trimbakeshwar, and hotels or wedding venues in Nashik.",
+    bestTimeToTravel:
+      "Monsoon (July to September) is scenic but the ghat is slow in fog. October to February is comfortable and good for vineyards. For Trimbakeshwar darshan, leave early to avoid queue time, especially on Mondays and during Shravan.",
+    comparisonTable: [
+      { option: "Private Cab", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Trimbakeshwar pilgrims, wine lovers, families" },
+      { option: "Train", doorToDoor: "No (Nashik Road)", luggage: "Manageable", timingControl: "Fixed timetable", bestFor: "Solo business trips to city" },
+      { option: "Bus", doorToDoor: "No", luggage: "Limited", timingControl: "Fixed timetable", bestFor: "Budget travel" },
+    ],
+    contextualLinks: [
+      { title: "Mumbai to Shirdi cab", href: "/mumbai-to-shirdi-cab" },
+      { title: "Mumbai to Pune cab", href: "/mumbai-to-pune-cab" },
+      { title: "Fleet page", href: "/fleet" },
+      { title: "Tour packages", href: "/packages" },
     ],
     faqs: [
       {
-        question: "What is the fastest route from Mumbai to Nashik?",
-        answer:
-          "We travel via the Mumbai-Nashik Highway (NH160). It usually takes about 4 hours. Early morning departures help avoid Thane traffic.",
+        question: "How far is Nashik from Mumbai by road?",
+        answer: "About 167 km, usually 3.5 to 4 hours via NH160 through Kasara Ghat.",
       },
       {
-        question: "Do you offer Trimbakeshwar darshan packages?",
+        question: "What is the cab fare from Mumbai to Nashik?",
         answer:
-          "Yes. Same-day or multi-day packages from Mumbai to Trimbakeshwar with Nashik sightseeing are available on request.",
+          "A one-way base fare starts at ₹2,171 for a Swift Dzire. An Ertiga is ₹2,672 and an Innova ₹3,006. Toll, parking and driver allowance are extra.",
       },
       {
-        question: "Can I book a one-way drop from Mumbai Airport to Nashik?",
+        question: "Can I add Trimbakeshwar or Sula Vineyards?",
         answer:
-          "Yes. We provide 24/7 pickup from Mumbai Airport and wait if your flight is delayed.",
+          "Yes. Share your plan at booking and we quote the extra kilometres and waiting time without vehicle change.",
+      },
+      {
+        question: "Do you do Mumbai to Nashik and Shirdi in one trip?",
+        answer:
+          "Yes. Nashik to Shirdi is a common add-on. Ask for a combined multi-destination quote on WhatsApp.",
+      },
+      {
+        question: "Do you pick up from Mumbai Airport for Nashik?",
+        answer:
+          "Yes, Terminal 1 and Terminal 2 with flight tracking and terminal meet-and-greet.",
       },
       {
         question: "Are there clean food stops on the Mumbai-Nashik route?",
@@ -167,7 +333,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     ],
     guideTitle: "Best pit-stops on a Mumbai to Nashik road trip",
     guideIntro:
-      "The Mumbai to Nashik drive is about 167 km on NH160. As you leave the city and enter the Sahyadris, the route opens up to ghats, valleys, and vineyard country.",
+      "Route: Mumbai, Thane, Bhiwandi, Shahapur, Kasara Ghat, Igatpuri, Nashik. The Kasara Ghat section is winding and foggy in monsoon, so we use experienced ghat drivers.",
     routeMap: {
       primary: "Mumbai → Thane → Bhiwandi → Igatpuri → Nashik",
       via: "Mumbai-Nashik Highway (NH-160)",
@@ -176,28 +342,28 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     },
     stops: [
       {
-        title: "Shree Datta Snacks, Padgha",
-        body: "A popular Maharashtrian breakfast stop near the Padgha toll for misal pav and vada pav.",
+        title: "Kasara Ghat Viewpoint",
+        body: "Scenic viewpoint overlooking misty valley drops, especially picturesque between July and September.",
       },
       {
-        title: "Manas Mandir, Shahapur",
-        body: "White marble Jain temple just off the highway — a calm 20-minute stretch break.",
+        title: "Igatpuri & Myanmar Gate",
+        body: "Golden pagoda landmark and quick photo stop near the Vipassana centre before entering Nashik.",
       },
       {
-        title: "Camel Valley, Igatpuri",
-        body: "Viewpoint on the Kasara ghat. Especially beautiful in monsoon mist.",
+        title: "Trimbakeshwar Temple",
+        body: "One of the 12 sacred Jyotirlingas, located 28 km before Nashik. Ideal for early morning darshan.",
       },
       {
-        title: "Myanmar Gate & Vipassana Centre",
-        body: "Golden pagoda landmark in Igatpuri and a quick photo stop before Nashik.",
+        title: "Panchavati & Kalaram Temple",
+        body: "Historic Ramayana pilgrimage site on the banks of Godavari river in the heart of old Nashik.",
       },
       {
-        title: "Vihigaon Waterfall",
-        body: "Monsoon detour from the highway for a close-up waterfall stop.",
+        title: "Pandavleni Caves",
+        body: "Ancient rock-cut Buddhist caves dating from the 1st century BCE on Trivashmi Hill.",
       },
       {
         title: "Sula Vineyards",
-        body: "Wine tasting and vineyard views near Gangapur Dam as you enter Nashik.",
+        body: "India's premier wine-tourism destination with vineyard tours, tasting rooms, and restaurants.",
       },
     ],
   },
@@ -206,81 +372,134 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Shirdi",
     title: "Mumbai to Shirdi Cab",
-    metaTitle: "Mumbai to Shirdi Cab | Reliable Taxi Service starting From ₹13/km",
+    metaTitle: "Mumbai to Shirdi Cab from ₹3,120 | Kakad Aarti Cab Booking",
     metaDescription:
-      "Book a Mumbai to Shirdi cab for Sai Baba darshan. Airport pickup, Innova Crysta family cars, and Samruddhi Mahamarg route with 24/7 service.",
+      "Book a Mumbai to Shirdi cab: one-way from ₹3,120 for 240 km. Early start for Kakad Aarti, family-friendly Innova and Ertiga. Call +91-9970294122.",
     distance: "240 km",
-    duration: "5 hours",
-    badge: "Pilgrimage Route",
-    headline: "Seamless Mumbai to Shirdi Cab Booking",
+    duration: "5 to 6 hours",
+    badge: "Pilgrimage Express",
+    headline: "Mumbai to Shirdi Cab: One Way & Round Trip Taxi",
     intro:
-      "Travel from Mumbai to Shirdi for Kakad Aarti or a family pilgrimage in a comfortable AC cab. Book A Cab offers door-to-door pickup, airport transfers, and experienced highway drivers.",
+      "A Mumbai to Shirdi cab covers about 240 km in roughly 5 to 6 hours. One-way base fares start at ₹3,120 for a Swift Dzire, ₹4,320 for an Innova and ₹4,800 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. For Kakad Aarti, leave Mumbai the previous afternoon or evening.",
+    quickAnswer:
+      "A Mumbai to Shirdi cab covers about 240 km in roughly 5 to 6 hours. One-way base fares start at ₹3,120 for a Swift Dzire, ₹4,320 for an Innova and ₹4,800 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. For Kakad Aarti, leave Mumbai the previous afternoon or evening.",
     highlights: [
-      { title: "Expressway Experts", body: "Samruddhi Mahamarg for a smoother 4.5-hour journey." },
-      { title: "Punctual Pickups", body: "On-time departures from home or Mumbai Airport." },
-      { title: "Family SUVs", body: "Innova Crysta seating for 7 with luggage space." },
-      { title: "Pilgrimage Packages", body: "Shirdi, Shani Shingnapur, and Trimbakeshwar combos." },
+      { title: "Pilgrimage Timing", body: "Custom departure for early morning Kakad Aarti." },
+      { title: "Doorstep Pickup", body: "Direct pickup from Mumbai homes or Airport T1/T2." },
+      { title: "Spacious Family SUVs", body: "Ertiga & Innova Crysta with ample luggage space." },
+      { title: "Shani Shingnapur Combo", body: "Convenient combo packages covering both shrines." },
     ],
     stats: [
       { value: "240 km", label: "Distance" },
-      { value: "4.5-5 hours", label: "Duration" },
-      { value: "24/7", label: "Door-to-door" },
+      { value: "5 to 6 hrs", label: "Duration" },
+      { value: "₹3,120", label: "Starting Fare" },
+    ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 3120, bestFor: "2 to 3 people" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 3360, bestFor: "2 to 3 people" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 3840, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 4320, bestFor: "Families with luggage" },
+      { vehicle: "Kia Carens", seats: "6+1 / 7+1", ratePerKm: 18, oneWayBaseFare: 4320, bestFor: "Families, more legroom" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 4800, bestFor: "Premium comfort, elders" },
+      { vehicle: "Tempo Traveller AC", seats: "12", ratePerKm: 28, oneWayBaseFare: 6720, bestFor: "Groups" },
+    ],
+    fareTableNote:
+      "Base fare = 240 km x rate per km. Toll, parking and driver allowance (₹300 per day) are extra at actuals. Round trips are charged on total kilometres travelled, minimum 250 km per day. For an all-inclusive quote, message us on WhatsApp.",
+    included: [
+      "AC vehicle, fuel, and experienced highway chauffeur",
+      "Door-to-door pickup across Mumbai",
+      "Flexible short breaks for dining and tea",
+      "Drop directly at Shirdi temple, hotel, or ashram",
+    ],
+    extraAtActuals: [
+      "Highway toll charges via FASTag",
+      "Parking fees at temple parking complex",
+      "Driver allowance (₹300 per day)",
+      "Shani Shingnapur add-on kms if requested",
+    ],
+    whyBook: {
+      title: "Planning Your Shirdi Trip by Cab",
+      content:
+        "Most families do Shirdi as a one-night trip. A common plan: leave Mumbai in the afternoon, reach Shirdi by evening, rest, attend the early-morning Kakad Aarti and darshan, and return the same day. Aarti and darshan timings change by season and festival, so check the Shri Saibaba Sansthan website before you finalise. A private cab is easier for elders and children because the car waits for you, you control the start time, and you avoid changing buses or trains.",
+      highlightLinkText: "Want to visit Nashik on the way? See Mumbai to Nashik cab.",
+      highlightLinkHref: "/mumbai-to-nashik-cab",
+    },
+    pickupAreas:
+      "Pickup anywhere in Mumbai, Thane and Navi Mumbai, including Mumbai Airport.",
+    dropAreas:
+      "Drop at your hotel, dharamshala or the temple area in Shirdi. Shirdi Airport and Sainagar railway station drops are also available.",
+    bestTimeToTravel:
+      "Early mornings (around 4-5 am) avoid city congestion. If attending Kakad Aarti (5:15 am), we advise leaving Mumbai the previous afternoon so you are well rested before entering darshan queues.",
+    comparisonTable: [
+      { option: "Private Cab", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Families with elders, children, luggage" },
+      { option: "Train", doorToDoor: "No (Sainagar Shirdi)", luggage: "Heavy to carry", timingControl: "Fixed timetable", bestFor: "Budget solo travellers" },
+      { option: "Bus", doorToDoor: "No", luggage: "Limited", timingControl: "Fixed timetable", bestFor: "Overnight budget transit" },
+    ],
+    contextualLinks: [
+      { title: "Mumbai to Nashik cab", href: "/mumbai-to-nashik-cab" },
+      { title: "Mumbai to Pune cab", href: "/mumbai-to-pune-cab" },
+      { title: "Fleet page", href: "/fleet" },
     ],
     faqs: [
       {
-        question: "What is the best time to leave Mumbai for Shirdi?",
+        question: "How many hours from Mumbai to Shirdi by cab?",
+        answer: "About 5 to 6 hours for 240 km, depending on traffic and route.",
+      },
+      {
+        question: "What is the Mumbai to Shirdi cab fare?",
         answer:
-          "Leave between 4:00 AM and 5:00 AM to avoid Mumbai/Thane traffic and reach Shirdi around 10:00 AM for afternoon darshan.",
+          "A one-way base fare starts at ₹3,120 for a Swift Dzire, ₹3,840 for an Ertiga and ₹4,320 for an Innova. Toll, parking and driver allowance are extra.",
+      },
+      {
+        question: "Which cab is best for a family going to Shirdi?",
+        answer:
+          "An Ertiga or Innova for families of 4 to 6. For elders, an Innova or Innova Crysta has easier seating and more luggage space.",
+      },
+      {
+        question: "Can we go for Kakad Aarti?",
+        answer:
+          "Yes. We recommend travelling the previous day. Our driver can start at the time you choose. Check current aarti timings with Shri Saibaba Sansthan.",
+      },
+      {
+        question: "Can I book a round trip with a stay in Shirdi?",
+        answer:
+          "Yes. Driver allowance of ₹300 per day applies for each day of the trip, and round trips are charged on total kilometres, minimum 250 km per day.",
       },
       {
         question: "Can we include Shani Shingnapur?",
         answer:
-          "Yes. Shani Shingnapur is about 75 km from Shirdi. Round-trip packages can include both temples.",
-      },
-      {
-        question: "Do you provide pickup from Mumbai Airport T2?",
-        answer:
-          "Yes. The driver can meet you at arrivals with a name board for a direct Shirdi drop.",
-      },
-      {
-        question: "How do I pay for the ride?",
-        answer:
-          "UPI, cards, or cash to the driver. A small token amount on WhatsApp confirms the booking.",
+          "Yes. Shani Shingnapur is about 70 km from Shirdi. We can easily arrange a combo pilgrimage quote on WhatsApp.",
       },
     ],
-    guideTitle: "Mumbai to Shirdi road trip: fastest route and stops",
+    guideTitle: "Mumbai to Shirdi Route and Stop Details",
     guideIntro:
-      "Samruddhi Mahamarg has made the Mumbai to Shirdi pilgrimage faster and more comfortable. This guide covers the preferred route and useful stops for families.",
+      "Mumbai, Thane, Kasara, Igatpuri, Nashik, Sinnar, Shirdi. Our driver chooses the fastest route on the day. Toll varies by route.",
     routeMap: {
-      primary: "Mumbai → Thane → Nashik → Shirdi (via Samruddhi Mahamarg)",
-      via: "NH-160 to Mumbai-Nagpur Expressway",
+      primary: "Mumbai → Thane → Kasara → Igatpuri → Nashik → Sinnar → Shirdi",
+      via: "NH-160 and Samruddhi Mahamarg Corridor",
       toll: "₹400-500",
       mapsUrl: "https://maps.google.com/?q=Mumbai+to+Shirdi",
     },
     stops: [
       {
-        title: "Samruddhi Mahamarg entry",
-        body: "NH160 to Igatpuri, then Samruddhi at the Bharvir interchange for an 8-lane expressway.",
+        title: "Kasara Ghat Viewpoint",
+        body: "Quick roadside viewpoint for fresh air before climbing into Ahmednagar district.",
       },
       {
-        title: "Shree Datta Snacks, Asangaon",
-        body: "Traditional breakfast stop before the long highway stretch.",
+        title: "Igatpuri Pagoda",
+        body: "Scenic golden landmark and peace centre right off the expressway.",
       },
       {
-        title: "Camel Valley & Bhatsa River",
-        body: "Short monsoon viewpoint on the Kasara ghat.",
+        title: "Sinnar Food Court",
+        body: "Modern highway food plaza offering clean restrooms, South Indian breakfasts, and tea.",
       },
       {
-        title: "Myanmar Gate, Igatpuri",
-        body: "Peaceful photo stop near the Vipassana centre before the expressway.",
-      },
-      {
-        title: "Samruddhi food plazas",
-        body: "Clean washrooms and parking every 50-60 km — useful for seniors and children.",
+        title: "Shani Shingnapur (Optional Detour)",
+        body: "Famous temple of Lord Shani with roofless shrine, located about 70 km from Shirdi.",
       },
       {
         title: "Sai Teerth Theme Park",
-        body: "Family-friendly stop in Shirdi after temple darshan.",
+        body: "Devotional spiritual theme park in Shirdi featuring animatronics and laser shows for kids.",
       },
     ],
   },
@@ -289,64 +508,118 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Mahabaleshwar",
     title: "Mumbai to Mahabaleshwar Cab",
-    metaTitle: "Mumbai to Mahabaleshwar Cab | Reliable Taxi starting @ ₹3,800",
+    metaTitle: "Mumbai to Mahabaleshwar Cab from ₹3,419 | One Way & Round Trip",
     metaDescription:
-      "Book a Mumbai to Mahabaleshwar taxi with ghat-expert drivers. Airport pickup, Innova Crysta SUVs, Panchgani sightseeing, and round-trip hill-station packages.",
+      "Book a Mumbai to Mahabaleshwar cab: one-way from ₹3,419 for 263 km. Ghat-experienced drivers, Panchgani and Pratapgad add-ons. Call +91-9970294122.",
     distance: "263 km",
     duration: "6 hours",
-    badge: "Hill Station Route",
-    headline: "Refreshing Mumbai to Mahabaleshwar Cab Service",
+    badge: "Scenic Hill Station",
+    headline: "Mumbai to Mahabaleshwar Cab: One Way & Round Trip Taxi",
     intro:
-      "Escape the city with a Mumbai to Mahabaleshwar taxi. Book A Cab runs powerful AC sedans and SUVs with drivers experienced on Pasarni Ghat, fog, and steep climbs.",
+      "A Mumbai to Mahabaleshwar cab covers about 263 km in roughly 6 hours. One-way base fares start at ₹3,419 for a Swift Dzire, ₹4,734 for an Innova and ₹5,260 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. The final climb is a ghat road, so we assign experienced hill drivers.",
+    quickAnswer:
+      "A Mumbai to Mahabaleshwar cab covers about 263 km in roughly 6 hours. One-way base fares start at ₹3,419 for a Swift Dzire, ₹4,734 for an Innova and ₹5,260 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. The final climb is a ghat road, so we assign experienced hill drivers.",
     highlights: [
-      { title: "Hill-climb specialists", body: "Drivers trained for Pasarni Ghat and foggy roads." },
-      { title: "Airport direct", body: "Pickup from Mumbai Airport T1/T2 for flying visitors." },
-      { title: "Sightseeing ready", body: "Full-day options for Pratapgad Fort and Venna Lake." },
-      { title: "Modern fleet", body: "Innova Crysta and SUVs for luggage-heavy family trips." },
+      { title: "Hill-Climb Specialists", body: "Chauffeurs experienced on Pasarni Ghat and steep hairpin turns." },
+      { title: "Airport Direct Pickup", body: "Door-to-door transfer directly from Mumbai Airport T1/T2." },
+      { title: "Local Sightseeing Ready", body: "Keep the cab for Arthur's Seat, Venna Lake & Mapro Garden." },
+      { title: "Family Luggage Ready", body: "Innova Crysta and Ertiga for comfortable mountain rides." },
     ],
     stats: [
       { value: "263 km", label: "Distance" },
-      { value: "5.5-6 hours", label: "Duration" },
-      { value: "Hill-expert", label: "Drivers" },
+      { value: "6 hours", label: "Duration" },
+      { value: "₹3,419", label: "Starting Fare" },
+    ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 3419, bestFor: "2 to 3 people" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 3682, bestFor: "2 to 3 people" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 4208, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 4734, bestFor: "Families with luggage" },
+      { vehicle: "Kia Carens", seats: "6+1 / 7+1", ratePerKm: 18, oneWayBaseFare: 4734, bestFor: "Families, more legroom" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 5260, bestFor: "Premium comfort, elders" },
+      { vehicle: "Tempo Traveller AC", seats: "12", ratePerKm: 28, oneWayBaseFare: 7364, bestFor: "Groups" },
+    ],
+    fareTableNote:
+      "Base fare = 263 km x rate per km. Toll, parking and driver allowance (₹300 per day) are extra at actuals. Round trips are charged on total kilometres travelled, minimum 250 km per day. For an all-inclusive quote, message us on WhatsApp.",
+    included: [
+      "AC vehicle, fuel, and experienced hill-climb chauffeur",
+      "Door-to-door pickup across Mumbai",
+      "Flexible short halts at Food Malls and Mapro Garden",
+      "Drop at any hotel or resort in Mahabaleshwar or Panchgani",
+    ],
+    extraAtActuals: [
+      "Expressway & NH48 toll fees via FASTag",
+      "Parking charges at viewpoints and Venna Lake",
+      "Driver allowance (₹300 per day)",
+      "Local sightseeing waiting time beyond agreed hours",
+    ],
+    whyBook: {
+      title: "Planning a Mahabaleshwar Weekend by Cab",
+      content:
+        "Mahabaleshwar works best with a car at your disposal for the stay, because the viewpoints are spread across the plateau. Common local stops: Venna Lake, Arthur's Seat, Elephant's Head Point, Mapro Garden, Pratapgad Fort and the table land at Panchgani. If you plan a multi-day trip with local sightseeing, ask for a package with the driver on night halt. Driver allowance is ₹300 per day, and halt details are confirmed at booking.",
+    },
+    pickupAreas:
+      "Pickup from anywhere in Mumbai, Thane and Navi Mumbai, including the airport.",
+    dropAreas:
+      "Drop to your resort or hotel in Mahabaleshwar, Panchgani or Wai.",
+    bestTimeToTravel:
+      "June to September is lush and misty, but ghat roads are slow with fog and some viewpoints get crowded or restricted in heavy rain. October to February is cool and clear, and strawberry season typically runs from November to February. March to May is warm but less crowded on weekdays.",
+    comparisonTable: [
+      { option: "Private Cab", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Families, multi-stop plateau sightseeing" },
+      { option: "Bus", doorToDoor: "No", luggage: "Limited", timingControl: "Fixed timetable", bestFor: "Budget backpackers" },
+      { option: "Self-Drive", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Drivers comfortable with Pasarni ghat curves" },
+    ],
+    contextualLinks: [
+      { title: "Mumbai to Pune cab", href: "/mumbai-to-pune-cab" },
+      { title: "Mumbai to Goa cab", href: "/mumbai-to-goa-cab" },
+      { title: "Fleet page", href: "/fleet" },
     ],
     faqs: [
       {
-        question: "Which is the best route from Mumbai to Mahabaleshwar?",
-        answer:
-          "We take the Mumbai-Pune Expressway, then NH48 via Surur. It is the smoothest and fastest option for most trips.",
+        question: "How far is Mahabaleshwar from Mumbai?",
+        answer: "About 263 km by road, usually 6 hours.",
       },
       {
-        question: "Can we stop at Mapro Garden on the way?",
+        question: "What is the cab fare from Mumbai to Mahabaleshwar?",
         answer:
-          "Yes. Mapro Garden in Panchgani is a popular stop for strawberry cream, snacks, and a short break.",
+          "A one-way base fare starts at ₹3,419 for a Swift Dzire, ₹4,208 for an Ertiga and ₹4,734 for an Innova. Toll, parking and driver allowance are extra.",
       },
       {
-        question: "Is it safe to travel to Mahabaleshwar at night?",
+        question: "Is the Mahabaleshwar ghat road safe in monsoon?",
         answer:
-          "Our drivers are trained for night driving. We still recommend reaching the ghat sections before 8:00 PM for better visibility.",
+          "We use experienced hill drivers and may adjust timing in heavy fog or rain. Ask us about current road conditions before you leave.",
       },
       {
-        question: "Do you offer Pratapgad Fort sightseeing?",
+        question: "Can I keep the cab for local sightseeing in Mahabaleshwar?",
         answer:
-          "Yes. Round-trip packages can include Pratapgad Fort, about 22 km from the main market.",
+          "Yes, on a round-trip or multi-day package. Share your dates and we quote total kilometres and halts.",
+      },
+      {
+        question: "Can you drop me in Panchgani?",
+        answer: "Yes. Mahabaleshwar and Panchgani drops are both available.",
+      },
+      {
+        question: "Can we visit Pratapgad Fort on this trip?",
+        answer:
+          "Yes. Pratapgad Fort is 22 km from Mahabaleshwar market and can be easily added to your sightseeing itinerary.",
       },
     ],
-    guideTitle: "Best places to visit on a Mahabaleshwar trip",
+    guideTitle: "Scenic Route & Pitstops on the Mahabaleshwar Drive",
     guideIntro:
-      "A cab makes hill-station sightseeing easier. Ask for a waiting package and cover viewpoints, Mapro, and Panchgani without changing cars.",
+      "Take the Mumbai-Pune Expressway, then NH48 towards Satara, followed by the Pasarni Ghat climb through Wai and Panchgani.",
     routeMap: {
       primary: "Mumbai → Expressway → NH48 → Wai → Panchgani → Mahabaleshwar",
-      via: "Mumbai-Pune Expressway and Pasarni Ghat",
-      toll: "As actuals",
+      via: "Mumbai-Pune Expressway, NH48, and Pasarni Ghat",
+      toll: "Expressway & NH tolls at actuals",
       mapsUrl: "https://maps.google.com/?q=Mumbai+to+Mahabaleshwar",
     },
     stops: [
-      { title: "Arthur's Seat", body: "Known as the Queen of Points for valley views." },
-      { title: "Venna Lake", body: "Boat rides surrounded by greenery in the main town." },
-      { title: "Mapro Garden", body: "Must-visit for strawberry products and family snacks." },
-      { title: "Pratapgad Fort", body: "Historic Maratha fort about 22 km from the market." },
-      { title: "Elephant's Head Point", body: "Natural rock formation with a cliff-side view." },
-      { title: "Parsi Point, Panchgani", body: "Tea-break viewpoint over the Krishna valley." },
+      { title: "Mapro Garden, Panchgani", body: "Famous for strawberry and fresh cream, handcrafted chocolates, and wood-fired pizza." },
+      { title: "Table Land, Panchgani", body: "Asia's second longest mountain plateau offering horse riding and paragliding." },
+      { title: "Venna Lake", body: "Tranquil boat rides surrounded by lush eucalyptus trees in central Mahabaleshwar." },
+      { title: "Arthur's Seat", body: "Panoramic cliff-side viewpoint overlooking Savitri River and deep valleys." },
+      { title: "Elephant's Head Point", body: "Unique rock needle structure looking like an elephant trunk." },
+      { title: "Pratapgad Fort", body: "Historic Maratha hilltop fortress featuring Shivaji Maharaj's monument and museum." },
     ],
   },
   {
@@ -354,74 +627,119 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     from: "Mumbai",
     to: "Goa",
     title: "Mumbai to Goa Cab",
-    metaTitle: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
+    metaTitle: "Mumbai to Goa Cab from ₹7,735 | One Way & Round Trip Taxi",
     metaDescription:
-      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+      "Book a Mumbai to Goa cab: one-way from ₹7,735 for 595 km via NH66. Comfortable Innova and Ertiga for long trips. Call +91-9970294122.",
     distance: "595 km",
-    duration: "10-12 hours",
+    duration: "10 to 12 hours",
     badge: "Coastal Holiday Route",
-    headline: "Comfortable Mumbai to Goa Cab Service",
+    headline: "Mumbai to Goa Cab: One Way & Round Trip Taxi",
     intro:
-      "Planning a holiday to Goa? Book A Cab offers premium Mumbai to Goa taxi service via NH66. Travel in comfort with verified long-distance drivers, transparent fixed pricing, and door-to-door pickup across Mumbai.",
+      "A Mumbai to Goa cab covers about 595 km via NH66 in roughly 10 to 12 hours. One-way base fares start at ₹7,735 for a Swift Dzire, ₹10,710 for an Innova and ₹11,900 for an Innova Crysta. Toll, parking, driver allowance and Goa entry or interstate taxes are extra at actuals. For comfort and safety we recommend leaving early morning.",
+    quickAnswer:
+      "A Mumbai to Goa cab covers about 595 km via NH66 in roughly 10 to 12 hours. One-way base fares start at ₹7,735 for a Swift Dzire, ₹10,710 for an Innova and ₹11,900 for an Innova Crysta. Toll, parking, driver allowance and Goa entry or interstate taxes are extra at actuals. For comfort and safety we recommend leaving early morning.",
     highlights: [
-      { title: "Fixed All-Inclusive Fares", body: "Transparent pricing including tolls, fuel, and driver allowance." },
       { title: "Door-to-Door Pickup", body: "Direct doorstep pickup from anywhere in Mumbai, Thane, or Navi Mumbai." },
-      { title: "NH66 Coastal Experts", body: "Chauffeurs trained for long highway stretches and scenic coastal driving." },
-      { title: "Family & Luggage Ready", body: "Spacious Ertiga and Innova Crysta SUVs ideal for family holidays." },
+      { title: "Long-Haul Specialists", body: "Verified drivers trained for 10+ hour highway routes with regular rest breaks." },
+      { title: "North & South Goa Drops", body: "Drops to Calangute, Baga, Panaji, Margao, or Dabolim/Mopa airports." },
+      { title: "Spacious Holiday Fleet", body: "Comfortable Ertiga, Carens, and Innova Crysta for luggage-heavy journeys." },
     ],
     stats: [
       { value: "595 km", label: "Distance" },
-      { value: "10-12 hours", label: "Duration" },
-      { value: "24/7", label: "Available" },
+      { value: "10 to 12 hrs", label: "Duration" },
+      { value: "₹7,735", label: "Starting Fare" },
+    ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 7735, bestFor: "2 to 3 people" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 8330, bestFor: "2 to 3 people" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 9520, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 10710, bestFor: "Families with luggage" },
+      { vehicle: "Kia Carens", seats: "6+1 / 7+1", ratePerKm: 18, oneWayBaseFare: 10710, bestFor: "Families, more legroom" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 11900, bestFor: "Premium comfort, elders" },
+      { vehicle: "Tempo Traveller AC", seats: "12", ratePerKm: 28, oneWayBaseFare: 16660, bestFor: "Groups" },
+    ],
+    fareTableNote:
+      "Base fare = 595 km x rate per km. Toll, parking, driver allowance (₹300 per day) and interstate permit/entry tax for Goa are extra at actuals.",
+    included: [
+      "AC vehicle, fuel, and experienced long-distance chauffeur",
+      "Doorstep pickup across Mumbai suburbs",
+      "Rest halts every 3 to 4 hours for driver alertness and dining",
+      "Drop at any hotel, resort, or airport in North or South Goa",
+    ],
+    extraAtActuals: [
+      "Highway tolls paid via FASTag at actuals",
+      "Interstate vehicle entry tax / permit for Goa",
+      "Driver allowance (₹300 per day)",
+      "Parking charges at drop venue",
+    ],
+    whyBook: {
+      title: "Planning a Long Trip to Goa by Cab",
+      content:
+        "Mumbai to Goa is a full-day drive. Most guests leave between 4 and 6 am and reach North Goa by evening. Options: a single day with a long drive, or an overnight halt in Chiplun, Ratnagiri or Kolhapur side. Our drivers take a rest break every 3 to 4 hours on long routes, and for 2-day plans we plan an overnight halt. Because NH66 has sections under repair at times, check travel time with us on the day you book.",
+    },
+    pickupAreas:
+      "Pickup from any doorstep in Mumbai, Thane, Navi Mumbai, or Mumbai Airport T1/T2.",
+    dropAreas:
+      "North Goa: Calangute, Baga, Candolim, Anjuna, Vagator, Mapusa. Central: Panaji. South Goa: Margao, Colva, Benaulim, Palolem. Airports: Dabolim and Mopa. Railway: Madgaon, Thivim.",
+    bestTimeToTravel:
+      "We strongly recommend starting between 4:00 AM and 6:00 AM. This avoids the heavy morning commute in Panvel and allows you to cross the Konkan ghats during daylight hours, reaching Goa comfortably by sunset.",
+    comparisonTable: [
+      { option: "Private Cab", doorToDoor: "Yes", luggage: "Easy", timingControl: "You decide", bestFor: "Families, pet owners, excessive luggage, groups" },
+      { option: "Flight", doorToDoor: "No (airport to airport)", luggage: "Strict weight limits", timingControl: "Fixed", bestFor: "Fastest single-passenger transit" },
+      { option: "Train", doorToDoor: "No (station to station)", luggage: "Manageable", timingControl: "Fixed", bestFor: "Budget overnight travellers" },
+      { option: "Bus", doorToDoor: "No", luggage: "Limited", timingControl: "Fixed", bestFor: "Sleeper bus budget travel" },
+    ],
+    contextualLinks: [
+      { title: "Mumbai to Pune cab", href: "/mumbai-to-pune-cab" },
+      { title: "Mumbai to Mahabaleshwar cab", href: "/mumbai-to-mahabaleshwar-cab" },
+      { title: "Fleet page", href: "/fleet" },
+      { title: "Tour packages", href: "/packages" },
     ],
     faqs: [
       {
+        question: "How many hours from Mumbai to Goa by road?",
+        answer: "About 10 to 12 hours for 595 km, depending on traffic and road work on NH66.",
+      },
+      {
         question: "What is the cab fare from Mumbai to Goa?",
         answer:
-          "Book A Cab's one-way Mumbai to Goa cab fare starts at ₹7,500 for Hatchback, ₹8,500 for Sedan, ₹11,000 for SUV, and ₹13,500 for Innova Crysta. Tolls and driver allowance are included.",
+          "A one-way base fare starts at ₹7,735 for a Swift Dzire, ₹9,520 for an Ertiga and ₹10,710 for an Innova. Toll, parking, driver allowance and taxes are extra.",
       },
       {
-        question: "How long does a Mumbai to Goa cab take?",
+        question: "Can we take a cab from Mumbai to Goa overnight?",
         answer:
-          "Under normal conditions, the journey takes 10 to 12 hours including 1 to 2 short break stops via NH66. An early morning departure is recommended.",
+          "Yes. Night charges apply between 12:00 am and 6:00 am, and we recommend a rest halt on long routes.",
       },
       {
-        question: "Can I book a one-way cab from Mumbai to Goa?",
+        question: "Which cab is best for Mumbai to Goa?",
         answer:
-          "Yes. One-way cab booking is available to both North and South Goa. You pay only for the trip you need with no return journey cost.",
+          "For comfort on 10+ hours, an Innova, Innova Crysta, Kia Carens or Ertiga. For groups, a Tempo Traveller.",
       },
       {
-        question: "Is it safe to travel Mumbai to Goa by cab at night?",
+        question: "Do you drop at Goa airport?",
+        answer: "Yes, both Dabolim (GOI) and Manohar Mopa (GOX) airports.",
+      },
+      {
+        question: "Is interstate tax included?",
         answer:
-          "Yes. NH66 is a well-lit national highway with lighter traffic at night. Book A Cab assigns only verified drivers with long-distance and ghat experience.",
+          "Commercial vehicle entry tax for Goa is billed at actual state border checkposts.",
       },
     ],
-    guideTitle: "Must-visit pitstops on a Mumbai to Goa road trip",
+    guideTitle: "Scenic Highway Route & Coastal Stops (NH66)",
     guideIntro:
-      "The Mumbai to Goa drive along the NH66 Konkan corridor is one of the most scenic road trips in India, featuring coastal views, river bridges, and authentic Konkani food stops.",
+      "Mumbai, Panvel, Mangaon, Mahad, Chiplun, Ratnagiri, Kudal, Goa. Useful stops: Chiplun (lunch), Ganpatipule (short detour), Ratnagiri (Alphonso mango season, April to June), Sindhudurg side beaches.",
     routeMap: {
-      primary: "Mumbai → Panvel → Mahad → Chiplun → Ratnagiri → Sawantwadi → Goa",
-      via: "NH-66 Konkan Coastal Highway",
-      toll: "Included in fare",
+      primary: "Mumbai → Panvel → Mangaon → Mahad → Chiplun → Ratnagiri → Kudal → Goa",
+      via: "NH-66 Coastal Highway & Konkan Expressway sections",
+      toll: "State border & NH tolls at actuals",
       mapsUrl: "https://maps.google.com/?q=Mumbai+to+Goa",
     },
     stops: [
-      {
-        title: "Mahad",
-        body: "A convenient breakfast stop and riverside town after crossing Panvel and Khopoli.",
-      },
-      {
-        title: "Chiplun",
-        body: "Midpoint on the Vashishti River, popular for lunch and scenic river views from the bridge.",
-      },
-      {
-        title: "Ratnagiri",
-        body: "Famous for Alphonso mangoes, coastal sea breeze, and authentic Konkani seafood/veg thalis.",
-      },
-      {
-        title: "Sawantwadi",
-        body: "Historic town known for traditional lacquerware toys and light snacks before entering Goa.",
-      },
+      { title: "Chiplun Riverside Bridge", body: "Scenic stop overlooking the Vashishti River for traditional Konkani lunch." },
+      { title: "Ganpatipule Beach Temple (Detour)", body: "Famous swayambhu Ganpati shrine on pristine virgin Konkan shoreline." },
+      { title: "Ratnagiri Mango Belt", body: "Heart of world-renowned Alphonso mango orchards and historic Thibaw Palace." },
+      { title: "Kudal & Malvan Junction", body: "Ideal evening tea stop before entering the Goa state border." },
+      { title: "North Goa Beaches", body: "Direct drop to Calangute, Baga, Candolim, Anjuna, or Vagator." },
     ],
   },
   {
@@ -433,11 +751,13 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     metaDescription:
       "Book a Pune to Mumbai cab with Book A Cab. Comfortable one-way drops, airport transfers to Mumbai T1/T2, and round trips via the Expressway from ₹13/km.",
     distance: "148 km",
-    duration: "3 hours",
+    duration: "3 to 3.5 hours",
     badge: "Business Express Route",
-    headline: "Punctual Pune to Mumbai Cab Service",
+    headline: "Pune to Mumbai Cab: One Way & Round Trip Taxi",
     intro:
-      "Need a dependable ride? Book A Cab offers premium Pune to Mumbai taxi service via the Mumbai-Pune Expressway. Perfect for business meetings, airport drops to Mumbai T1/T2, or weekend trips in clean, air-conditioned hatchbacks, sedans, and SUVs.",
+      "Need a dependable ride? Book A Cab offers premium Pune to Mumbai taxi service via the Mumbai-Pune Expressway. Perfect for business meetings, airport drops to Mumbai T1/T2, or weekend trips in clean, air-conditioned hatchbacks, sedans, and SUVs from ₹1,924.",
+    quickAnswer:
+      "A Pune to Mumbai cab covers 148 km via the Mumbai-Pune Expressway in about 3 to 3.5 hours. One-way base fares start at ₹1,924 for a Swift Dzire (₹13/km), ₹2,368 for Ertiga, and ₹2,960 for Innova Crysta. Toll and driver allowance are extra at actuals.",
     highlights: [
       { title: "Transparent Pricing", body: "Clear per-km rates with no surprise add-ons." },
       { title: "Mumbai Airport Drops", body: "Direct drop to Mumbai T1 or T2 airport departures." },
@@ -446,24 +766,52 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     ],
     stats: [
       { value: "148 km", label: "Distance" },
-      { value: "3-4 hours", label: "Duration" },
-      { value: "24/7", label: "Available" },
+      { value: "3 to 3.5 hrs", label: "Duration" },
+      { value: "₹1,924", label: "Starting Fare" },
     ],
+    fareTable: [
+      { vehicle: "Swift Dzire / Aura", seats: "4+1", ratePerKm: 13, oneWayBaseFare: 1924, bestFor: "2 to 3 people" },
+      { vehicle: "Toyota Etios", seats: "4+1", ratePerKm: 14, oneWayBaseFare: 2072, bestFor: "2 to 3 people" },
+      { vehicle: "Ertiga", seats: "6+1", ratePerKm: 16, oneWayBaseFare: 2368, bestFor: "Families of 4 to 5" },
+      { vehicle: "Innova", seats: "6+1", ratePerKm: 18, oneWayBaseFare: 2664, bestFor: "Families with luggage" },
+      { vehicle: "Innova Crysta", seats: "6+1", ratePerKm: 20, oneWayBaseFare: 2960, bestFor: "Premium comfort, elders" },
+    ],
+    fareTableNote:
+      "Base fare = 148 km x rate per km. Expressway toll (approx ₹320 paid by FASTag) and driver allowance are extra at actuals.",
+    included: [
+      "AC vehicle and fuel for 148 km",
+      "Expressway trained chauffeur",
+      "Doorstep pickup in Pune",
+      "Direct drop to any Mumbai suburb or airport",
+    ],
+    extraAtActuals: [
+      "Expressway toll paid via FASTag at actuals",
+      "Airport parking fee if applicable",
+      "Driver allowance (₹300 per day)",
+    ],
+    pickupAreas: "Anywhere in Pune: Hinjewadi, Wakad, Baner, Kothrud, Viman Nagar, Kharadi, Magarpatta, Station, Airport.",
+    dropAreas: "Anywhere in Mumbai: T1/T2 Airport, Dadar, Bandra, Andheri, Borivali, Thane, Navi Mumbai, South Mumbai.",
+    bestTimeToTravel:
+      "Early mornings (before 7:00 AM) or after 8:00 PM are fastest for the Expressway. Leave with at least 4.5 hours buffer if you have a departing flight from Mumbai Airport.",
     faqs: [
       {
         question: "How much is the cab fare from Pune to Mumbai?",
         answer:
-          "Pune to Mumbai cab fares start from ₹13/km. The total depends on the car type and whether you choose one-way or round trip. Tolls and parking are extra as actuals.",
+          "Pune to Mumbai cab fares start from ₹13/km. A Swift Dzire one-way base fare is ₹1,924, an Ertiga is ₹2,368, and Innova Crysta is ₹2,960. Tolls and driver allowance are extra.",
       },
       {
         question: "Do you provide Pune to Mumbai Airport cab service?",
         answer:
-          "Yes. We specialize in drops to Mumbai Airport T1/T2. Our drivers plan for highway traffic so you reach departures on time.",
+          "Yes. We specialize in drops to Mumbai Airport T1 and T2. Our drivers plan for highway traffic so you reach departures on time.",
       },
       {
         question: "Which route do you take?",
         answer:
-          "We travel via the Mumbai-Pune Expressway (toll road) for a fast, comfortable, and smooth 3-hour journey.",
+          "We travel via the Mumbai-Pune Expressway (toll road) for a fast, comfortable, and smooth 3 to 3.5 hour journey.",
+      },
+      {
+        question: "Can I book a one-way cab?",
+        answer: "Yes, one-way bookings are available 24/7 without return charges.",
       },
     ],
     guideTitle: "Pune to Mumbai Road Trip Guide",
@@ -472,8 +820,8 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     routeMap: {
       primary: "Pune → Lonavala → Khalapur → Panvel → Mumbai",
       via: "Mumbai-Pune Expressway",
-      toll: "Expressway tolls are extra as actuals.",
-      mapsUrl: "https://maps.google.com/maps?q=Pune+to+Mumbai&t=&z=10&ie=UTF8&iwloc=&output=embed",
+      toll: "approx ₹320",
+      mapsUrl: "https://maps.google.com/maps?q=Pune+to+Mumbai",
     },
     stops: [
       {

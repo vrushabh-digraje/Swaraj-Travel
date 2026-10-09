@@ -12,7 +12,6 @@ export const metadata = createMetadata({
   description:
     "Book A Cab tour package pricing for Innova Crysta, Dzire, Ertiga, Tempo Traveller, and buses. Transparent per-km rates for Mumbai outstation trips.",
   path: "/packages",
-  keywords: ["Mumbai cab packages", "Innova Crysta rate", "outstation cab fare"],
 });
 
 const faqs = [

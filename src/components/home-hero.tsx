@@ -65,8 +65,8 @@ export function HomeHero() {
             Trusted Airport & Outstation Cabs
           </p>
           <h1 className="font-display text-4xl font-black leading-tight md:text-5xl lg:text-6xl">
-            <span className="block">Safe, Reliable</span>
-            <span className="gradient-text block">& Comfortable Rides</span>
+            <span className="block">Mumbai Cab Booking:</span>
+            <span className="gradient-text block">Airport, Outstation & Local Taxi</span>
           </h1>
           <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-accent to-primary lg:mx-0" />
           <p className="mx-auto mt-6 max-w-lg text-lg text-white/80 lg:mx-0">

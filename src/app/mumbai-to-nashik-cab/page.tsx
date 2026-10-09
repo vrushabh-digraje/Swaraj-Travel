@@ -13,7 +13,6 @@ export const metadata = (() => {
     title: route.metaTitle,
     description: route.metaDescription,
     path: `/${route.slug}`,
-    keywords: ["Mumbai to Nashik cab", "Mumbai Airport to Nashik taxi"],
   });
 })();
 

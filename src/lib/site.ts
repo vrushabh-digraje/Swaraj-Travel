@@ -17,7 +17,7 @@ export const SITE = {
   tagline: "Your Ride, Your Way",
   shortTagline: "Premium Rides",
   description:
-    "Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra. 24/7 support, verified drivers, and instant booking on WhatsApp.",
+    "Book a Mumbai cab for airport transfers, local rides and outstation trips to Pune, Nashik, Shirdi, Goa. Clear per-km rates, verified drivers. Call +91-9970294122.",
   phone: "+919970294122",
   phoneDisplay: "+91-9970294122",
   email: "bookings@bookacab.co.in",
@@ -66,19 +66,16 @@ export function createMetadata({
   title,
   description,
   path,
-  keywords,
 }: {
   title: string;
   description: string;
   path: string;
-  keywords?: string[];
 }): Metadata {
   const url = absoluteUrl(path);
 
   return {
     title,
     description,
-    keywords,
     alternates: { canonical: url },
     openGraph: {
       title,

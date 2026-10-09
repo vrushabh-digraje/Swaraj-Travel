@@ -7,12 +7,10 @@ import { Button } from "@/components/button";
 import { Card } from "@/components/card";
 import { CtaBanner } from "@/components/cta-banner";
 import { FaqSection } from "@/components/faq-section";
-import { PackageTable } from "@/components/package-table";
-import { ReviewsSection } from "@/components/reviews-section";
 import { CheckIcon } from "@/components/icons";
 import { useBooking } from "@/lib/booking-context";
 import { relatedRoutes, type OutstationRoute } from "@/lib/routes";
-import { telHref } from "@/lib/site";
+import { telHref, whatsappHref } from "@/lib/site";
 
 function getHighlightIcon(title: string) {
   const t = title.toLowerCase();
@@ -38,7 +36,7 @@ function getHighlightIcon(title: string) {
       </svg>
     );
   }
-  if (t.includes("expressway") || t.includes("specialist") || t.includes("driver") || t.includes("highway") || t.includes("expert")) {
+  if (t.includes("expressway") || t.includes("specialist") || t.includes("driver") || t.includes("highway") || t.includes("expert") || t.includes("ghat")) {
     return (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -46,16 +44,9 @@ function getHighlightIcon(title: string) {
       </svg>
     );
   }
-  if (t.includes("24/7") || t.includes("availability") || t.includes("always")) {
-    return (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    );
-  }
   return (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.907c.969 0 1.371 1.24.588 1.81l-3.97 2.883a1 1 0 00-.364 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.971-2.883a1 1 0 00-1.178 0l-3.97 2.883c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.364-1.118L2.98 12.18c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   );
 }
@@ -67,9 +58,6 @@ function getStopRecommendation(title: string) {
   }
   if (t.includes("datta")) {
     return "🍴 Food Recommendation: Highly recommended for piping-hot Vada Pav, Sabudana Khichdi, and Batata Vada. Can get crowded on weekend mornings!";
-  }
-  if (t.includes("food plaza") || t.includes("foodmall") || t.includes("food mall")) {
-    return "🍴 Food Recommendation: Perfect multi-cuisine highway pitstop featuring Starbucks, McDonald's, and local eateries. Clean washroom facilities.";
   }
   if (t.includes("lonavala")) {
     return "🛍️ Specialty: Famous for Cooper's fudge and fresh peanut Chikki. Best visited during monsoon when the hills turn emerald green.";
@@ -83,17 +71,11 @@ function getStopRecommendation(title: string) {
   if (t.includes("igatpuri")) {
     return "⛰️ Monsoon Special: Full of waterfalls and misty valleys. The Vipassana International Academy pagoda is visible from the highway.";
   }
-  if (t.includes("panchgani")) {
+  if (t.includes("mapro")) {
     return "🍓 Local Specialty: Do not miss strawberries and fresh cream at Mapro Garden. Table Land offers scenic horseback riding.";
   }
-  if (t.includes("mahabaleshwar")) {
-    return "⛰️ Hill Station: Venna Lake offers boating. Arthur's Seat and Wilson Point provide panoramic sunrise/sunset viewpoints.";
-  }
-  if (t.includes("shirdi")) {
-    return "🙏 Pilgrimage Tip: Pre-book Darshan passes online to skip long lines. Dwarkamai and Chavadi are located near the main temple.";
-  }
-  if (t.includes("nashik")) {
-    return "🍷 Wine Country: Sula Vineyards and York Winery are nearby. Trimbakeshwar Shiva Temple is 30 km from Nashik city center.";
+  if (t.includes("chiplun")) {
+    return "🍴 Food Recommendation: Ideal midpoint stop overlooking the Vashishti river for authentic Konkani seafood/veg meals.";
   }
   return "💡 Travel Tip: A highly recommended stop. Great for clicking photos, relaxing, or enjoying local Maharashtrian refreshments.";
 }
@@ -109,38 +91,23 @@ function getStopImage(title: string) {
   if (t.includes("duke's nose") || t.includes("khandala")) {
     return "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80";
   }
-  if (t.includes("bhushi dam") || t.includes("lonavala lake")) {
+  if (t.includes("lonavala") || t.includes("dam")) {
     return "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=500&q=80";
   }
-  if (t.includes("caves")) {
-    return "https://images.unsplash.com/photo-1600100397608-f010e42ec9ca?auto=format&fit=crop&w=500&q=80";
-  }
-  if (t.includes("dhaba")) {
-    return "https://images.unsplash.com/photo-1585938338392-50a59970d8ee?auto=format&fit=crop&w=500&q=80";
-  }
-  if (t.includes("manas resort") || t.includes("igatpuri")) {
+  if (t.includes("kasara") || t.includes("camel valley") || t.includes("ghat")) {
     return "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80";
   }
-  if (t.includes("sula") || t.includes("vineyards") || t.includes("wine")) {
+  if (t.includes("sula") || t.includes("vineyard")) {
     return "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=500&q=80";
   }
-  if (t.includes("temple") || t.includes("shirdi") || t.includes("darshan")) {
+  if (t.includes("trimbakeshwar") || t.includes("temple") || t.includes("shirdi")) {
     return "https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=500&q=80";
-  }
-  if (t.includes("pagoda")) {
-    return "https://images.unsplash.com/photo-1505995433366-e12047f3f144?auto=format&fit=crop&w=500&q=80";
   }
   if (t.includes("mapro") || t.includes("strawberry")) {
     return "https://images.unsplash.com/photo-1518635017498-87f514b751ba?auto=format&fit=crop&w=500&q=80";
   }
-  if (t.includes("table land")) {
-    return "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80";
-  }
-  if (t.includes("lake") || t.includes("boating")) {
-    return "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=500&q=80";
-  }
-  if (t.includes("fort") || t.includes("pratapgad")) {
-    return "https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?auto=format&fit=crop&w=500&q=80";
+  if (t.includes("chiplun") || t.includes("ratnagiri") || t.includes("beach") || t.includes("goa")) {
+    return "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80";
   }
   return "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=500&q=80";
 }
@@ -156,21 +123,39 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
 
   return (
     <>
+      {/* 1. Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-navy via-navy to-primary/30 pt-28 pb-16 text-white md:pt-32">
         <div className="mx-auto max-w-6xl px-4">
-          <p className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold">
-            {route.badge}
-          </p>
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <p className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold">
+              {route.badge}
+            </p>
+            {/* 1.8 Visible Freshness Line */}
+            <span className="text-xs font-medium text-white/75 bg-white/5 border border-white/10 rounded-full px-3 py-1">
+              Last updated: October 2026
+            </span>
+          </div>
+
           <h1 className="max-w-4xl font-display text-4xl font-extrabold md:text-6xl animate-fade-in-scale">
             {route.headline}
           </h1>
-          <p className="mt-4 max-w-3xl text-lg text-white/80">{route.intro}</p>
+          <p className="mt-4 max-w-3xl text-lg text-white/80 leading-relaxed">{route.intro}</p>
+
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="#pricing">Get Quote for {route.to}</Button>
             <Button variant="outline" href={telHref()}>
               Call Now
             </Button>
+            <Button
+              variant="whatsapp"
+              href={whatsappHref(`Hi, I want a quote for ${route.title} on [date]`)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </Button>
           </div>
+
           <dl className="mt-10 grid max-w-xl grid-cols-3 gap-3">
             {route.stats.map((stat) => (
               <div
@@ -189,9 +174,26 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
 
       <div className="mx-auto max-w-6xl px-4 py-8">
         <Breadcrumbs items={crumbs} />
-        <section className="py-8">
-          <h2 className="mb-8 font-display text-3xl font-bold text-navy md:text-4xl">
-            Best {route.title} service
+
+        {/* 2. Quick Answer Box (Crucial for Google Featured Snippets & AI answers) */}
+        {route.quickAnswer && (
+          <div className="mb-10 rounded-2xl border-l-4 border-primary bg-primary/5 p-5 md:p-6 shadow-sm">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-lg">⚡</span>
+              <h2 className="font-display text-lg font-bold text-navy">
+                Quick Answer: {route.title}
+              </h2>
+            </div>
+            <p className="text-gray-800 text-sm md:text-base leading-relaxed">
+              {route.quickAnswer}
+            </p>
+          </div>
+        )}
+
+        {/* Highlights Grid */}
+        <section className="py-4">
+          <h2 className="mb-6 font-display text-2xl font-bold text-navy md:text-3xl">
+            Why Choose Our {route.title}
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {route.highlights.map((item) => (
@@ -231,8 +233,244 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
         </section>
       </div>
 
-      <PackageTable id="pricing" />
+      {/* 3. Responsive Fare Table (Replaces duplicate cards bloat) */}
+      {route.fareTable && route.fareTable.length > 0 && (
+        <section id="pricing" className="bg-light py-12 md:py-16 scroll-mt-16">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-8 text-center md:text-left">
+              <h2 className="font-display text-2xl font-bold text-navy md:text-4xl">
+                {route.title} Fare (One Way)
+              </h2>
+              <p className="mt-2 text-gray-600 text-sm md:text-base">
+                Published rates per kilometre and calculated base fares. No surge pricing, no hidden charges.
+              </p>
+            </div>
 
+            {/* Mobile Horizontally Scrollable Table Container */}
+            <div className="overflow-x-auto rounded-2xl bg-white shadow-md border border-gray-100">
+              <table className="w-full min-w-[650px] text-left border-collapse text-sm">
+                <thead className="bg-navy text-white text-xs uppercase tracking-wider">
+                  <tr>
+                    <th className="py-3.5 px-4 font-semibold">Vehicle</th>
+                    <th className="py-3.5 px-4 font-semibold">Seats</th>
+                    <th className="py-3.5 px-4 font-semibold">Rate per km</th>
+                    <th className="py-3.5 px-4 font-semibold">One-Way Base Fare ({route.distance})</th>
+                    <th className="py-3.5 px-4 font-semibold">Best For</th>
+                    <th className="py-3.5 px-4 font-semibold text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {route.fareTable.map((row, idx) => (
+                    <tr
+                      key={row.vehicle}
+                      className={`transition-colors hover:bg-primary/[0.02] ${
+                        idx % 2 === 0 ? "bg-white" : "bg-gray-50/50"
+                      }`}
+                    >
+                      <td className="py-3.5 px-4 font-bold text-navy">{row.vehicle}</td>
+                      <td className="py-3.5 px-4 text-gray-600">{row.seats}</td>
+                      <td className="py-3.5 px-4 font-semibold text-primary">₹{row.ratePerKm}/km</td>
+                      <td className="py-3.5 px-4 font-bold text-emerald-700">₹{row.oneWayBaseFare.toLocaleString("en-IN")}</td>
+                      <td className="py-3.5 px-4 text-gray-600 text-xs">{row.bestFor || "Comfortable ride"}</td>
+                      <td className="py-3.5 px-4 text-center">
+                        <Button
+                          size="sm"
+                          onClick={() => openBooking(`${route.title} - ${row.vehicle}`)}
+                        >
+                          Book Now
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Under the Table Small Text Note */}
+            {route.fareTableNote && (
+              <p className="mt-4 text-xs text-gray-500 leading-relaxed bg-white/70 p-4 rounded-xl border border-gray-100">
+                {route.fareTableNote}
+              </p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* 4. What Is Included and What Is Not */}
+      {route.included && route.included.length > 0 && (
+        <section className="bg-white py-12 md:py-16 border-b border-gray-100">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="mb-8 font-display text-2xl font-bold text-navy md:text-3xl text-center md:text-left">
+              What Is Included and What Is Not
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="rounded-2xl border border-emerald-100 bg-emerald-50/40 p-6 shadow-sm">
+                <h3 className="font-display text-lg font-bold text-emerald-900 flex items-center gap-2 mb-4">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600 text-white text-xs font-bold">✓</span>
+                  Included in Base Fare
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-700">
+                  {route.included.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <CheckIcon className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-2xl border border-amber-100 bg-amber-50/40 p-6 shadow-sm">
+                <h3 className="font-display text-lg font-bold text-amber-900 flex items-center gap-2 mb-4">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-600 text-white text-xs font-bold">!</span>
+                  Extra at Actuals (With Itemised Receipts)
+                </h3>
+                <ul className="space-y-3 text-sm text-gray-700">
+                  {route.extraAtActuals?.map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <span className="text-amber-600 font-bold shrink-0">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 5. Why Travellers Book / Trip Planning Note */}
+      {route.whyBook && (
+        <section className="py-12 bg-light">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+              <h2 className="font-display text-2xl font-bold text-navy mb-3">
+                {route.whyBook.title}
+              </h2>
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                {route.whyBook.content}
+              </p>
+              {route.whyBook.highlightLinkText && route.whyBook.highlightLinkHref && (
+                <div className="mt-4 pt-4 border-t border-gray-100">
+                  <Link
+                    href={route.whyBook.highlightLinkHref}
+                    className="font-semibold text-primary hover:underline text-sm inline-flex items-center gap-1.5"
+                  >
+                    <span>{route.whyBook.highlightLinkText}</span>
+                    <span>→</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 6. Pickup and Drop Areas */}
+      {route.pickupAreas && route.dropAreas && (
+        <section className="bg-white py-12 md:py-16 border-b border-gray-100">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="mb-8 font-display text-2xl font-bold text-navy md:text-3xl text-center md:text-left">
+              Pickup Areas in {route.from} and Drop Areas in {route.to}
+            </h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="p-6 border-l-4 border-primary">
+                <h3 className="font-display text-lg font-bold text-navy mb-2 flex items-center gap-2">
+                  <span>📍 Pickup Coverage in {route.from}</span>
+                </h3>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  {route.pickupAreas}
+                </p>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-accent">
+                <h3 className="font-display text-lg font-bold text-navy mb-2 flex items-center gap-2">
+                  <span>🎯 Drop Locations in {route.to}</span>
+                </h3>
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  {route.dropAreas}
+                </p>
+              </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 7. Best Time to Travel */}
+      {route.bestTimeToTravel && (
+        <section className="bg-light py-12">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+              <h2 className="font-display text-xl md:text-2xl font-bold text-navy mb-3 flex items-center gap-2">
+                <span>⏰ Best Time to Leave for {route.to}</span>
+              </h2>
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                {route.bestTimeToTravel}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 8. Transport Comparison Table (Cab vs Train vs Bus vs Self-Drive) */}
+      {route.comparisonTable && route.comparisonTable.length > 0 && (
+        <section className="bg-white py-12 md:py-16 border-b border-gray-100">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="mb-4 font-display text-2xl font-bold text-navy md:text-3xl">
+              Cab vs Train vs Bus vs Self-Drive
+            </h2>
+            <p className="mb-6 text-gray-600 text-sm">
+              How private taxi compares with alternative transit modes for your trip to {route.to}:
+            </p>
+
+            <div className="overflow-x-auto rounded-2xl bg-white shadow-md border border-gray-100">
+              <table className="w-full min-w-[600px] text-left border-collapse text-sm">
+                <thead className="bg-navy text-white text-xs uppercase tracking-wider">
+                  <tr>
+                    <th className="py-3.5 px-4 font-semibold">Option</th>
+                    <th className="py-3.5 px-4 font-semibold">Door to Door</th>
+                    <th className="py-3.5 px-4 font-semibold">Luggage</th>
+                    <th className="py-3.5 px-4 font-semibold">Timing Control</th>
+                    <th className="py-3.5 px-4 font-semibold">Best For</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {route.comparisonTable.map((row) => (
+                    <tr key={row.option} className="hover:bg-gray-50/70 transition-colors">
+                      <td className="py-3.5 px-4 font-bold text-navy">{row.option}</td>
+                      <td className="py-3.5 px-4 text-gray-700">{row.doorToDoor}</td>
+                      <td className="py-3.5 px-4 text-gray-700">{row.luggage}</td>
+                      <td className="py-3.5 px-4 text-gray-700">{row.timingControl}</td>
+                      <td className="py-3.5 px-4 font-medium text-gray-800 text-xs">{row.bestFor}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="mt-4 text-xs text-gray-500">
+              For three or more people, or with luggage, a private cab is usually the most convenient. Check current train and bus fares directly with the operators.
+            </p>
+          </div>
+        </section>
+      )}
+
+      {/* 9. Airport Pickup Feature Note */}
+      {route.airportNote && (
+        <section className="bg-light py-10">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="rounded-2xl bg-white p-6 md:p-8 shadow-sm border border-gray-100">
+              <h2 className="font-display text-xl md:text-2xl font-bold text-navy mb-2 flex items-center gap-2">
+                <span>✈️ Mumbai Airport to {route.to} Cab</span>
+              </h2>
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                {route.airportNote}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 10. Route Details & Interactive Scenic Pitstops */}
       <section className="bg-white py-16">
         <div className="mx-auto max-w-6xl px-4">
           <p className="text-sm font-bold tracking-wide text-primary uppercase">
@@ -242,6 +480,7 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
             {route.guideTitle}
           </h2>
           <p className="mt-4 max-w-3xl text-gray-600">{route.guideIntro}</p>
+
           <Card className="mt-8 p-6 transition-all duration-300 hover:shadow-lg border border-transparent hover:border-gray-100/50 bg-gradient-to-br from-white to-gray-50/50">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
@@ -294,6 +533,7 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
               </div>
             </div>
           </Card>
+
           <ol className="mt-8 space-y-4">
             {route.stops.map((stop, index) => {
               const isExpanded = expandedStop === index;
@@ -359,29 +599,17 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
               );
             })}
           </ol>
-          <ul className="mt-8 space-y-2 text-gray-700">
-            <li className="flex items-start gap-2">
-              <CheckIcon className="mt-1 h-4 w-4 text-primary shrink-0" />
-              Relax and explore — drivers know the useful stops on this route.
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckIcon className="mt-1 h-4 w-4 text-primary shrink-0" />
-              Experienced highway and ghat drivers for a safer journey.
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckIcon className="mt-1 h-4 w-4 text-primary shrink-0" />
-              Flexible waiting for meals, photos, and sightseeing.
-            </li>
-          </ul>
         </div>
       </section>
 
+      {/* 11. FAQ Section */}
       <FaqSection items={route.faqs} />
 
-      <section className="px-4 pb-8">
+      {/* 12. Also Serving & Contextual Links */}
+      <section className="px-4 py-8 bg-light">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 font-display text-2xl font-bold text-navy">
-            Also serving
+            Popular Outstation Routes & Related Services
           </h2>
           <div className="grid gap-4 sm:grid-cols-3">
             {relatedRoutes(route.slug).map((item) => (
@@ -412,13 +640,34 @@ export function RoutePage({ route }: { route: OutstationRoute }) {
               </Link>
             ))}
           </div>
+
+          {/* In-body Contextual Cross-links */}
+          {route.contextualLinks && route.contextualLinks.length > 0 && (
+            <div className="mt-8 rounded-2xl bg-white p-5 border border-gray-100 shadow-sm">
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-400 block mb-3">
+                Quick Navigation & Related Pages
+              </span>
+              <div className="flex flex-wrap gap-2.5">
+                {route.contextualLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-gray-50 px-3.5 py-1.5 text-xs font-semibold text-gray-700 border border-gray-200 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                  >
+                    <span>{link.title}</span>
+                    <span className="text-gray-400 group-hover:text-white">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
-      <ReviewsSection />
+      {/* 13. CTA Banner */}
       <CtaBanner
         title={`Book your ${route.from} to ${route.to} trip`}
-        description="Send a WhatsApp enquiry and get a quote for one-way, round-trip, or airport pickup."
+        description="Send a WhatsApp enquiry and get an instant quote for one-way, round-trip, or airport pickup."
       />
     </>
   );

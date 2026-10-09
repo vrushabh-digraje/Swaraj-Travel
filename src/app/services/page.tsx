@@ -12,12 +12,6 @@ export const metadata = createMetadata({
   description:
     "Book A Cab cab services in Mumbai: airport transfers, city rides, outstation trips, hourly rental, corporate transport, and wedding cars. Book 24/7.",
   path: "/services",
-  keywords: [
-    "Mumbai airport cab",
-    "local taxi Mumbai",
-    "outstation cab service",
-    "corporate cab Mumbai",
-  ],
 });
 
 const faqs = [

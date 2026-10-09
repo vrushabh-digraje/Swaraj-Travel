@@ -296,6 +296,16 @@ export function MumbaiDarshanContent() {
           Swift Dzire full day, 8 hours and 80 km, from ₹1,120 plus driver allowance
         </p>
 
+        {/* 4.5 Quick Answer Box */}
+        <div className="mt-6 rounded-2xl border-l-4 border-primary bg-primary/5 p-4 sm:p-5 text-left text-sm text-gray-800 shadow-sm">
+          <p className="font-bold text-navy mb-1.5 flex items-center gap-2">
+            <span>⚡ Quick Answer: Mumbai Darshan Cab</span>
+          </p>
+          <p className="leading-relaxed">
+            A Mumbai Darshan cab is a private car with driver for 8 hours and 80 km, from ₹1,120 for a Swift Dzire, ₹1,280 for an Ertiga and ₹1,920 for an Innova Crysta (rates on this page). Driver allowance, toll, parking and entry tickets are extra. Most travellers cover either South Mumbai or the North circuit in 8 hours, and both in 10 hours.
+          </p>
+        </div>
+
         {/* CTA 1: After H1 */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
@@ -321,7 +331,7 @@ export function MumbaiDarshanContent() {
             ↓ See full fare table
           </a>
           <span className="mx-2">•</span>
-          <span>Fares on this page are calculated from our published per kilometre rates. Last reviewed January 2026.</span>
+          <span>Fares on this page are calculated from our published per kilometre rates. Last reviewed: October 2026.</span>
         </div>
 
         {/* IMAGE 1: Interactive Force Urbania Showcase Directly under H1 (Eager loading) */}
@@ -954,10 +964,10 @@ export function MumbaiDarshanContent() {
       {/* 03: H2 - Section 2 (id="fare-table") */}
       <section id="fare-table" className="mx-auto max-w-[1080px] px-4 scroll-mt-20">
         <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
-          Mumbai Darshan Cab Fare, 2026 Rate Card
+          City Package Rates (Mumbai Darshan)
         </h2>
         <p className="mt-2 text-sm text-gray-700 leading-relaxed">
-          Our fares are calculated on published per kilometre rates, the same rates listed on our <Link href="/packages" className="text-primary underline">tour packages page</Link> and <Link href="/fleet" className="text-primary underline">fleet page</Link>. The fare is for the vehicle, not per person. Six people in an Innova pay the same as two.
+          Local city packages have their own rates, different from outstation per-km rates. Looking for outstation trips? See our <Link href="/mumbai-to-pune-cab" className="text-primary underline">Mumbai to Pune cab</Link> and <Link href="/packages" className="text-primary underline">tour packages page</Link>. The fare is for the vehicle, not per person. Six people in an Innova pay the same as two.
         </p>
 
         {/* Interactive Filter Pills for Rate Card */}

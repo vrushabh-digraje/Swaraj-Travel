@@ -7,6 +7,7 @@ import { Card } from "@/components/card";
 import { CtaBanner } from "@/components/cta-banner";
 import { FleetGrid } from "@/components/fleet-grid";
 import { ReviewsSection } from "@/components/reviews-section";
+import { FaqSection } from "@/components/faq-section";
 import {
   ClockIcon,
   RouteIcon,
@@ -18,6 +19,39 @@ import { POPULAR_VEHICLES } from "@/lib/fleet";
 import { OUTSTATION_ROUTES } from "@/lib/routes";
 import { SERVICES } from "@/lib/services";
 import { useBooking } from "@/lib/booking-context";
+
+const HOME_FAQS = [
+  {
+    question: "How do I book a cab in Mumbai?",
+    answer:
+      "Call or WhatsApp +91-9970294122 with your pickup address, drop location, date and time. We confirm the vehicle and fare, and send driver and vehicle details before pickup.",
+  },
+  {
+    question: "Do you provide Mumbai airport pickup and drop?",
+    answer:
+      "Yes. We serve Terminal 1 and Terminal 2, with flight tracking for arrivals. Airport parking is charged at actuals.",
+  },
+  {
+    question: "What are your per-km rates?",
+    answer:
+      "Swift Dzire and Aura ₹13/km, Toyota Etios ₹14/km, Ertiga ₹16/km, Innova and Kia Carens ₹18/km, Innova Crysta ₹20/km. Tempo Traveller and buses are quoted on call. Tolls, parking and driver allowance are extra at actuals.",
+  },
+  {
+    question: "Do you offer one-way outstation cabs?",
+    answer:
+      "Yes. On one-way trips you pay for the distance travelled. Popular one-way routes are Mumbai to Pune, Nashik, Shirdi, Mahabaleshwar and Goa.",
+  },
+  {
+    question: "Is the cab service available 24 hours?",
+    answer:
+      "Yes, booking and support run 24 hours. Night charges apply between 12:00 am and 6:00 am.",
+  },
+  {
+    question: "Which areas do you cover?",
+    answer:
+      "Mumbai city, the western, central and harbour suburbs, Thane, Navi Mumbai, and outstation trips across Maharashtra and to Goa.",
+  },
+];
 
 const reasons = [
   {
@@ -186,9 +220,9 @@ function homeUnifiedSchema() {
         "@type": "WebPage",
         "@id": "https://bookacab.co.in/#webpage",
         url: "https://bookacab.co.in/",
-        name: "Mumbai Cab Booking | Airport, Outstation & Local Taxi - Book A Cab",
+        name: "Mumbai Cab Booking | Airport, Outstation & Local Taxi | Book A Cab",
         description:
-          "Book Mumbai cabs for airport transfers, local rides, and outstation trips across Maharashtra. 24/7 support, verified drivers, and instant booking on WhatsApp.",
+          "Book a Mumbai cab for airport transfers, local rides and outstation trips to Pune, Nashik, Shirdi, Goa. Clear per-km rates, verified drivers. Call +91-9970294122.",
         isPartOf: {
           "@id": "https://bookacab.co.in/#website",
         },
@@ -196,7 +230,7 @@ function homeUnifiedSchema() {
           "@id": "https://bookacab.co.in/#localbusiness",
         },
         inLanguage: "en-IN",
-        dateModified: "2026-09-21",
+        dateModified: "2026-10-01",
       },
       {
         "@type": "ItemList",
@@ -229,6 +263,18 @@ function homeUnifiedSchema() {
           },
         ],
       },
+      {
+        "@type": "FAQPage",
+        "@id": "https://bookacab.co.in/#faq",
+        mainEntity: HOME_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
     ],
   };
 }
@@ -239,6 +285,53 @@ export default function Home() {
     <>
       <JsonLd data={homeUnifiedSchema()} />
       <HomeHero />
+
+      {/* 2.4 Intro Section */}
+      <section className="bg-white py-12 md:py-16 border-b border-gray-100">
+        <div className="mx-auto max-w-4xl px-4 text-center md:text-left">
+          <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
+            Taxi Service in Mumbai and Across Maharashtra
+          </h2>
+          <p className="mt-4 text-gray-700 leading-relaxed">
+            Book A Cab is a Mumbai-based cab service for airport pickups and drops, local city rides, one-way and round-trip outstation taxis, and full-day Mumbai Darshan tours. Our office is at Near Airport, Andheri East, Mumbai, Maharashtra 400099, close to Mumbai Airport, so airport pickups from Terminal 1 and Terminal 2 are quick.
+          </p>
+          <p className="mt-3 text-gray-700 leading-relaxed">
+            Rates are published per kilometre and shown before you book. Tolls, parking and driver allowance are charged at actuals and itemised on your bill. You can book on call or WhatsApp at{" "}
+            <a href="tel:+919970294122" className="font-semibold text-primary hover:underline">
+              +91-9970294122
+            </a>
+            , 24 hours a day.
+          </p>
+          <div className="mt-6 rounded-2xl bg-light p-4 text-sm text-gray-700 border border-gray-200">
+            <span className="font-bold text-navy block sm:inline">Popular routes: </span>
+            <Link href="/mumbai-to-pune-cab" className="font-semibold text-primary hover:underline">
+              Mumbai to Pune cab
+            </Link>
+            ,{" "}
+            <Link href="/mumbai-to-nashik-cab" className="font-semibold text-primary hover:underline">
+              Mumbai to Nashik cab
+            </Link>
+            ,{" "}
+            <Link href="/mumbai-to-shirdi-cab" className="font-semibold text-primary hover:underline">
+              Mumbai to Shirdi cab
+            </Link>
+            ,{" "}
+            <Link href="/mumbai-to-mahabaleshwar-cab" className="font-semibold text-primary hover:underline">
+              Mumbai to Mahabaleshwar cab
+            </Link>
+            ,{" "}
+            <Link href="/mumbai-to-goa-cab" className="font-semibold text-primary hover:underline">
+              Mumbai to Goa cab
+            </Link>{" "}
+            and{" "}
+            <Link href="/mumbai-darshan-cab" className="font-semibold text-primary hover:underline">
+              Mumbai Darshan cab
+            </Link>
+            .
+          </div>
+        </div>
+      </section>
+
       <CtaBanner
         title="Ready to Ride?"
         description="Book your cab now and get exciting offers on your first ride."
@@ -420,6 +513,7 @@ export default function Home() {
       </section>
 
       <ReviewsSection />
+      <FaqSection items={HOME_FAQS} />
       <CtaBanner
         title="Ready for Your Next Journey?"
         description="Book your cab now and experience the difference."
