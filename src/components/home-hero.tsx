@@ -91,23 +91,6 @@ export function HomeHero() {
               WhatsApp
             </Button>
           </div>
-          <dl className="mx-auto mt-10 grid max-w-md grid-cols-3 gap-3 lg:mx-0">
-            {[
-              ["50K+", "Happy Riders"],
-              ["120+", "Premium Cabs"],
-              ["24/7", "Service"],
-            ].map(([value, label]) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-white/20 bg-white/10 p-4"
-              >
-                <dt className="font-display text-2xl font-black text-accent md:text-3xl">
-                  {value}
-                </dt>
-                <dd className="mt-1 text-xs text-white/80">{label}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
         
         <div

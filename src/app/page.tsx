@@ -6,7 +6,6 @@ import { JsonLd } from "@/components/json-ld";
 import { Card } from "@/components/card";
 import { CtaBanner } from "@/components/cta-banner";
 import { FleetGrid } from "@/components/fleet-grid";
-import { ReviewsSection } from "@/components/reviews-section";
 import { FaqSection } from "@/components/faq-section";
 import {
   ClockIcon,
@@ -512,7 +511,6 @@ export default function Home() {
         </div>
       </section>
 
-      <ReviewsSection />
       <FaqSection items={HOME_FAQS} />
       <CtaBanner
         title="Ready for Your Next Journey?"

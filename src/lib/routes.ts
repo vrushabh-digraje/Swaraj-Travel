@@ -83,7 +83,7 @@ export const OUTSTATION_ROUTES: OutstationRoute[] = [
     badge: "Most Popular Route",
     headline: "Mumbai to Pune Cab: One Way & Round Trip Taxi",
     intro:
-      "A Mumbai to Pune cab covers about 148 km via the Yashwantrao Chavan Mumbai-Pune Expressway in roughly 3 to 3.5 hours. One-way base fares start at ₹1,924 for a Swift Dzire (₹13/km), ₹2,664 for an Innova and ₹2,960 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. Book on call or WhatsApp at +91-9970294122.",
+      "One-way and round-trip cabs from Mumbai to Pune. Door-to-door pickup, airport Terminal 1 and 2 service, booking 24 hours.",
     quickAnswer:
       "A Mumbai to Pune cab covers about 148 km via the Yashwantrao Chavan Mumbai-Pune Expressway in roughly 3 to 3.5 hours. One-way base fares start at ₹1,924 for a Swift Dzire (₹13/km), ₹2,664 for an Innova and ₹2,960 for an Innova Crysta. Toll, parking and driver allowance are extra at actuals. Book on call or WhatsApp at +91-9970294122.",
     highlights: [

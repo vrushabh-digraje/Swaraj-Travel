@@ -20,7 +20,7 @@ export const MAHABALESHWAR_FARES: MahabaleshwarFareItem[] = [
   {
     id: "dzire",
     vehicle: "Swift Dzire",
-    type: "Hatchback / Sedan, AC",
+    type: "Sedan, AC",
     seats: "4 Passengers (5 seats with driver)",
     luggage: "2 Bags",
     perKm: 13,
@@ -34,7 +34,7 @@ export const MAHABALESHWAR_FARES: MahabaleshwarFareItem[] = [
   {
     id: "etios",
     vehicle: "Toyota Etios",
-    type: "Sedan / Hatchback, AC",
+    type: "Sedan, AC",
     seats: "4 Passengers (5 seats with driver)",
     luggage: "2 Bags",
     perKm: 15,
@@ -360,7 +360,7 @@ export const MAHABALESHWAR_FAQS: MahabaleshwarFaq[] = [
   },
   {
     question: "How do I confirm my Mumbai to Mahabaleshwar cab booking?",
-    answer: "You can confirm your booking by calling us at +91-8856904131, sending a WhatsApp message to +91-8856904131, or using the booking form on our website. After confirmation, you will receive your driver's name, contact number, vehicle type, and vehicle number before your pickup date.",
+    answer: "You can confirm your booking by calling us at +91-9970294122, sending a WhatsApp message to +91-9970294122, or using the booking form on our website. After confirmation, you will receive your driver's name, contact number, vehicle type, and vehicle number before your pickup date.",
     category: "policies",
   },
 ];

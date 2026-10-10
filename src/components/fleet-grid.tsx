@@ -81,8 +81,7 @@ export function FleetGrid({
             {[
               { id: "All", label: "All", count: 14 },
               { id: "SUV", label: "SUV", count: 8 },
-              { id: "Hatchback", label: "Hatchback", count: 2 },
-              { id: "Sedan", label: "Sedan", count: 4 },
+              { id: "Sedan", label: "Sedan", count: 6 },
               { id: "Mini Bus", label: "Mini Bus", count: 1 },
               { id: "Urbania", label: "Urbania", count: 2 },
             ].map((item) => (

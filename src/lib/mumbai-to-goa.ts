@@ -353,7 +353,7 @@ export const GOA_FAQS: GoaFaqItem[] = [
   },
   {
     question: "Are Book A Cab drivers experienced on the ghat sections of the Mumbai to Goa route?",
-    answer: "Yes. Our outstation drivers are specifically selected for their long-distance route experience. They know the NH66 coastal highway, the ghat approaches near Mahad and Poladpur, and the river bridge sections that require careful speed management. One of our customers confirmed this directly: \"Driver was experienced on ghats and drove safely. Family enjoyed a lot.\" That standard applies to every Mumbai to Goa trip we operate.",
+    answer: "Yes. Our outstation drivers are specifically selected for their long-distance route experience. They know the NH66 coastal highway, the ghat approaches near Mahad and Poladpur, and the river bridge sections that require careful speed management.",
     category: "safety",
   },
   {

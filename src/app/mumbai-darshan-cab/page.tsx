@@ -507,7 +507,7 @@ function mumbaiDarshanUnifiedSchema() {
             "acceptedAnswer": {
               "@type": "Answer",
               "text":
-                "For a family of four doing a six stop South Mumbai circuit in a Swift Dzire, expect roughly ₹1,900 to ₹2,400 in total. That is the ₹1,120 package fare plus driver allowance, around ₹200 to ₹400 of parking and roughly ₹400 to ₹700 of museum entry for four people. A South Mumbai loop attracts no toll. We give you a specific estimate for your route before you book.",
+                "For a family of four doing a six stop South Mumbai circuit in a Swift Dzire, expect roughly ₹2,020 to ₹2,520 in total. That is the ₹1,120 package fare, ₹300 driver allowance, around ₹200 to ₹400 of parking and roughly ₹400 to ₹700 of museum entry for four people. A South Mumbai loop attracts no toll. We give you a specific estimate for your route before you book.",
             },
           },
           {

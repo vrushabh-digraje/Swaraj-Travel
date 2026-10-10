@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mumbai to Mahabaleshwar Cab — Transparent Fare Booking | Book A Cab",
     description:
-      "Book a reliable Mumbai to Mahabaleshwar cab with clear upfront fares. One way & round trip options. Call/WhatsApp: +91-8856904131",
+      "Book a reliable Mumbai to Mahabaleshwar cab with clear upfront fares. One way & round trip options. Call/WhatsApp: +91-9970294122",
     url: "https://bookacab.co.in/mumbai-to-mahabaleshwar-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       {
         url: "https://bookacab.co.in/images/mahabaleshwar-cab-hero-book-a-cab.webp",
         width: 1200,
-        height: 600,
+        height: 630,
         alt: "Mumbai to Mahabaleshwar cab by Book A Cab on the highway",
       },
     ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mumbai to Mahabaleshwar Cab — Transparent Fare Booking | Book A Cab",
     description:
-      "Book a reliable Mumbai to Mahabaleshwar cab with clear upfront fares. One way & round trip options. Call/WhatsApp: +91-8856904131",
+      "Book a reliable Mumbai to Mahabaleshwar cab with clear upfront fares. One way & round trip options. Call/WhatsApp: +91-9970294122",
     images: ["https://bookacab.co.in/images/mahabaleshwar-cab-hero-book-a-cab.webp"],
   },
 };
@@ -220,7 +220,7 @@ function mahabaleshwarUnifiedSchema() {
         offers: {
           "@type": "AggregateOffer",
           priceCurrency: "INR",
-          lowPrice: 3800,
+          lowPrice: 3419,
           offerCount: 9,
           availability: "https://schema.org/InStock",
           url: "https://bookacab.co.in/mumbai-to-mahabaleshwar-cab/",
@@ -246,7 +246,7 @@ function mahabaleshwarUnifiedSchema() {
             name: "How much does a Mumbai to Mahabaleshwar cab cost?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The fare depends on the vehicle type and whether you choose a one way or round trip booking. At Book A Cab, one way fares for this route start from approximately ₹4,200 for a Swift Dzire (hatchback) and go up to around ₹9,600+ for a 12-seater Tempo Traveller AC. Innova Crysta, one of our most popular options, is priced in the ₹6,500–₹7,500 range for a one way trip. Contact us or use our booking form to get an exact quote for your date and vehicle choice.",
+              text: "The fare depends on the vehicle type and whether you choose a one way or round trip booking. At Book A Cab, one way fares for this route start from approximately ₹4,200 for a Swift Dzire (sedan) and go up to around ₹9,600+ for a 12-seater Tempo Traveller AC. Innova Crysta, one of our most popular options, is priced in the ₹6,500–₹7,500 range for a one way trip. Contact us or use our booking form to get an exact quote for your date and vehicle choice.",
             },
           },
           {
@@ -326,7 +326,7 @@ function mahabaleshwarUnifiedSchema() {
             name: "How do I confirm my Mumbai to Mahabaleshwar cab booking?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "You can confirm your booking by calling us at +91-8856904131, sending a WhatsApp message to +91-8856904131, or using the booking form on our website. After confirmation, you will receive your driver's name, contact number, vehicle type, and vehicle number before your pickup date.",
+              text: "You can confirm your booking by calling us at +91-9970294122, sending a WhatsApp message to +91-9970294122, or using the booking form on our website. After confirmation, you will receive your driver's name, contact number, vehicle type, and vehicle number before your pickup date.",
             },
           },
         ],

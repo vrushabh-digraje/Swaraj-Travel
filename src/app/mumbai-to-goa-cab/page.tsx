@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/json-ld";
 import { MumbaiToGoaContent } from "@/components/mumbai-to-goa-content";
+import { GOA_FAQS } from "@/lib/mumbai-to-goa";
 
 export const metadata: Metadata = {
   title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
   description:
-    "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+    "Mumbai to Goa cab: fixed one-way fares from ₹7,500, tolls included. 595 km via NH66, pickup anywhere in Mumbai. Call +91-9970294122.",
   alternates: {
     canonical: "https://bookacab.co.in/mumbai-to-goa-cab/",
   },
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
-      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+      "Mumbai to Goa cab: fixed one-way fares from ₹7,500, tolls included. 595 km via NH66, pickup anywhere in Mumbai. Call +91-9970294122.",
     url: "https://bookacab.co.in/mumbai-to-goa-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp",
-        width: 1440,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: "Mumbai to Goa cab booking service by Book A Cab with verified driver on NH66 Konkan coastal highway",
       },
     ],
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
     description:
-      "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+      "Mumbai to Goa cab: fixed one-way fares from ₹7,500, tolls included. 595 km via NH66, pickup anywhere in Mumbai. Call +91-9970294122.",
     images: ["https://bookacab.co.in/images/mumbai-to-goa-cab-book-a-cab-hero.webp"],
   },
 };
@@ -173,7 +174,7 @@ function mumbaiToGoaUnifiedSchema() {
           {
             "@type": "ListItem",
             position: 2,
-            name: "Outstation",
+            name: "Outstation Cabs",
             item: "https://bookacab.co.in/outstation/",
           },
           {
@@ -188,9 +189,9 @@ function mumbaiToGoaUnifiedSchema() {
         "@type": "WebPage",
         "@id": "https://bookacab.co.in/mumbai-to-goa-cab/#webpage",
         url: "https://bookacab.co.in/mumbai-to-goa-cab/",
-        name: "Mumbai to Goa Cab | Fixed Fare, Verified Drivers | Book A Cab",
+        name: "Mumbai to Goa Cab: One Way & Round Trip Taxi",
         description:
-          "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
+          "Mumbai to Goa cab: fixed one-way fares from ₹7,500, tolls included. 595 km via NH66, pickup anywhere in Mumbai. Call +91-9970294122.",
         isPartOf: {
           "@id": "https://bookacab.co.in/#website",
         },
@@ -198,7 +199,7 @@ function mumbaiToGoaUnifiedSchema() {
           "@id": "https://bookacab.co.in/#localbusiness",
         },
         inLanguage: "en-IN",
-        dateModified: "2026-09-21",
+        dateModified: "2026-10-09",
         breadcrumb: {
           "@id": "https://bookacab.co.in/mumbai-to-goa-cab/#breadcrumb",
         },
@@ -206,186 +207,37 @@ function mumbaiToGoaUnifiedSchema() {
       {
         "@type": "Service",
         "@id": "https://bookacab.co.in/mumbai-to-goa-cab/#service",
-        name: "Mumbai to Goa Cab Service",
+        name: "Mumbai to Goa Cab",
+        serviceType: "Outstation taxi",
         description:
-          "Book Mumbai to Goa cab with Book A Cab. Fixed fare, no hidden charges, ghat-experienced drivers & instant WhatsApp booking 24/7. 50,000+ happy riders.",
-        serviceType: "Outstation taxi service",
+          "One-way and round-trip cab from Mumbai to Goa via NH66, 595 km, about 10 to 12 hours. Fixed fares with NH66 tolls included.",
         provider: {
-          "@id": "https://bookacab.co.in/#localbusiness",
+          "@type": "TaxiService",
+          name: "Book A Cab",
+          url: "https://bookacab.co.in/",
+          telephone: "+91-9970294122",
         },
-        areaServed: [
-          { "@type": "City", name: "Mumbai" },
-          { "@type": "City", name: "Goa" },
-        ],
+        areaServed: ["Mumbai", "Goa"],
+        url: "https://bookacab.co.in/mumbai-to-goa-cab/",
         offers: {
-          "@type": "AggregateOffer",
+          "@type": "Offer",
           priceCurrency: "INR",
-          lowPrice: 8500,
-          offerCount: 9,
-          availability: "https://schema.org/InStock",
-          url: "https://bookacab.co.in/mumbai-to-goa-cab/",
-          seller: {
-            "@id": "https://bookacab.co.in/#localbusiness",
-          },
+          price: "7500",
+          description:
+            "One-way fixed fare from Rs 7,500 for a hatchback. NH66 tolls included.",
         },
       },
       {
         "@type": "FAQPage",
         "@id": "https://bookacab.co.in/mumbai-to-goa-cab/#faq",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What is the distance from Mumbai to Goa by road?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "The road distance from Mumbai to Goa via NH66 is approximately 595 km. This is the most commonly used and well-maintained route for the journey.",
-            },
+        mainEntity: GOA_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
           },
-          {
-            "@type": "Question",
-            name: "How long does a Mumbai to Goa cab take?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Under normal conditions, the journey takes 10 to 12 hours including 1 to 2 short break stops. Traffic near Panvel and Khopoli during morning hours can add 45 to 90 minutes. A 4 AM to 5 AM departure or a 10 PM to 11 PM departure gives you the smoothest and fastest drive.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Which route does Book A Cab use for Mumbai to Goa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "We use NH66, the coastal highway passing through Panvel, Mahad, Chiplun, Ratnagiri, Kankavli, and Sawantwadi before entering Goa. This is the most reliable, scenic, and consistently maintained route for this journey. If you specifically need the expressway and Kolhapur route, mention this at booking and we will accommodate it.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What is the cab fare from Mumbai to Goa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Book A Cab's one-way Mumbai to Goa cab fare starts at ₹7,500 for a Hatchback, ₹8,500 for a Sedan, ₹11,000 for an SUV, ₹13,500 for an Innova Crysta, and ₹18,000 for a Tempo Traveller. All fares include tolls and driver charges. Your exact confirmed fare is sent to you on WhatsApp before you book.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Are tolls included in the Mumbai to Goa cab fare?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. Toll charges applicable on the NH66 route are included in the Book A Cab one-way fare. The only additional government charge is the Maharashtra to Goa interstate state permit fee, which is charged at actuals. We inform you of this separately before you confirm your booking.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Are there any hidden charges in the Book A Cab fare?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "No. Book A Cab charges no platform fee, no booking commission, and no surprise additions. The fare confirmed on WhatsApp is what you pay. The only variables outside our control are the interstate state permit fee and the night allowance for pickups between 11 PM and 5 AM, both of which are communicated clearly before confirmation.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Does the Mumbai to Goa cab fare change during peak season?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "During high-demand periods such as Christmas, New Year, Diwali, and summer vacations from April to June, cab availability reduces and fares may reflect current market demand. We recommend booking 3 to 5 days in advance during these periods. Contact us on WhatsApp for your travel date's exact fare and availability.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How do I book a Mumbai to Goa cab with Book A Cab?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Send us a WhatsApp message with your travel date, pickup location in Mumbai, preferred car type, and drop point in Goa. We confirm your fare and booking within minutes. No app is required, no advance payment is needed to hold your booking.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How far in advance should I book a Mumbai to Goa cab?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "For weekday trips, 1 to 2 days in advance is usually sufficient. For weekend getaways, long weekends, and peak season dates, book 3 to 5 days ahead to secure your preferred vehicle type and fare.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can I change my Goa drop location after booking?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Minor changes within the same Goa zone, such as switching between two hotels in Calangute, can usually be accommodated without a fare change. A significant change such as switching from North Goa to South Goa will involve a fare adjustment. Message us on WhatsApp as early as possible if your plans change and we will sort it out transparently.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Is it safe to travel Mumbai to Goa by cab at night?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. NH66 is a national highway with consistent lighting for most of its length. Night traffic is lighter, making for a smoother and faster drive compared to daytime. Book A Cab assigns only experienced long-distance drivers for overnight trips. You receive your driver's direct contact number 2 hours before pickup, our support team is reachable on WhatsApp at all hours, and live location sharing is available throughout the journey.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Are Book A Cab drivers experienced on the ghat sections of the Mumbai to Goa route?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. Our outstation drivers are specifically selected for their long-distance route experience. They know the NH66 coastal highway, the ghat approaches near Mahad and Poladpur, and the river bridge sections that require careful speed management. One of our customers confirmed this directly: \"Driver was experienced on ghats and drove safely. Family enjoyed a lot.\" That standard applies to every Mumbai to Goa trip we operate.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What happens if my cab breaks down during the Mumbai to Goa journey?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Our support team is reachable on WhatsApp and call 24 hours a day, 7 days a week. In the event of a breakdown, we coordinate roadside assistance and arrange an alternate vehicle to continue your journey from that point. You will always have a live point of contact from Book A Cab and will never be left without a clear resolution.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Which car is best for a family of 5 traveling Mumbai to Goa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "For a family of 5 with full Goa holiday luggage, the Innova Crysta is the best choice. It seats 6+1 comfortably, carries 5 large bags in the boot, and handles both coastal highway and ghat road conditions better than a standard sedan on a 10 to 12 hour drive. An Ertiga SUV is a good option for a family of 4 with moderate luggage.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can I book a one-way cab from Mumbai to Goa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. One-way cab booking is our most popular Mumbai to Goa option. You pay only for the trip you need. There is no return journey cost included in a one-way fare.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do you provide Goa to Mumbai cab service as well?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Yes. Book A Cab operates return cabs from Goa to Mumbai with the same standard of verified drivers and well-maintained vehicles. If you want to book both legs together, mention this when you message us on WhatsApp and we arrange both in one conversation.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Can I stop for sightseeing between Mumbai and Goa?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Standard bookings are point-to-point from Mumbai to your Goa drop location. If you want to include a specific stop such as Ganpatipule, Tarkarli, or another coastal point, mention this at the time of booking. Extended detours beyond the standard route may involve an additional fare based on extra distance and time. We always confirm any adjustment with you before it applies.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Do your drivers speak Marathi or English?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Most Book A Cab drivers are fluent in Marathi and conversational in Hindi. A working level of English is available. If you have a specific language preference, mention it at booking and we will do our best to match you accordingly.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "How long is the free waiting time at my Mumbai pickup?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "15 minutes of free waiting time applies at all standard pickup locations. For Mumbai Airport pickups, 60 minutes of free waiting time is provided from the flight landing time. Waiting charges apply after the free waiting period ends.",
-            },
-          },
-        ],
+        })),
       },
     ],
   };

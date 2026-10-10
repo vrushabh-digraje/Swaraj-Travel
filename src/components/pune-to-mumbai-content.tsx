@@ -29,9 +29,9 @@ import {
   PuneRateItem,
 } from "@/lib/pune-to-mumbai";
 
-const PHONE_NUMBER = "+91 8830273575";
-const PHONE_TEL = "+918830273575";
-const WHATSAPP_NUMBER = "918830273575";
+const PHONE_NUMBER = "+91-9970294122";
+const PHONE_TEL = "+919970294122";
+const WHATSAPP_NUMBER = "919970294122";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -48,7 +48,7 @@ export function PuneToMumbaiContent() {
   const [isNightPickup, setIsNightPickup] = useState<boolean>(false);
 
   // 2. Rate Card Filter
-  const [rateCategoryFilter, setRateCategoryFilter] = useState<"all" | "Hatchback" | "Sedan" | "SUV" | "Bus">("all");
+  const [rateCategoryFilter, setRateCategoryFilter] = useState<"all" | "Sedan" | "SUV" | "Bus">("all");
 
   // 3. Flight Calculator
   const [selectedFlightIndex, setSelectedFlightIndex] = useState<number>(0);
@@ -143,7 +143,7 @@ export function PuneToMumbaiContent() {
               Rates start at ₹14 per km for a Swift Dzire and go up to a 32 seat Mini Bus for large groups. Toll, parking and driver food are charged as per actual on top of the running fare, and we tell you exactly what applies before your booking is confirmed.
             </p>
             <p className="text-sm font-semibold text-navy">
-              To book, message <a href={`tel:${PHONE_TEL}`} className="text-primary underline hover:text-navy">8830273575</a> on WhatsApp or call the same number.
+              To book, message <a href={`tel:${PHONE_TEL}`} className="text-primary underline hover:text-navy">+91-9970294122</a> on WhatsApp or call the same number.
             </p>
           </div>
 
@@ -187,7 +187,7 @@ export function PuneToMumbaiContent() {
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <th scope="row" className="py-2.5 pr-4 font-semibold text-gray-900">Starting rate</th>
-                    <td className="py-2.5 font-bold text-primary">₹14 per km, Swift Dzire</td>
+                    <td className="py-2.5 font-bold text-primary">₹13 per km, Swift Dzire</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <th scope="row" className="py-2.5 pr-4 font-semibold text-gray-900">Trip types</th>
@@ -199,7 +199,7 @@ export function PuneToMumbaiContent() {
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <th scope="row" className="py-2.5 pr-4 font-semibold text-gray-900">Booking</th>
-                    <td className="py-2.5 text-gray-700">WhatsApp or call 8830273575</td>
+                    <td className="py-2.5 text-gray-700">WhatsApp or call +91-9970294122</td>
                   </tr>
                 </tbody>
               </table>
@@ -222,7 +222,7 @@ export function PuneToMumbaiContent() {
               className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-5 py-3.5 text-sm font-bold text-gray-800 hover:bg-gray-50 transition-colors shadow-sm"
             >
               <PhoneIcon className="h-4 w-4 text-emerald-600" />
-              <span>Call 8830273575</span>
+              <span>Call +91-9970294122</span>
             </a>
             <button
               type="button"
@@ -386,7 +386,7 @@ export function PuneToMumbaiContent() {
 
           {/* Rate card category filters */}
           <div className="mt-4 flex flex-wrap gap-1.5">
-            {(["all", "Hatchback", "Sedan", "SUV", "Bus"] as const).map((cat) => (
+            {(["all", "Sedan", "SUV", "Bus"] as const).map((cat) => (
               <button
                 key={cat}
                 type="button"
@@ -487,7 +487,7 @@ export function PuneToMumbaiContent() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-emerald-600 shrink-0" />
-                    <span>24 hour phone support on 8830273575</span>
+                    <span>24 hour phone support on +91-9970294122</span>
                   </li>
                 </ul>
               </div>
@@ -1004,7 +1004,7 @@ export function PuneToMumbaiContent() {
                 Flight delays are the part of airport travel nobody plans for, so tell us early and we will work around it.
               </p>
               <p>
-                If you have booked a Mumbai airport pickup and your flight is running late, message <a href={`tel:${PHONE_TEL}`} className="text-primary font-bold hover:underline">8830273575</a> with the new landing time as soon as you have it. Our drivers already track flights on airport bookings, so in most cases we will have seen the delay before you message. We hold the booking and adjust the pickup where the driver&apos;s schedule allows.
+                If you have booked a Mumbai airport pickup and your flight is running late, message <a href={`tel:${PHONE_TEL}`} className="text-primary font-bold hover:underline">+91-9970294122</a> with the new landing time as soon as you have it. Our drivers already track flights on airport bookings, so in most cases we will have seen the delay before you message. We hold the booking and adjust the pickup where the driver&apos;s schedule allows.
               </p>
               <p className="text-xs text-gray-600">
                 Waiting charges on delayed arrivals are agreed with you rather than applied automatically, and reasonable flight delays are handled as part of the service. If a delay is long enough that the trip needs moving to a different day, contact us as early as you can so we can reschedule rather than cancel.
@@ -1095,7 +1095,7 @@ export function PuneToMumbaiContent() {
               <div>
                 <div className="text-base font-bold text-navy">Send us your trip details</div>
                 <p className="mt-1 text-sm text-gray-700 leading-relaxed">
-                  Use the booking form on our site or message 8830273575 directly on WhatsApp. Tell us your pickup address in Pune, your drop address in Mumbai, the date and time, how many passengers and bags, and whether you want one way, round trip or hourly.
+                  Use the booking form on our site or message +91-9970294122 directly on WhatsApp. Tell us your pickup address in Pune, your drop address in Mumbai, the date and time, how many passengers and bags, and whether you want one way, round trip or hourly.
                 </p>
               </div>
             </li>
@@ -1151,7 +1151,7 @@ export function PuneToMumbaiContent() {
               className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-3.5 text-sm font-bold text-white shadow hover:bg-emerald-700 transition-colors"
             >
               <WhatsAppIcon className="h-4 w-4" />
-              <span>Book on WhatsApp Call 8830273575</span>
+              <span>Book on WhatsApp / Call +91-9970294122</span>
             </a>
           </div>
         </section>
@@ -1233,7 +1233,7 @@ export function PuneToMumbaiContent() {
                 <ClockIcon className="h-4 w-4 text-primary shrink-0" />
                 <span>Available 24 hours</span>
               </div>
-              <p className="text-xs text-gray-600">Bookings and support run around the clock on 8830273575, which is the only way an airport service can honestly operate.</p>
+              <p className="text-xs text-gray-600">Bookings and support run around the clock on +91-9970294122, which is the only way an airport service can honestly operate.</p>
             </div>
 
             <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-xs">
@@ -1266,8 +1266,8 @@ export function PuneToMumbaiContent() {
                 The company was founded by Rajesh Sharma, who brought more than 15 years of experience in the transportation industry to the business. It began with a fleet of five cars and the straightforward aim of running a cab service that people could rely on, with proper attention to customer safety and driver welfare. The fleet today runs to 16 vehicles across four categories, hatchbacks, sedans, SUVs and buses.
               </p>
               <div className="rounded-xl bg-gray-50 p-4 border border-gray-200 text-xs sm:text-sm text-gray-800 space-y-1">
-                <div><strong>Office:</strong> Near Airport, Mumbai, Maharashtra, India</div>
-                <div><strong>Phone and WhatsApp:</strong> +91 8830273575, answered 24 hours</div>
+                <div><strong>Office:</strong> Near Airport, Andheri East, Mumbai, Maharashtra 400099</div>
+                <div><strong>Phone and WhatsApp:</strong> +91-9970294122, answered 24 hours</div>
                 <div><strong>Email:</strong> bookings@bookacab.co.in</div>
               </div>
               <p className="text-xs text-gray-500">
@@ -1345,7 +1345,7 @@ export function PuneToMumbaiContent() {
             </Link>
           </div>
           <p className="mt-4 text-xs sm:text-sm text-gray-600">
-            Same rate card, same fleet, same number. Call or WhatsApp 8830273575.
+            Same rate card, same fleet, same number. Call or WhatsApp +91-9970294122.
           </p>
         </section>
 
@@ -1387,7 +1387,7 @@ export function PuneToMumbaiContent() {
               className="inline-flex items-center gap-2 rounded-xl bg-navy px-5 py-3 text-sm font-bold text-white shadow hover:bg-slate-800 transition-colors"
             >
               <PhoneIcon className="h-4 w-4 text-amber-400" />
-              <span>Call +91 8830273575</span>
+              <span>Call +91-9970294122</span>
             </a>
             <a
               href={waLink("Hi Book A Cab, I want to book a Pune to Mumbai cab.")}

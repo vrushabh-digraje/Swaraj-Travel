@@ -31,9 +31,9 @@ import {
   ShirdiFareItem,
 } from "@/lib/mumbai-to-shirdi";
 
-const PHONE_NUMBER = "+91-8856904131";
-const PHONE_TEL = "+918856904131";
-const WHATSAPP_NUMBER = "918856904131";
+const PHONE_NUMBER = "+91-9970294122";
+const PHONE_TEL = "+919970294122";
+const WHATSAPP_NUMBER = "919970294122";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;

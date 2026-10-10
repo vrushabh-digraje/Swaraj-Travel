@@ -1,6 +1,6 @@
 export interface PuneRateItem {
   vehicle: string;
-  category: "Hatchback" | "Sedan" | "SUV" | "Bus";
+  category: "Sedan" | "SUV" | "Bus";
   seats: string;
   luggage: string;
   fuel: "Petrol" | "Diesel";
@@ -14,35 +14,35 @@ export interface PuneRateItem {
 export const PUNE_MUMBAI_RATES: PuneRateItem[] = [
   {
     vehicle: "Swift Dzire",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "5",
     luggage: "2 bags",
     fuel: "Petrol",
-    ratePerKm: 14,
-    ratePerKmStr: "₹14",
-    sample150KmFare: 2100,
+    ratePerKm: 13,
+    ratePerKmStr: "₹13",
+    sample150KmFare: 1950,
     popular: true,
     desc: "Air conditioned Swift Dzire for Pune to Mumbai bookings, seats 5 with 2 bags.",
   },
   {
     vehicle: "Aura",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "5",
     luggage: "2 bags",
     fuel: "Petrol",
-    ratePerKm: 14,
-    ratePerKmStr: "₹14",
-    sample150KmFare: 2100,
+    ratePerKm: 13,
+    ratePerKmStr: "₹13",
+    sample150KmFare: 1950,
   },
   {
     vehicle: "Toyota Etios",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "5",
     luggage: "2 bags",
     fuel: "Diesel",
-    ratePerKm: 15,
-    ratePerKmStr: "₹15",
-    sample150KmFare: 2250,
+    ratePerKm: 14,
+    ratePerKmStr: "₹14",
+    sample150KmFare: 2100,
     desc: "Toyota Etios diesel sedan for Pune to Mumbai trips, seats 5 with 2 bags.",
   },
   {
@@ -63,9 +63,9 @@ export const PUNE_MUMBAI_RATES: PuneRateItem[] = [
     seats: "5",
     luggage: "2 bags",
     fuel: "Petrol",
-    ratePerKm: 16,
-    ratePerKmStr: "₹16",
-    sample150KmFare: 2400,
+    ratePerKm: 18,
+    ratePerKmStr: "₹18",
+    sample150KmFare: 2700,
   },
   {
     vehicle: "Toyota Corolla",
@@ -95,9 +95,9 @@ export const PUNE_MUMBAI_RATES: PuneRateItem[] = [
     seats: "7",
     luggage: "4 bags",
     fuel: "Petrol",
-    ratePerKm: 20,
-    ratePerKmStr: "₹20",
-    sample150KmFare: 3000,
+    ratePerKm: 18,
+    ratePerKmStr: "₹18",
+    sample150KmFare: 2700,
   },
   {
     vehicle: "Innova",
@@ -105,9 +105,9 @@ export const PUNE_MUMBAI_RATES: PuneRateItem[] = [
     seats: "7",
     luggage: "5 bags",
     fuel: "Diesel",
-    ratePerKm: 24,
-    ratePerKmStr: "₹24",
-    sample150KmFare: 3600,
+    ratePerKm: 18,
+    ratePerKmStr: "₹18",
+    sample150KmFare: 2700,
   },
   {
     vehicle: "Scorpio",
@@ -173,7 +173,7 @@ export const PUNE_MUMBAI_RATES: PuneRateItem[] = [
   },
   {
     vehicle: "Honda Amaze",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "5",
     luggage: "2 bags",
     fuel: "Petrol",
@@ -240,7 +240,7 @@ export interface PuneFaqItem {
 export const PUNE_FAQS: PuneFaqItem[] = [
   {
     question: "What is the fare for a Pune to Mumbai cab?",
-    answer: "A Pune to Mumbai cab with Book A Cab is charged per kilometre, starting at ₹14 per km for a Swift Dzire, ₹16 per km for an Ertiga and ₹20 per km for an Innova Crysta. On a 150 km trip that is roughly ₹2,100 in a Dzire and ₹3,000 in an Innova Crysta, plus toll and driver food as per actual.",
+    answer: "A Pune to Mumbai cab with Book A Cab is charged per kilometre, starting at ₹13 per km for a Swift Dzire, ₹16 per km for an Ertiga, ₹18 per km for an Innova, and ₹20 per km for an Innova Crysta. On a 150 km trip that is roughly ₹1,950 in a Dzire and ₹3,000 in an Innova Crysta, plus toll and driver allowance as per actual.",
   },
   {
     question: "Is toll included in the Pune to Mumbai cab fare?",
@@ -280,11 +280,11 @@ export const PUNE_FAQS: PuneFaqItem[] = [
   },
   {
     question: "What happens if my flight is delayed and I need a later airport pickup?",
-    answer: "Message 8830273575 with your new landing time as soon as you know it. Our drivers track flights on airport bookings, so we usually see the delay first. We hold the booking and adjust the pickup where the driver's schedule allows. Any waiting charge is discussed with you, not applied automatically.",
+    answer: "Message +91-9970294122 with your new landing time as soon as you know it. Our drivers track flights on airport bookings, so we usually see the delay first. We hold the booking and adjust the pickup where the driver's schedule allows. Any waiting charge is discussed with you, not applied automatically.",
   },
   {
     question: "Is a round trip cheaper than booking two one way cabs?",
-    answer: "Usually yes, if you are returning within about 24 hours, because a one way fare has to account for the driver bringing the car back. For longer gaps between legs, two one way bookings can work out better. Send your travel dates to 8830273575 and we will price both options.",
+    answer: "Usually yes, if you are returning within about 24 hours, because a one way fare has to account for the driver bringing the car back. For longer gaps between legs, two one way bookings can work out better. Send your travel dates to +91-9970294122 and we will price both options.",
   },
   {
     question: "Do you cover Navi Mumbai, Thane and BKC at the same rate?",
@@ -316,6 +316,6 @@ export const PUNE_FAQS: PuneFaqItem[] = [
   },
   {
     question: "Can I book a Mumbai to Pune cab as well?",
-    answer: "Yes. We run this route in both directions, including Mumbai Airport T1 and T2 pickups where the driver tracks your flight and waits at arrivals. The same fleet and rate card apply. See our Mumbai to Pune cab page or call 8830273575.",
+    answer: "Yes. We run this route in both directions, including Mumbai Airport T1 and T2 pickups where the driver tracks your flight and waits at arrivals. The same fleet and rate card apply. See our Mumbai to Pune cab page or call +91-9970294122.",
   },
 ];

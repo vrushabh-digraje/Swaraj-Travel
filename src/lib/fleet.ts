@@ -47,7 +47,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: "toyota-etios",
     name: "Toyota Etios",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "4+1",
     luggage: "2 Bags",
     fuel: "Diesel",
@@ -75,7 +75,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: "swift-dzire",
     name: "Swift Dzire",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "4+1",
     luggage: "2 Bags",
     fuel: "Petrol",
@@ -89,7 +89,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: "aura",
     name: "Aura",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "4+1",
     luggage: "2 Bags",
     fuel: "Petrol",
@@ -128,7 +128,7 @@ export const VEHICLES: Vehicle[] = [
   {
     id: "amaze",
     name: "Amaze",
-    category: "Hatchback",
+    category: "Sedan",
     seats: "4+1",
     luggage: "2 Bags",
     fuel: "Petrol",
@@ -208,7 +208,6 @@ export const VEHICLES: Vehicle[] = [
 export const FLEET_CATEGORIES: Array<"All" | VehicleCategory> = [
   "All",
   "SUV",
-  "Hatchback",
   "Sedan",
   "Bus",
 ];

@@ -32,9 +32,9 @@ import {
   GoaFareItem,
 } from "@/lib/mumbai-to-goa";
 
-const PHONE_NUMBER = "+91-8856904131";
-const PHONE_TEL = "+918856904131";
-const WHATSAPP_NUMBER = "918856904131";
+const PHONE_NUMBER = "+91-9970294122";
+const PHONE_TEL = "+919970294122";
+const WHATSAPP_NUMBER = "919970294122";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -132,16 +132,29 @@ export function MumbaiToGoaContent() {
 
           {/* H1 - Exact match per Developer Blueprint */}
           <h1 className="font-display text-3xl font-extrabold tracking-tight text-navy sm:text-4xl lg:text-5xl">
-            Mumbai to Goa Cab Booking | Fixed Fare, Verified Drivers, WhatsApp Booking 24/7
+            Mumbai to Goa Cab: One Way & Round Trip Taxi
           </h1>
+          <p className="mt-2 text-xs font-semibold uppercase tracking-wider text-primary">
+            Last updated: October 2026
+          </p>
 
           {/* Paragraph (intro text — 4 lines max) */}
           <div className="mt-4 space-y-3 text-base text-gray-700 leading-relaxed md:text-lg">
             <p>
-              Planning your Mumbai to Goa road trip? Book A Cab provides direct cab service from your doorstep anywhere in Mumbai to your exact drop point in Goa. Our drivers are experienced on the NH66 Konkan coastal highway, are comfortable on ghat sections, and have safely completed thousands of long-distance trips for families, groups, couples, and solo travelers.
+              Planning your Mumbai to Goa road trip? Book A Cab provides direct cab service from your doorstep anywhere in Mumbai to your exact drop point in Goa. Our drivers are experienced on the NH66 Konkan coastal highway, are comfortable on ghat sections, and are used to long-distance trips for families, groups, couples, and solo travelers.
             </p>
             <p>
-              No hidden charges. No app to download. No complicated booking forms. With 50,000+ happy riders, 120+ premium cabs, and a team available around the clock, your Mumbai to Goa cab booking is simple, fast, and completely transparent. Send us a WhatsApp message and we confirm your cab in minutes.
+              No hidden charges. No app to download. No complicated booking forms. With a team available around the clock, your Mumbai to Goa cab booking is simple, fast, and completely transparent. Send us a WhatsApp message and we confirm your cab in minutes.
+            </p>
+          </div>
+
+          {/* Quick Answer Box */}
+          <div className="mt-6 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5 sm:p-6 shadow-sm">
+            <h2 className="font-display text-lg font-bold text-navy sm:text-xl">
+              Quick Answer: Mumbai to Goa Cab
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-gray-700 sm:text-base">
+              A Mumbai to Goa cab covers about 595 km via NH66 in roughly 10 to 12 hours. One-way fixed fares start at ₹7,500 for a hatchback, ₹8,500 for a sedan (Dzire or Etios), ₹11,000 for an SUV (Ertiga or Scorpio) and ₹13,500 for an Innova Crysta. NH66 tolls are included. The Goa interstate permit fee, night allowance and extra waiting time are charged separately. Book on WhatsApp or call +91-9970294122.
             </p>
           </div>
 
@@ -279,7 +292,7 @@ export function MumbaiToGoaContent() {
                       onChange={(e) => setIsNightPickup(e.target.checked)}
                       className="rounded border-gray-300 text-primary focus:ring-primary h-4 w-4"
                     />
-                    <span>Night Departure (11 PM - 5 AM, +{selectedVehicle.nightCharge})</span>
+                    <span>Night Departure (11 PM - 5 AM, charge as per car type)</span>
                   </label>
                   <p className="text-[11px] text-gray-500 italic">
                     Night window allows clear highway and arrival in Goa by 8 AM - 10 AM.
@@ -440,9 +453,9 @@ export function MumbaiToGoaContent() {
               </table>
             </div>
 
-            {/* Note block (state permit note) */}
-            <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50/60 p-4 text-xs sm:text-sm text-amber-900">
-              <strong>Important note on charges:</strong> Fares above are one-way fixed fares. The Maharashtra to Goa interstate state permit fee is charged at actuals and is a government levy outside any cab operator&apos;s control. We inform you of this separately at the time of booking confirmation, before you pay anything.
+            {/* Note block (clarifying note per Task 3.8) */}
+            <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50/70 p-4 text-xs sm:text-sm text-slate-800 leading-relaxed">
+              <strong>Note:</strong> Goa fares are fixed one-way fares with NH66 tolls included. Our other routes (Pune, Nashik, Shirdi, Mahabaleshwar) are priced per kilometre with toll at actuals. The Goa interstate permit fee is charged at actuals.
             </div>
           </div>
 
@@ -629,6 +642,9 @@ export function MumbaiToGoaContent() {
           </h2>
           <p className="mt-3 text-base text-gray-700 leading-relaxed">
             The drive from Mumbai to Goa is one of the finest road journeys in India. NH66, the coastal highway, takes you along the Konkan shoreline, past the Vashishthi River at Chiplun, through Alphonso mango country in Ratnagiri, and across the famous Sawantwadi belt before arriving in Goa. For many of our customers, the journey becomes as memorable as the destination.
+          </p>
+          <p className="mt-2 text-sm text-gray-700 leading-relaxed">
+            Heading to Mahabaleshwar on the way? See our <Link href="/mumbai-to-mahabaleshwar-cab" className="text-primary font-semibold underline hover:text-navy">Mumbai to Mahabaleshwar cab</Link>. Spending a day in Mumbai before you leave? See our <Link href="/mumbai-darshan-cab" className="text-primary font-semibold underline hover:text-navy">Mumbai Darshan cab</Link>.
           </p>
 
           {/* H3: The Road from Mumbai to Goa — Stage by Stage */}
@@ -875,7 +891,7 @@ export function MumbaiToGoaContent() {
               Our Driver Verification and Selection Process
             </h3>
             <p className="mt-3 text-base text-gray-700 leading-relaxed">
-              Book A Cab has completed 50,000+ trips with background-verified drivers. Every driver on our network is screened before their first trip assignment. For long-distance outstation routes like Mumbai to Goa, our selection goes further.
+              Every driver on our network is screened before their first trip assignment. For long-distance outstation routes like Mumbai to Goa, our selection goes further.
             </p>
 
             {/* Bullet list (selection criteria) */}
@@ -905,17 +921,9 @@ export function MumbaiToGoaContent() {
               </ul>
             </div>
 
-            {/* Real customer quote block */}
-            <blockquote className="mt-5 rounded-xl border-l-4 border-emerald-500 bg-emerald-50/50 p-4 text-sm font-medium italic text-emerald-950">
-              &ldquo;Long trip but very comfortable. Driver was experienced on ghats and drove safely. Family enjoyed a lot.&rdquo;
-              <span className="block mt-1 text-xs font-normal not-italic text-emerald-800">
-                — Verified Customer Feedback on Ghat Route
-              </span>
-            </blockquote>
-
             {/* Vehicle maintenance note */}
             <p className="mt-4 text-xs sm:text-sm text-gray-600">
-              All 120+ vehicles in our fleet are regularly maintained with AC, tyres, brakes, and fuel checked before every long-distance departure.
+              Our vehicles are regularly maintained with AC, tyres, brakes, and fuel checked before every long-distance departure.
             </p>
           </div>
 
@@ -1300,68 +1308,7 @@ export function MumbaiToGoaContent() {
           </div>
         </section>
 
-        {/* SECTION: REVIEWS */}
-        <section id="reviews" className="scroll-mt-20">
-          {/* H2 */}
-          <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
-            What Our Customers Say About Book A Cab
-          </h2>
-          <p className="mt-3 text-base text-gray-700 leading-relaxed">
-            Real reviews from real riders. No edits, no filters.
-          </p>
 
-          {/* Image 6 — Reviews Section */}
-          <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-md">
-            <div className="relative aspect-[16/9] sm:aspect-[2.5/1] w-full max-h-[340px]">
-              <Image
-                src="/images/book-a-cab-50000-happy-riders-mumbai-cab-service-reviews.webp"
-                alt="Book A Cab 50000 happy riders customer reviews for Mumbai outstation and Goa cab service"
-                title="50,000+ Happy Riders — Book A Cab Customer Reviews for Mumbai to Goa Cab"
-                fill
-                loading="lazy"
-                className="object-cover object-center"
-                sizes="(max-width: 1080px) 100vw, 1080px"
-              />
-            </div>
-          </div>
-
-          {/* 6x Review Cards */}
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {GOA_REVIEWS.map((rev) => (
-              <div
-                key={rev.id}
-                className="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-5 shadow-sm hover:border-sky-300 transition-colors"
-              >
-                <div>
-                  <div className="flex items-center gap-1 text-amber-500 mb-2">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <StarIcon key={i} className="h-4 w-4" />
-                    ))}
-                  </div>
-                  <blockquote className="text-xs sm:text-sm font-medium italic text-gray-800 leading-relaxed">
-                    &ldquo;{rev.quote}&rdquo;
-                  </blockquote>
-                </div>
-                <div className="mt-4 border-t border-gray-100 pt-3 text-xs">
-                  <div className="font-bold text-navy">— {rev.author}</div>
-                  <div className="text-[11px] text-gray-500">{rev.route}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA BLOCK: Book My Goa Cab */}
-          <div className="mt-6">
-            <button
-              type="button"
-              onClick={() => openBooking("Mumbai to Goa Cab Booking")}
-              className="inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3.5 text-sm font-bold text-navy shadow hover:bg-amber-400 transition-colors"
-            >
-              <TaxiIcon className="h-4 w-4" />
-              <span>Book My Goa Cab</span>
-            </button>
-          </div>
-        </section>
 
         {/* SECTION: FAQ */}
         <section id="faq" className="scroll-mt-20">
@@ -1479,11 +1426,9 @@ export function MumbaiToGoaContent() {
                         <span className="text-sm sm:text-base">{faq.question}</span>
                         {isOpen ? <ChevronUpIcon className="h-5 w-5 text-primary shrink-0" /> : <ChevronDownIcon className="h-5 w-5 text-gray-400 shrink-0" />}
                       </button>
-                      {isOpen && (
-                        <div className="border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      )}
+                      <div className={`border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed ${isOpen ? "block" : "hidden"}`}>
+                        {faq.answer}
+                      </div>
                     </div>
                   );
                 })}
@@ -1510,11 +1455,9 @@ export function MumbaiToGoaContent() {
                         <span className="text-sm sm:text-base">{faq.question}</span>
                         {isOpen ? <ChevronUpIcon className="h-5 w-5 text-primary shrink-0" /> : <ChevronDownIcon className="h-5 w-5 text-gray-400 shrink-0" />}
                       </button>
-                      {isOpen && (
-                        <div className="border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      )}
+                      <div className={`border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed ${isOpen ? "block" : "hidden"}`}>
+                        {faq.answer}
+                      </div>
                     </div>
                   );
                 })}
@@ -1541,11 +1484,9 @@ export function MumbaiToGoaContent() {
                         <span className="text-sm sm:text-base">{faq.question}</span>
                         {isOpen ? <ChevronUpIcon className="h-5 w-5 text-primary shrink-0" /> : <ChevronDownIcon className="h-5 w-5 text-gray-400 shrink-0" />}
                       </button>
-                      {isOpen && (
-                        <div className="border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      )}
+                      <div className={`border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed ${isOpen ? "block" : "hidden"}`}>
+                        {faq.answer}
+                      </div>
                     </div>
                   );
                 })}
@@ -1572,11 +1513,9 @@ export function MumbaiToGoaContent() {
                         <span className="text-sm sm:text-base">{faq.question}</span>
                         {isOpen ? <ChevronUpIcon className="h-5 w-5 text-primary shrink-0" /> : <ChevronDownIcon className="h-5 w-5 text-gray-400 shrink-0" />}
                       </button>
-                      {isOpen && (
-                        <div className="border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      )}
+                      <div className={`border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed ${isOpen ? "block" : "hidden"}`}>
+                        {faq.answer}
+                      </div>
                     </div>
                   );
                 })}
@@ -1603,11 +1542,9 @@ export function MumbaiToGoaContent() {
                         <span className="text-sm sm:text-base">{faq.question}</span>
                         {isOpen ? <ChevronUpIcon className="h-5 w-5 text-primary shrink-0" /> : <ChevronDownIcon className="h-5 w-5 text-gray-400 shrink-0" />}
                       </button>
-                      {isOpen && (
-                        <div className="border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                          {faq.answer}
-                        </div>
-                      )}
+                      <div className={`border-t border-gray-100 bg-gray-50/50 p-4 text-xs sm:text-sm text-gray-700 leading-relaxed ${isOpen ? "block" : "hidden"}`}>
+                        {faq.answer}
+                      </div>
                     </div>
                   );
                 })}
@@ -1625,7 +1562,7 @@ export function MumbaiToGoaContent() {
 
           {/* Supporting paragraph (2 lines) */}
           <p className="mt-3 text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl">
-            Fixed fare. No hidden charges. Verified driver with ghat experience. WhatsApp booking confirmed in minutes. 50,000+ riders have trusted Book A Cab for their journey. Your Goa trip starts here. Pickup from anywhere in Mumbai. Drop anywhere in Goa. Available 24 hours a day, 7 days a week.
+            Fixed fare. No hidden charges. Verified driver with ghat experience. WhatsApp booking confirmed in minutes. Your Goa trip starts here. Pickup from anywhere in Mumbai. Drop anywhere in Goa. Available 24 hours a day, 7 days a week.
           </p>
 
           {/* CTA Buttons */}

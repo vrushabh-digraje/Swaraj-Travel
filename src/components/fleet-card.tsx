@@ -42,10 +42,6 @@ export function FleetCard({ vehicle }: { vehicle: Vehicle }) {
             {vehicle.category}
           </span>
         </div>
-        <div className="absolute top-3 right-3 z-10 flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-sm font-bold text-navy shadow-sm">
-          <StarIcon className="h-3.5 w-3.5 text-accent" />
-          {vehicle.rating}
-        </div>
         <div className="absolute bottom-3 left-3 z-10 rounded-full bg-success px-2.5 py-1 text-[11px] font-bold text-white shadow-sm">
           Available now
         </div>

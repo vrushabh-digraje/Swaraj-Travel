@@ -4,9 +4,9 @@ import { PuneToMumbaiContent } from "@/components/pune-to-mumbai-content";
 
 
 export const metadata: Metadata = {
-  title: "Pune to Mumbai Cab Service | Rates from ₹14/km",
+  title: "Pune to Mumbai Cab Service | Rates from ₹13/km",
   description:
-    "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹14/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call 8830273575.",
+    "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹13/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call +91-9970294122.",
   alternates: {
     canonical: "https://bookacab.co.in/pune-to-mumbai-cab/",
   },
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Pune to Mumbai Cab Service | Rates from ₹14/km",
+    title: "Pune to Mumbai Cab Service | Rates from ₹13/km",
     description:
-      "Per km rates published upfront for all 16 vehicles. One way, round trip and hourly. Mumbai airport T1 and T2 drops. Call 8830273575.",
+      "Per km rates published upfront for all 16 vehicles. One way, round trip and hourly. Mumbai airport T1 and T2 drops. Call +91-9970294122.",
     url: "https://bookacab.co.in/pune-to-mumbai-cab/",
     siteName: "Book A Cab",
     locale: "en_IN",
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pune to Mumbai Cab Service | Rates from ₹14/km",
+    title: "Pune to Mumbai Cab Service | Rates from ₹13/km",
     description:
-      "Per km rates published upfront. One way, round trip, airport drops. Call 8830273575.",
+      "Per km rates published upfront. One way, round trip, airport drops. Call +91-9970294122.",
     images: ["https://bookacab.co.in/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg"],
   },
 };
@@ -190,9 +190,9 @@ function puneToMumbaiUnifiedSchema() {
         "@type": "WebPage",
         "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#webpage",
         url: "https://bookacab.co.in/pune-to-mumbai-cab/",
-        name: "Pune to Mumbai Cab Service | Rates from ₹14/km",
+        name: "Pune to Mumbai Cab Service | Rates from ₹13/km",
         description:
-          "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹14/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call 8830273575.",
+          "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹13/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call +91-9970294122.",
         isPartOf: {
           "@id": "https://bookacab.co.in/#website",
         },
@@ -200,7 +200,7 @@ function puneToMumbaiUnifiedSchema() {
           "@id": "https://bookacab.co.in/#localbusiness",
         },
         inLanguage: "en-IN",
-        dateModified: "2026-09-21",
+        dateModified: "2026-10-09",
         breadcrumb: {
           "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#breadcrumb",
         },
@@ -210,7 +210,7 @@ function puneToMumbaiUnifiedSchema() {
         "@id": "https://bookacab.co.in/pune-to-mumbai-cab/#service",
         name: "Pune to Mumbai Cab Service",
         description:
-          "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹14/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call 8830273575.",
+          "Book a Pune to Mumbai cab with rates published upfront, Dzire ₹13/km to Innova Crysta ₹20/km. One way, round trip, airport drops. Call +91-9970294122.",
         serviceType: "Outstation taxi service",
         provider: {
           "@id": "https://bookacab.co.in/#localbusiness",
@@ -320,7 +320,7 @@ function puneToMumbaiUnifiedSchema() {
             name: "What happens if my flight is delayed and I need a later airport pickup?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Message 8830273575 with your new landing time as soon as you know it. Our drivers track flights on airport bookings, so we usually see the delay first. We hold the booking and adjust the pickup where the driver's schedule allows. Any waiting charge is discussed with you, not applied automatically.",
+              text: "Message +91-9970294122 with your new landing time as soon as you know it. Our drivers track flights on airport bookings, so we usually see the delay first. We hold the booking and adjust the pickup where the driver's schedule allows. Any waiting charge is discussed with you, not applied automatically.",
             },
           },
           {
@@ -328,7 +328,7 @@ function puneToMumbaiUnifiedSchema() {
             name: "Is a round trip cheaper than booking two one way cabs?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Usually yes, if you are returning within about 24 hours, because a one way fare has to account for the driver bringing the car back. For longer gaps between legs, two one way bookings can work out better. Send your travel dates to 8830273575 and we will price both options.",
+              text: "Usually yes, if you are returning within about 24 hours, because a one way fare has to account for the driver bringing the car back. For longer gaps between legs, two one way bookings can work out better. Send your travel dates to +91-9970294122 and we will price both options.",
             },
           },
           {
@@ -392,7 +392,7 @@ function puneToMumbaiUnifiedSchema() {
             name: "Can I book a Mumbai to Pune cab as well?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. We run this route in both directions, including Mumbai Airport T1 and T2 pickups where the driver tracks your flight and waits at arrivals. The same fleet and rate card apply. See our Mumbai to Pune cab page or call 8830273575.",
+              text: "Yes. We run this route in both directions, including Mumbai Airport T1 and T2 pickups where the driver tracks your flight and waits at arrivals. The same fleet and rate card apply. See our Mumbai to Pune cab page or call +91-9970294122.",
             },
           },
         ],

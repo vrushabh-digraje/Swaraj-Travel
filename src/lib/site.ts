@@ -22,7 +22,7 @@ export const SITE = {
   phoneDisplay: "+91-9970294122",
   email: "bookings@bookacab.co.in",
   whatsapp: "919970294122",
-  address: "Near Airport, Mumbai, Maharashtra, India",
+  address: "Near Airport, Andheri East, Mumbai, Maharashtra 400099",
   city: "Mumbai",
   region: "Maharashtra",
   country: "IN",
@@ -66,12 +66,29 @@ export function createMetadata({
   title,
   description,
   path,
+  image,
 }: {
   title: string;
   description: string;
   path: string;
+  image?: {
+    url: string;
+    alt?: string;
+    width?: number;
+    height?: number;
+  };
 }): Metadata {
   const url = absoluteUrl(path);
+  const ogImage = {
+    url: image
+      ? image.url.startsWith("http")
+        ? image.url
+        : `${SITE_URL}${image.url.startsWith("/") ? "" : "/"}${image.url}`
+      : `${SITE_URL}/assets/images/routes/pune-to-mumbai/pune-to-mumbai-og.jpg`,
+    width: image?.width || 1200,
+    height: image?.height || 630,
+    alt: image?.alt || `${title} | Book A Cab`,
+  };
 
   return {
     title,
@@ -84,11 +101,13 @@ export function createMetadata({
       siteName: SITE.name,
       type: "website",
       locale: "en_IN",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage.url],
     },
   };
 }

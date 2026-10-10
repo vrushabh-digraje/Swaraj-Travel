@@ -25,7 +25,7 @@ export const RATE_CARD: RateCardRow[] = [
 
 export const WORKED_COST_EXAMPLE = [
   { item: "Swift Dzire, 8 hrs and 80 km, at ₹14 per km", amount: "₹1,120", paidTo: SITE.name },
-  { item: "Driver allowance", amount: "Charged extra, confirmed at booking", paidTo: SITE.name },
+  { item: "Driver allowance", amount: "₹300 per day (fixed)", paidTo: SITE.name },
   { item: "Tolls on this route", amount: "Nil on a pure South Mumbai loop", paidTo: "Not applicable" },
   { item: "Parking at three or four stops", amount: "Roughly ₹200 to ₹400 in total", paidTo: "At actual, with receipts" },
   { item: "Entry tickets, museum for four people", amount: "Roughly ₹400 to ₹700", paidTo: "Paid at the venue" },
@@ -467,7 +467,7 @@ export const MUMBAI_DARSHAN_FAQS = [
   },
   {
     question: "What will the whole day actually cost, all in?",
-    answer: "For a family of four doing a six stop South Mumbai circuit in a Swift Dzire, expect roughly ₹1,900 to ₹2,400 in total. That is the ₹1,120 package fare plus driver allowance, around ₹200 to ₹400 of parking and roughly ₹400 to ₹700 of museum entry for four people. A South Mumbai loop attracts no toll. We give you a specific estimate for your route before you book.",
+    answer: "For a family of four doing a six stop South Mumbai circuit in a Swift Dzire, expect roughly ₹2,020 to ₹2,520 in total. That is the ₹1,120 package fare, ₹300 driver allowance, around ₹200 to ₹400 of parking and roughly ₹400 to ₹700 of museum entry for four people. A South Mumbai loop attracts no toll. We give you a specific estimate for your route before you book.",
   },
   {
     question: "Can Mumbai Darshan be done in one day?",

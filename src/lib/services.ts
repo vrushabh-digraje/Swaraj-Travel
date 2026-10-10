@@ -25,7 +25,7 @@ export const SERVICES: ServiceItem[] = [
     slug: "city-rides",
     title: "City Rides",
     description: "Comfortable local taxi service across Mumbai, Thane, Navi Mumbai, and Pune.",
-    price: "₹13/km + ₹50 base",
+    price: "₹14/km + ₹50 base",
     features: ["Quick booking", "Multiple stops", "Cashless payment", "Real-time tracking"],
   },
   {

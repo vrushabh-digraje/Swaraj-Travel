@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       {
         url: "https://bookacab.co.in/images/mumbai-to-shirdi-cab-service.webp",
         width: 1200,
-        height: 600,
+        height: 630,
         alt: "Mumbai to Shirdi cab service by Book A Cab",
       },
     ],
@@ -220,7 +220,7 @@ function shirdiUnifiedSchema() {
         offers: {
           "@type": "AggregateOffer",
           priceCurrency: "INR",
-          lowPrice: 3400,
+          lowPrice: 3000,
           offerCount: 9,
           availability: "https://schema.org/InStock",
           url: "https://bookacab.co.in/mumbai-to-shirdi-cab/",

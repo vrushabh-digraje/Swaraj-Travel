@@ -1477,7 +1477,7 @@ export function MumbaiDarshanContent() {
           </div>
 
           <p className="mt-4 text-xs font-semibold text-navy md:text-sm">
-            Total out of pocket for the day: approximately ₹1,900 to ₹2,400 all in, of which {SITE.name} receives only the package fare and driver allowance.
+            Total out of pocket for the day: approximately ₹2,020 to ₹2,520 all in, of which {SITE.name} receives only the package fare and driver allowance.
           </p>
         </div>
 
@@ -3458,13 +3458,11 @@ export function MumbaiDarshanContent() {
                     }`}
                   />
                 </button>
-                {isOpen && (
-                  <div className="border-t border-gray-100 px-5 pb-5 pt-3">
-                    <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                <div className={`border-t border-gray-100 px-5 pb-5 pt-3 ${isOpen ? "block" : "hidden"}`}>
+                  <p className="text-xs md:text-sm text-gray-700 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             );
           })}

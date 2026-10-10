@@ -19,9 +19,9 @@ import {
   MahabaleshwarFareItem,
 } from "@/lib/mumbai-to-mahabaleshwar";
 
-const PHONE_NUMBER = "+91-8856904131";
-const PHONE_TEL = "+918856904131";
-const WHATSAPP_NUMBER = "918856904131";
+const PHONE_NUMBER = "+91-9970294122";
+const PHONE_TEL = "+919970294122";
+const WHATSAPP_NUMBER = "919970294122";
 
 function waLink(msg: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -1359,7 +1359,7 @@ export function MumbaiToMahabaleshwarContent() {
               </tr>
               <tr>
                 <td className="px-4 py-3.5 font-bold text-navy whitespace-nowrap">Address</td>
-                <td className="px-4 py-3.5 text-gray-700">Near Airport, Mumbai, Maharashtra, India</td>
+                <td className="px-4 py-3.5 text-gray-700">Near Airport, Andheri East, Mumbai, Maharashtra 400099</td>
               </tr>
             </tbody>
           </table>
